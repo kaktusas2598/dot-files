@@ -89,8 +89,13 @@ call pathogen#infect()
 "change mapleared from \ to ,
 let mapleader=","
 "Quickly edit/reload vimrc
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent><leader>ev :e $MYVIMRC<CR>
 nmap <silent><leader>sv :so $MYVIMRC<CR>
+"Disable search highlight
+nmap <silent> ,/ :nohlsearch<CR>
+
+"Map w!! when forget sudo while opening file
+cmap w!! w !sudo tee % >/dev/null
 
 "Easier split navigation
 nnoremap <C-J> <C-W><C-J>
@@ -98,6 +103,20 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+"Map ; to ex cmd mode
+nnoremap ; :
+
+"Force to stop ussing arrow keys
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
+"Jump to next row(not line) (This lines cause no mapping found err)
+"nnoremap j gj
+"nnoremap gk
+
+set relativenumber "Relative line numbering instead of absolute
 set hidden "Hide buffers instead of closing
 set nowrap "don't wrap lines
 set tabstop=4 "a tab is four spaces
@@ -114,9 +133,18 @@ set smarttab "insert tabs on the start of line according to shiftwith
 set hlsearch "highlight search terms
 set incsearch "show search matches as you type
 
+"Open splits right and bottom
+set splitbelow
+set splitright
+
 "Addirional syntax rules show tabs, trailing spaces...
 set list
-set listchars=tab:>.,trail:.,extends:#,nbsp:.
+set listchars=tab:▸.,trail:.,extends:#,nbsp:.
+"Dont need tab show in HTML, XML files
+autocmd filetype html,xml set listchars-=tab:>.
+
+"Toogle paste mode in insert mode(for pasting from elsewhere to vim)
+set pastetoggle=<F2>
 
 set undolevels=1000
 set wildignore=*.swp,*.bak,*.pyc,*.class "ignore some extensions
