@@ -2,86 +2,17 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
-
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
 else
   set backup		" keep a backup file (restore to previous version)
   set undofile		" keep an undo file (undo changes after closing)
 endif
-set history=500
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
-
-" For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
-" let &guioptions = substitute(&guioptions, "t", "", "g")
-
-" Don't use Ex mode, use Q for formatting
-map Q gq
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
 
-" In many terminal emulators the mouse works just fine, thus enable it.
-if has('mouse')
-  set mouse=a
-endif
-
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
-if &t_Co > 2 || has("gui_running")
-  syntax on
-  set hlsearch
-endif
-
-" Only do this part when compiled with support for autocommands.
-if has("autocmd")
-
-  " Enable file type detection.
-  " Use the default filetype settings, so that mail gets 'tw' set to 72,
-  " 'cindent' is on in C files, etc.
-  " Also load indent files, to automatically do language-dependent indenting.
-  filetype plugin indent on
-
-  " Put these in an autocmd group, so that we can delete them easily.
-  augroup vimrcEx
-  au!
-
-  " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
-
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it when the position is invalid or when inside an event handler
-  " (happens when dropping a file on gvim).
-  " Also don't do it when the mark is in the first line, that is the default
-  " position when opening a file.
-  autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
-    \ endif
-
-  augroup END
-
-else
-
-  set autoindent		" always set autoindenting on
-
-endif " has("autocmd")
-
-" Convenient command to see the difference between the current buffer and the
-" file it was loaded from, thus the changes you made.
-" Only define it when not defined already.
-if !exists(":DiffOrig")
-  command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
-endif
-
-"Enable all cool features
-set nocompatible
 " Use pathogen to include plugins to ~/.vim/bundle/
 call pathogen#helptags()
 call pathogen#infect()
@@ -94,8 +25,11 @@ nmap <silent><leader>sv :so $MYVIMRC<CR>
 "Disable search highlight
 nmap <silent> ,/ :nohlsearch<CR>
 
-"Map w!! when forget sudo while opening file
-cmap w!! w !sudo tee % >/dev/null
+"Map window resizing to Alt+h,j,k,l
+map <silent> <A-h> <C-w>< 
+map <silent> <A-j> <C-W>- 
+map <silent> <A-k> <C-W>+ 
+map <silent> <A-l> <C-w>> 
 
 "Easier split navigation
 nnoremap <C-J> <C-W><C-J>
@@ -106,15 +40,13 @@ nnoremap <C-H> <C-W><C-H>
 "Map ; to ex cmd mode
 nnoremap ; :
 
-"Force to stop ussing arrow keys
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
+"Always show status line(Includes airline show, if installed)
+set laststatus=2
 
-"Jump to next row(not line) (This lines cause no mapping found err)
-"nnoremap j gj
-"nnoremap gk
+"folding settings
+set foldmethod=syntax   "fold based on t
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
 
 set relativenumber "Relative line numbering instead of absolute
 set hidden "Hide buffers instead of closing
@@ -127,11 +59,14 @@ set number
 set shiftwidth=4 "number of spaces for autoindent
 set shiftround "use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch " show matching parentheses
+set showmode "Show mode in status bar
 set ignorecase "ignore case when searching
 set smartcase "ignore case if pattern is all lower-case, case-sensitive otherwise
 set smarttab "insert tabs on the start of line according to shiftwith
 set hlsearch "highlight search terms
 set incsearch "show search matches as you type
+set ruler " show the cursor position all the time
+set showcmd " display incomplete commands
 
 "Open splits right and bottom
 set splitbelow
@@ -146,6 +81,7 @@ autocmd filetype html,xml set listchars-=tab:>.
 "Toogle paste mode in insert mode(for pasting from elsewhere to vim)
 set pastetoggle=<F2>
 
+set history=1000
 set undolevels=1000
 set wildignore=*.swp,*.bak,*.pyc,*.class "ignore some extensions
 set title " change terminal's title
@@ -155,16 +91,45 @@ set noerrorbells "don't beep
 " Dont like swaps, really ==>()
 set noswapfile
 
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+"Map Ctrl-n to NERDTree
+"map <C-n> :NERDTreeToggle<CR>
+
+"Close vim if only window is NERDTree 
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+
+"intend intelligence based on syntax rules
+filetype plugin indent on
 "set file type specific settings
 "only for python for now
 if has('autocmd')
 	autocmd filetype python set expandtab"TODO:add more
 endif
 " Add syntax highlight and colorscheme
-if &t_Co >= 256 || has("gui_running")
-	colorscheme elflord
-endif
-if &t_Co > 2 || has("gui_running")
-	"switch syntax highlight on, when terminal have colors
-	syntax on
-endif
+let g:solarized_termcolors=256
+colorscheme solarized
+set background=dark
+syntax on
+
+"Set autocomplete menu colors
+highlight Pmenu ctermbg=8
+highlight PmenuSel ctermbg=1
+highlight PmenuSbar ctermbg=0
+"Window split colors
+highlight VertSplit cterm=none gui=none 
+"highlight StatusLineNC
+
+"Vimdiff coloring
+highlight DiffAdd cterm=none ctermfg=bg ctermbg=Green gui=none guifg=bg guibg=Green
+highlight DiffDelete cterm=none ctermfg=bg ctermbg=Red gui=none guifg=bg guibg=Red
+highlight DiffChange cterm=none ctermfg=bg ctermbg=Yellow gui=none guifg=bg guibg=Yellow
+highlight DiffText cterm=none ctermfg=bg ctermbg=Magenta gui=none guifg=bg guibg=Magenta
