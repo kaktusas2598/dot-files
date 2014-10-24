@@ -101,10 +101,10 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 "Map Ctrl-n to NERDTree
-"map <C-n> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 
 "Close vim if only window is NERDTree 
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 
 "intend intelligence based on syntax rules
