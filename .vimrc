@@ -115,10 +115,10 @@ if has('autocmd')
 	autocmd filetype python set expandtab"TODO:add more
 endif
 " Add syntax highlight and colorscheme
-let g:solarized_termcolors=256
-colorscheme solarized
-set background=dark
 syntax on
+let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
 
 "Set autocomplete menu colors
 highlight Pmenu ctermbg=8
