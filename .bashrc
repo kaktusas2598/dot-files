@@ -21,8 +21,18 @@ export HISTSIZE=1000
 export PATH=~/bin:"$PATH"
 
 #Helpful aliases
+alias ls='ls -hF --color=auto'                 # classify files in colour
 alias l.='ls -d .* --color=auto'
 alias ll='ls -l --color=auto'
+
+# Default to human readable figures
+alias df='df -h'
+alias du='du -h'
+
+alias grep='grep --color'                     # show differences in colour
+# alias egrep='egrep --color=auto'              # show differences in colour
+# alias fgrep='fgrep --color=auto'              # show differences in colour
+
 alias vi='vim' #Fedora bug? Need to install sudo...
 #alias most_used='history|awk '{print $2}'|awk 'BEGIN {FS="|"} {print $1}'|sort|uniq -c|sort -r'
 alias star_wars='telnet towel.blinkenlights.nl'
