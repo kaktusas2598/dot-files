@@ -26,10 +26,15 @@ nmap <silent><leader>sv :so $MYVIMRC<CR>
 nmap <silent> ,/ :nohlsearch<CR>
 
 "Map window resizing to Alt+h,j,k,l
-map <silent> <A-h> <C-w>< 
-map <silent> <A-j> <C-W>- 
-map <silent> <A-k> <C-W>+ 
-map <silent> <A-l> <C-w>> 
+map <silent> <A-h> <C-w><
+map <silent> <A-j> <C-W>-
+map <silent> <A-k> <C-W>+
+map <silent> <A-l> <C-w>>
+"Terminals does not support <A-sth>, need to use <Esc> or ^[
+map <silent> <Esc>h <C-w><
+map <silent> <Esc>j <C-W>-
+map <silent> <Esc>k <C-W>+
+map <silent> <Esc>l <C-w>>
 
 "Easier split navigation
 nnoremap <C-J> <C-W><C-J>
@@ -74,9 +79,9 @@ set splitright
 
 "Addirional syntax rules show tabs, trailing spaces...
 set list
-set listchars=tab:▸.,trail:.,extends:#,nbsp:.
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
 "Dont need tab show in HTML, XML files
-autocmd filetype html,xml set listchars-=tab:>.
+autocmd filetype html,xml,php set listchars-=tab:>.
 
 "Toogle paste mode in insert mode(for pasting from elsewhere to vim)
 set pastetoggle=<F2>
@@ -106,7 +111,6 @@ map <C-n> :NERDTreeToggle<CR>
 "Close vim if only window is NERDTree 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-
 "intend intelligence based on syntax rules
 filetype plugin indent on
 "set file type specific settings
@@ -115,10 +119,11 @@ if has('autocmd')
 	autocmd filetype python set expandtab"TODO:add more
 endif
 " Add syntax highlight and colorscheme
-syntax on
-let g:solarized_termcolors=256
+set t_Co=256
 set background=dark
-colorscheme solarized
+let g:solarized_termcolors=256
+colorscheme jellybeans "solarized
+syntax on
 
 "Set autocomplete menu colors
 highlight Pmenu ctermbg=8
