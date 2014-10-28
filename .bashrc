@@ -1,41 +1,62 @@
-# .bashrc
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
-
-# User specific aliases and functions
-
 #change umask to mkae dir sharing easier
 umask 0002
 
+#----HISTORY SETTINGS
 #Ignore duplicates in history and increase its size
 export HISTCONTROL=ignoredups
 export HISTSIZE=1000
 
+HISTSIZE=1000
+HISTFILESIZE=2000
+# append to the history file, don't overwrite it
+shopt -s histappend
+#----
+
 #Add ~/bin/ dir to PATH so we can execute our own scripts
 export PATH=~/bin:"$PATH"
 
-#Helpful aliases
-alias ls='ls -hF --color=auto'                 # classify files in colour
-alias l.='ls -d .* --color=auto'
-alias ll='ls -l --color=auto'
+#----ALIASES----
+
+# You may want to put all your additions into a separate file like
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls -hF --color=auto' #Classify files
+    alias l.='ls -d .* --color=auto'
+    alias ll='ls -l --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+#alias la='ls -A'
+#alias l='ls -CF'
 
 # Default to human readable figures
 alias df='df -h'
 alias du='du -h'
 
-alias grep='grep --color'                     # show differences in colour
-# alias egrep='egrep --color=auto'              # show differences in colour
-# alias fgrep='fgrep --color=auto'              # show differences in colour
-
 alias vi='vim' #Fedora bug? Need to install sudo...
 #alias most_used='history|awk '{print $2}'|awk 'BEGIN {FS="|"} {print $1}'|sort|uniq -c|sort -r'
 alias star_wars='telnet towel.blinkenlights.nl'
+
+#----
+
 #Customize shell prompt
 function prompt
 {
@@ -51,3 +72,11 @@ prompt
 if [ -x /usr/bin/cowsay ]; then
 	echo STANCEGO | cowsay -n -f sodomized.cow
 fi
+#MY
+
+#colored terminal
+export TERM="screen-256color" #xterm256-color with tmux doesnt work right
+alias atsipisk='exit'
+
+#Open file with default x application
+alias nu="xdg-open"
