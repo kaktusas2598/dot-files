@@ -1,3 +1,10 @@
 [user]
 	email = nerijus.vilcinskas@gmail.com
 	name = kaktusas2598
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = true
+	pager = true
