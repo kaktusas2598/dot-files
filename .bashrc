@@ -69,8 +69,8 @@ function prompt
 }
 prompt
 #Greeting
-if [ -x /usr/bin/cowsay ]; then
-	echo STANCEGO | cowsay -n -f sodomized.cow
+if [ -x /usr/bin/cowsay -o -x /usr/games/cowsay ]; then
+	echo STANCEGO | cowsay -n -f sodomized.cow #or sodomized-sheep.cow
 fi
 #MY
 
