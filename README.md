@@ -1,24 +1,26 @@
- This is my Configuration files which I use for my daily development.
+# Dot Files
  
- Includes my .vimrc with plugins.
+  This is my Configuration files which I use for my daily development.
  
- Current plugins:
- Pathogen
- NERDTree
- Vim-Airline
- Syntastic
+## Vim
  
- Colorschemes:
- JellyBeans
- Solarized
+**Plugins:**
+  * [Pathogen](https://github.com/tpope/vim-pathogen)
+  * [NERDTree](https://github.com/scrooloose/nerdtree)
+  * [Vim-Airline](https://github.com/bling/vim-airline)
+  * [Syntastic](https://github.com/scrooloose/syntastic)
  
- Other stuff:
+**Colorschemes:**
+  * [JellyBeans](https://github.com/nanotech/jellybeans.vim)
+  * [Solarized](https://github.com/altercation/vim-colors-solarized)
  
- Basic tmux configuration
+## Other stuff
+
+  * Basic **tmux** configuration
+  
+  * Simple **bash** configuration with some helpful aliases, custom greeting and customized shell prompt.
  
- Simple bash configuration with some helpful aliases, custom greeting and customized shell prompt.
- 
- My simple git configuration.
+  * My simple **git** configuration.
  
  
- Haters Gonna Hate.
+ **Haters Gonna Hate.**
