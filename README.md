@@ -5,7 +5,8 @@
  Current plugins:
  Pathogen
  NERDTree
- VIm-Airline
+ Vim-Airline
+ Syntastic
  
  Colorschemes:
  JellyBeans
