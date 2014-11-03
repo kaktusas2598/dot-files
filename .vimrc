@@ -25,6 +25,10 @@ nmap <silent><leader>sv :so $MYVIMRC<CR>
 "Disable search highlight
 nmap <silent> ,/ :nohlsearch<CR>
 
+"Easier Buffer switching
+nmap <silent><leader>bn :bn<CR>
+nmap <silent><leader>bp :bp<CR>
+
 "Map window resizing to Alt+h,j,k,l
 map <silent> <A-h> <C-w><
 map <silent> <A-j> <C-W>-
@@ -107,6 +111,8 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 "Map Ctrl-n to NERDTree
 map <C-n> :NERDTreeToggle<CR>
+"Map Ctrl+t to TagBar
+map <C-t> :TagbarToggle<CR>
 
 "Close vim if only window is NERDTree 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
