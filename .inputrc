@@ -1,0 +1,5 @@
+#$if Bash
+  #--Ignore Case for Completion
+  set completion-ignore-case on
+  #--
+#$endif
