@@ -12,6 +12,7 @@
   * [NERDCommenter](https://github.com/scrooloose/nerdcommenter)
   * [Tagbar](https://github.com/majutsushi/tagbar)
   * [Emmet](https://github.com/mattn/emmet-vim)
+  * [ctrlp](https://github.com/kien/ctrlp.vim)
  
 **Colorschemes:**
   * [JellyBeans](https://github.com/nanotech/jellybeans.vim)
