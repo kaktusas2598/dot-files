@@ -13,6 +13,7 @@
   * [Tagbar](https://github.com/majutsushi/tagbar)
   * [Emmet](https://github.com/mattn/emmet-vim)
   * [ctrlp](https://github.com/kien/ctrlp.vim)
+  * [MiniBufExpl](https://github.com/fholgado/minibufexpl.vim)
  
 **Colorschemes:**
   * [JellyBeans](https://github.com/nanotech/jellybeans.vim)
