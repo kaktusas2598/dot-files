@@ -10,6 +10,7 @@
   * [Vim-Airline](https://github.com/bling/vim-airline)
   * [Syntastic](https://github.com/scrooloose/syntastic)
   * [NERDCommenter](https://github.com/scrooloose/nerdcommenter)
+  * [Tagbar] (https://github.com/majutsushi/tagbar)
  
 **Colorschemes:**
   * [JellyBeans](https://github.com/nanotech/jellybeans.vim)
