@@ -9,6 +9,7 @@
   * [NERDTree](https://github.com/scrooloose/nerdtree)
   * [Vim-Airline](https://github.com/bling/vim-airline)
   * [Syntastic](https://github.com/scrooloose/syntastic)
+  * [NERDCommenter](https://github.com/scrooloose/nerdcommenter)
  
 **Colorschemes:**
   * [JellyBeans](https://github.com/nanotech/jellybeans.vim)
