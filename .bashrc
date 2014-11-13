@@ -82,6 +82,8 @@ fi
 #colored terminal
 export TERM="screen-256color" #xterm256-color with tmux doesnt work right
 alias atsipisk='exit'
+#Convert all files in dir from CRLF to LF endings
+alias dirToUnix='find . -type f -exec dos2unix {} \;'
 
 #Open file with default x application
 alias nu="xdg-open"
