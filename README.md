@@ -15,7 +15,9 @@
 **Colorschemes:**
   * [JellyBeans](https://github.com/nanotech/jellybeans.vim)
   * [Solarized](https://github.com/altercation/vim-colors-solarized)
- 
+
+**Dependencies:** 
+  * [Ctags](http://ctags.sourceforge.net/) - for tagbar to work.
 ## Other stuff
 
   * Basic **tmux** configuration
