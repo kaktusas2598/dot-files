@@ -3,9 +3,8 @@
 set nocompatible
 
 if has("vms")
-  set nobackup		" do not keep a backup file, use versions instead
+  set noundofile
 else
-  set backup		" keep a backup file (restore to previous version)
   set undofile		" keep an undo file (undo changes after closing)
 endif
 
@@ -99,6 +98,7 @@ set noerrorbells "don't beep
 
 " Dont like swaps, really ==>()
 set noswapfile
+set nobackup
 
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
