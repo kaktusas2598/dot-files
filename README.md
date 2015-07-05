@@ -28,7 +28,7 @@
   
   * Simple **bash** configuration with some helpful aliases, custom greeting and customized shell prompt.
  
-  * My simple **git** configuration.
+  * My simple **git** configuration for color output and github.
  
  
  **Haters Gonna Hate.**
