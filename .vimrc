@@ -93,7 +93,7 @@ set history=1000
 set undolevels=1000
 set wildignore=*.swp,*.bak,*.pyc,*.class "ignore some extensions
 set title " change terminal's title
-set visualbell "don't beep
+"set visualbell "don't beep !Bug here on linux
 set noerrorbells "don't beep
 
 " Dont like swaps, really ==>()
