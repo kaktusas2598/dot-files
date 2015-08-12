@@ -2,19 +2,27 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-if has("vms")
-  set noundofile
-else
-  set undofile		" keep an undo file (undo changes after closing)
-endif
+"if has ("vms") - doesnt work?
+set noundofile
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
 
-" Use pathogen to include plugins to ~/.vim/bundle/
-call pathogen#helptags()
-call pathogen#infect()
+"TODO: mark :PluginInstall in README
+call plug#begin('~/.vim/plugged')
+" Group dependencies, vim-snippets depends on ultisnips
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+" " On-demand loading
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdcommenter'
+Plug 'majutsushi/tagbar'
+"Type expression and <C-Y>, to expand
+Plug 'mattn/emmet-vim'
+Plug 'kien/ctrlp.vim'
+Plug 'bling/vim-airline'
+Plug 'scrooloose/syntastic'
+call plug#end()
 
 "change mapleared from \ to ,
 let mapleader=","
@@ -60,6 +68,7 @@ set relativenumber "Relative line numbering instead of absolute
 set hidden "Hide buffers instead of closing
 set nowrap "don't wrap lines
 set tabstop=4 "a tab is four spaces
+set backspace=2
 set backspace=indent,eol,start "allow backspacing over anything in insert mode
 set autoindent
 set copyindent "copy previous indentation on autoindeting
@@ -80,11 +89,11 @@ set showcmd " display incomplete commands
 set splitbelow
 set splitright
 
-"Addirional syntax rules show tabs, trailing spaces...
-set list
-set listchars=tab:>.,trail:.,extends:#,nbsp:.
+"Additional syntax rules show tabs, trailing spaces...
+"set list
+"set listchars=tab:>.,trail:.,extends:#,nbsp:.
 "Dont need tab show in HTML, XML files
-autocmd filetype html,xml,php set listchars-=tab:>.
+"autocmd filetype html,xml,php,cpp set listchars-=tab:>.
 
 "Toogle paste mode in insert mode(for pasting from elsewhere to vim)
 set pastetoggle=<F2>
@@ -93,7 +102,7 @@ set history=1000
 set undolevels=1000
 set wildignore=*.swp,*.bak,*.pyc,*.class "ignore some extensions
 set title " change terminal's title
-"set visualbell "don't beep !Bug here on linux
+"set visualbell "don't beep !Bug here on Linux
 set noerrorbells "don't beep
 
 " Dont like swaps, really ==>()
