@@ -5,11 +5,13 @@
 ## Vim
  
 **Installation Guide**
+
   Then first running vim, execute:
   ```
-	:PlugInstall
+  :PlugInstall
   ```
-  	for vim-plug to install plugins...
+  for vim-plug to install plugins.
+  
 **Plugins:**
   * [Pathogen](https://github.com/tpope/vim-pathogen)(Not used right now)
   * [NERDTree](https://github.com/scrooloose/nerdtree)
