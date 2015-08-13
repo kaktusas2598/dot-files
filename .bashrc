@@ -41,33 +41,45 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
-#alias la='ls -A'
+alias la='ls -A'
 #alias l='ls -CF'
 
 # Default to human readable figures
 alias df='df -h'
 alias du='du -h'
 
-alias vi='vim' #Fedora bug? Need to install sudo...
+#alias vi='vim' #Fedora bug? Need to install sudo...
 alias most_used='history|awk '{print $2}'|awk 'BEGIN {FS="|"} {print $1}'|sort|uniq -c|sort -r'
 alias star_wars='telnet towel.blinkenlights.nl'
+#WINE & WINE programs aliases
+alias wine32='env WINEARCH=win32 WINEPREFIX="/home/madvi11ain/.wine32" wine'
+alias League_of_Legends='cd /home/madvi11ain/.wine32/drive_c/Riot\ Games/League\ of\ Legends/RADS/system/ && wine32 rads_user_kernel.exe run lol_launcher $(ls ../projects/lol_launcher/releases/) LoLLauncher.exe'
 #----
 
 #Customize shell prompt
 function prompt
 {
+	#Colors for prompt, see ecpape secuences for colors
 	local WHITE="\[\033[1;37m\]"
 	local GREEN="\[\033[0;32m\]"
+	local YELLOW="\[\033[1;33m\]"
 	local RED="\[\033[0;31m\]"
 	local GRAY="\[\033[0;37m\]"
 	local BLUE="\[\033[0;34m\]"
-	export PS1="${RED}\A${WHITE}[${GREEN}\u@\h ${RED}\W${WHITE}]${GREEN}\$ ${GRAY}"
+
+	#Escape codes
+	local TIME="\A"
+	local USER="\u"
+	local HOST="\h"
+	local PWD="\W"
+	export PS1="${RED}${TIME}${WHITE}[${GREEN}${USER}${YELLOW}@${BLUE}${HOST} ${RED}${PWD}${WHITE}]${YELLOW}\$ ${GRAY}"
+	#export PS1="${RED}\A${WHITE}[${GREEN}\u@\h ${RED}\W${WHITE}]${GREEN}\$ ${GRAY}"
 }
 prompt
 #Greeting
-if [ -x /usr/bin/cowsay -o -x /usr/games/cowsay ]; then
-	echo STANCEGO | cowsay -n -f sodomized.cow #or sodomized-sheep.cow
-fi
+#if [ -x /usr/bin/cowsay -o -x /usr/games/cowsay ]; then
+	#NOTE: can insert cowsay greeting here
+#fi
 #MY
 
 #colored terminal
