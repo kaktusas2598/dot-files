@@ -1,12 +1,6 @@
 # Use case-insensitive filename globbing
 shopt -s nocaseglob
 
-# Make bash append rather than overwrite the history on disk
-shopt -s histappend
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
-
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
@@ -20,8 +14,6 @@ umask 0002
 export HISTCONTROL=ignoredups
 export HISTSIZE=1000
 
-HISTSIZE=1000
-HISTFILESIZE=2000
 # append to the history file, don't overwrite it
 shopt -s histappend
 #----
@@ -57,9 +49,8 @@ alias df='df -h'
 alias du='du -h'
 
 alias vi='vim' #Fedora bug? Need to install sudo...
-#alias most_used='history|awk '{print $2}'|awk 'BEGIN {FS="|"} {print $1}'|sort|uniq -c|sort -r'
+alias most_used='history|awk '{print $2}'|awk 'BEGIN {FS="|"} {print $1}'|sort|uniq -c|sort -r'
 alias star_wars='telnet towel.blinkenlights.nl'
-
 #----
 
 #Customize shell prompt
@@ -86,14 +77,14 @@ alias atsipisk='exit'
 alias dirToUnix='find . -type f -exec dos2unix {} \;'
 
 #Open file with default x application
-alias nu="xdg-open"
+alias o="xdg-open"
 
 alias up="cd .."
 alias ..="cd .."
 #Hardware and drivers info
 alias hardware='lspci -v | less'
 #Web
-alias server='php artisan serve'
+alias laravel_server='php artisan serve'
 
 #Colored man
 export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
@@ -103,5 +94,3 @@ export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
 export LESS_TERMCAP_so=$'\E[01;44;33m'   # begin standout-mode - info box                              
 export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 export LESS_TERMCAP_us=$'\E[01;32m'      # begin underline
-
-
