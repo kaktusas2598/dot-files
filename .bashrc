@@ -49,7 +49,7 @@ alias df='df -h'
 alias du='du -h'
 
 #alias vi='vim' #Fedora bug? Need to install sudo...
-alias most_used='history|awk '{print $2}'|awk 'BEGIN {FS="|"} {print $1}'|sort|uniq -c|sort -r'
+#alias most_used='history|awk '{print $2}'|awk 'BEGIN {FS="|"} {print $1}'|sort|uniq -c|sort -r'
 alias star_wars='telnet towel.blinkenlights.nl'
 #WINE & WINE programs aliases
 alias wine32='env WINEARCH=win32 WINEPREFIX="/home/madvi11ain/.wine32" wine'
