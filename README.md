@@ -5,7 +5,17 @@
 ## Vim
  
 **Installation Guide**
-
+  
+  Clone dot-files by executing:
+  ```
+  git clone https://github.com/kaktusas2598/dot-files.git
+  ```
+  Initialize submodules:
+  ```
+  cd dot-files
+  git submodule init
+  git submodule update
+  ```
   Then first running vim, execute:
   ```
   :PlugInstall
