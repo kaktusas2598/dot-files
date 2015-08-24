@@ -56,6 +56,11 @@ alias wine32='env WINEARCH=win32 WINEPREFIX="/home/madvi11ain/.wine32" wine'
 alias League_of_Legends='cd /home/madvi11ain/.wine32/drive_c/Riot\ Games/League\ of\ Legends/RADS/system/ && wine32 rads_user_kernel.exe run lol_launcher $(ls ../projects/lol_launcher/releases/) LoLLauncher.exe'
 #----
 
+#Get git branch name
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
 #Customize shell prompt
 function prompt
 {
@@ -72,7 +77,7 @@ function prompt
 	local USER="\u"
 	local HOST="\h"
 	local PWD="\W"
-	export PS1="${RED}${TIME}${WHITE}[${GREEN}${USER}${YELLOW}@${BLUE}${HOST} ${RED}${PWD}${WHITE}]${YELLOW}\$ ${GRAY}"
+	export PS1="${RED}${TIME}${WHITE}[${GREEN}${USER}${YELLOW}@${BLUE}${HOST} ${RED}${PWD}${WHITE}]${YELLOW}\$(parse_git_branch) \$ ${GRAY}"
 	#export PS1="${RED}\A${WHITE}[${GREEN}\u@\h ${RED}\W${WHITE}]${GREEN}\$ ${GRAY}"
 }
 prompt
