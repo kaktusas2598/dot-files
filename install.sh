@@ -35,4 +35,4 @@ done
 
 #Apply some changes
 source ~/.bashrc
-echo "Don't forget to run :PlugInstall in vim!"
+vim +PlugInstall +qall
