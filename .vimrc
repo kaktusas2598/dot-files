@@ -22,6 +22,7 @@ Plug 'mattn/emmet-vim'
 Plug 'kien/ctrlp.vim'
 Plug 'bling/vim-airline'
 Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 "change mapleared from \ to ,
@@ -137,6 +138,13 @@ set background=dark
 let g:solarized_termcolors=256
 colorscheme jellybeans "solarized
 syntax on
+
+"Set fonts
+if has("gui_running")
+  if has("gui_win32")
+    set guifont=Consolas:h11:cANSI
+  endif
+endif
 
 "Set autocomplete menu colors
 highlight Pmenu ctermbg=8
