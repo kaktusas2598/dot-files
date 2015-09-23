@@ -23,7 +23,7 @@
   for vim-plug to install plugins.
   
 **Plugins:**
-  * [Pathogen](https://github.com/tpope/vim-pathogen)(Not used right now)
+  * [vim-plug](https://github.com/junegunn/vim-plug)
   * [NERDTree](https://github.com/scrooloose/nerdtree)
   * [Vim-Airline](https://github.com/bling/vim-airline)
   * [Syntastic](https://github.com/scrooloose/syntastic)
@@ -32,6 +32,7 @@
   * [Emmet](https://github.com/mattn/emmet-vim)
   * [ctrlp](https://github.com/kien/ctrlp.vim)
   * [MiniBufExpl](https://github.com/fholgado/minibufexpl.vim)
+  * [surround.vim](https://github.com/tpope/vim-surround)
  
 **Colorschemes:**
   * [JellyBeans](https://github.com/nanotech/jellybeans.vim)
@@ -40,6 +41,8 @@
 
 **Dependencies:** 
   * [Ctags](http://ctags.sourceforge.net/) - for tagbar to work.
+  * [Git](https://git-scm.com/) - for vim-plug
+  * [Python](https://www.python.org/) - for ulti-snip
 ## Other stuff
 
   * Basic **tmux** configuration
@@ -48,5 +51,6 @@
  
   * My simple **git** configuration for color output and github.
  
+  * Basic **urxvt** config file.
  
  **Haters Gonna Hate.**
