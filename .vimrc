@@ -2,6 +2,12 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+"Source syntax, colorschemes and plugins in windows gvim
+"Don't forget to put .vimrc and .vim in $HOME!!
+if has('win32') || has('win64')
+	let &runtimepath.=',$HOME/.vim/'
+endif
+
 "if has ("vms") - doesnt work?
 set noundofile
 
@@ -12,6 +18,7 @@ inoremap <C-U> <C-G>u<C-U>
 "TODO: mark :PluginInstall in README
 call plug#begin('~/.vim/plugged')
 " Group dependencies, vim-snippets depends on ultisnips
+" Causes problems in windows gVim
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 " " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
