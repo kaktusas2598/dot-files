@@ -5,7 +5,7 @@ set nocompatible
 "Source syntax, colorschemes and plugins in windows gvim
 "Don't forget to put .vimrc and .vim in $HOME!!
 if has('win32') || has('win64')
-	let &runtimepath.=',$HOME/.vim/'
+  let &runtimepath.=',$HOME/.vim/'
 endif
 
 "if has ("vms") - doesnt work?
