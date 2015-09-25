@@ -44,6 +44,7 @@
   * [Ctags](http://ctags.sourceforge.net/) - for tagbar to work.
   * [Git](https://git-scm.com/) - for vim-plug
   * [Python](https://www.python.org/) - for ulti-snip
+  * [Patched Powerline Fonts](https://github.com/powerline/fonts)
 ## Other stuff
 
   * Basic **tmux** configuration
