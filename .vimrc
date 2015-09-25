@@ -67,6 +67,13 @@ nnoremap ; :
 "Always show status line(Includes airline show, if installed)
 set laststatus=2
 
+"Use utf-8 encoding
+set encoding=utf8
+
+"Use patched powerline fonts and enable smart tab show in top
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
 "folding settings
 set foldmethod=syntax   "fold based on t
 set foldnestmax=10      "deepest fold is 10 levels
@@ -148,8 +155,14 @@ syntax on
 
 "Set fonts
 if has("gui_running")
+  #Start gui minimal with no scrollbar, toolbar or menu
+  set go -=T
+  set go -=m
+  set go -=r
   if has("gui_win32")
-    set guifont=Consolas:h11:cANSI
+    "set guifont=Consolas:h11:cANSI Default
+    "Patched powerline font
+    set guifont=DejaVu_Sans_Mono_for_Powerline:h10:cANSI
   endif
 endif
 
