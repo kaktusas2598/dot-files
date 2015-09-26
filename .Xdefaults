@@ -1,9 +1,10 @@
 ! urxvt
 
-URxvt*geometry:                80x40
+URxvt*geometry:                120x40
 !URxvt*font: xft:Liberation Mono:pixelsize=14:antialias=false:hinting=true
-URxvt*font: xft:Inconsolata:pixelsize=17:antialias=true:hinting=true
-URxvt*boldFont: xft:Inconsolata:bold:pixelsize=17:antialias=true:hinting=true
+!URxvt*font: xft:Inconsolata:pixelsize=17:antialias=true:hinting=true
+!URxvt*boldFont: xft:Inconsolata:bold:pixelsize=17:antialias=true:hinting=true
+urxvt*font: xft:Inconsolata\ for\ Powerline:pixelsize=14
 !URxvt*boldFont: xft:Liberation Mono:bold:pixelsize=14:antialias=false:hinting=true
 
 URxvt.depth: 32
