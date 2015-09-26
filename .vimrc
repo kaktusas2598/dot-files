@@ -155,7 +155,7 @@ syntax on
 
 "Set fonts
 if has("gui_running")
-  #Start gui minimal with no scrollbar, toolbar or menu
+  "Start gui minimal with no scrollbar, toolbar or menu
   set go -=T
   set go -=m
   set go -=r
