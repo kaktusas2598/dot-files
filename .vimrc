@@ -64,6 +64,9 @@ nnoremap <C-H> <C-W><C-H>
 "Map ; to ex cmd mode
 nnoremap ; :
 
+"Enable mouse scrolling
+set mouse=a
+
 "Always show status line(Includes airline show, if installed)
 set laststatus=2
 
