@@ -20,8 +20,8 @@ inoremap <C-U> <C-G>u<C-U>
 "TODO: mark :PluginInstall in README
 call plug#begin('~/.vim/plugged')
 " Group dependencies, vim-snippets depends on ultisnips
-" Causes problems in windows gVim
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+" Causes problems: does not find Python interpreter
+" Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 " " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
