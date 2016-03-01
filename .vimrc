@@ -20,8 +20,8 @@ inoremap <C-U> <C-G>u<C-U>
 "TODO: mark :PluginInstall in README
 call plug#begin('~/.vim/plugged')
 " Group dependencies, vim-snippets depends on ultisnips
-" Causes problems in windows gVim
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+" Causes problems: does not find Python interpreter
+" Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 " " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
@@ -32,6 +32,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'bling/vim-airline'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-surround'
+Plug 'terryma/vim-multiple-cursors'
 call plug#end()
 
 "change mapleared from \ to ,
@@ -41,6 +42,8 @@ nmap <silent><leader>ev :e $MYVIMRC<CR>
 nmap <silent><leader>sv :so $MYVIMRC<CR>
 "Disable search highlight
 nmap <silent> ,/ :nohlsearch<CR>
+"Can now cancel search by escape
+nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 
 "Easier Buffer switching
 nmap <silent><leader>bn :bn<CR>
@@ -84,6 +87,8 @@ set foldmethod=syntax   "fold based on t
 set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 
+"Default startup size
+set lines=30 columns=120
 set relativenumber "Relative line numbering instead of absolute
 set hidden "Hide buffers instead of closing
 set nowrap "don't wrap lines
@@ -141,8 +146,11 @@ map <C-n> :NERDTreeToggle<CR>
 "Map Ctrl+t to TagBar
 map <C-t> :TagbarToggle<CR>
 
-"Close vim if only window is NERDTree 
+"Close vim if only window is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+"Remove whitespaces on save
+autocmd BufWritePre * :%s/\s\+$//e
 
 "intend intelligence based on syntax rules
 filetype plugin indent on
@@ -151,6 +159,10 @@ filetype plugin indent on
 if has('autocmd')
 	autocmd filetype python set expandtab"TODO:add more
 endif
+
+"Set php chechers
+let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+
 " Add syntax highlight and colorscheme
 set t_Co=256
 set background=dark
@@ -176,7 +188,7 @@ highlight Pmenu ctermbg=8
 highlight PmenuSel ctermbg=1
 highlight PmenuSbar ctermbg=0
 "Window split colors
-highlight VertSplit cterm=none gui=none 
+highlight VertSplit cterm=none gui=none
 "highlight StatusLineNC
 
 "Vimdiff coloring
