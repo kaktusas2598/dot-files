@@ -1,4 +1,8 @@
+" PLUGIN USE
 " To use Emmet for Html expansion, write expansion and use <C-y>, to expand it!!
+" For Toggle comments with NerCommenter use <leader>cc
+" Toggling NERDTree: <C-n>
+" Toggling Tagbar(Needs ctags to work!!): <C-t>
 
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
@@ -17,7 +21,7 @@ set noundofile
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
 
-"TODO: mark :PluginInstall in README
+" LOAD PLUGINS
 call plug#begin('~/.vim/plugged')
 " Group dependencies, vim-snippets depends on ultisnips
 " Causes problems: does not find Python interpreter
@@ -26,7 +30,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'majutsushi/tagbar'
-"Type expression and <C-Y>, to expand
 Plug 'mattn/emmet-vim'
 Plug 'kien/ctrlp.vim'
 Plug 'bling/vim-airline'
@@ -35,6 +38,7 @@ Plug 'tpope/vim-surround'
 Plug 'terryma/vim-multiple-cursors'
 call plug#end()
 
+" KEY MAPPINGS
 "change mapleared from \ to ,
 let mapleader=","
 "Quickly edit/reload vimrc
@@ -69,6 +73,11 @@ nnoremap <C-H> <C-W><C-H>
 "Map ; to ex cmd mode
 nnoremap ; :
 
+"Map Ctrl-n to NERDTree
+map <C-n> :NERDTreeToggle<CR>
+"Map Ctrl+t to TagBar
+map <C-t> :TagbarToggle<CR>
+
 "Enable mouse scrolling
 set mouse=a
 
@@ -77,10 +86,6 @@ set laststatus=2
 
 "Use utf-8 encoding
 set encoding=utf8
-
-"Use patched powerline fonts and enable smart tab show in top
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
 
 "folding settings
 set foldmethod=syntax   "fold based on t
@@ -134,6 +139,15 @@ set noerrorbells "don't beep
 set noswapfile
 set nobackup
 
+
+
+" AUTO COMMANDS
+"Close vim if only window is NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+"Remove whitespaces on save
+autocmd BufWritePre * :%s/\s\+$//e
+
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
@@ -141,16 +155,13 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
-"Map Ctrl-n to NERDTree
-map <C-n> :NERDTreeToggle<CR>
-"Map Ctrl+t to TagBar
-map <C-t> :TagbarToggle<CR>
-
-"Close vim if only window is NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-"Remove whitespaces on save
-autocmd BufWritePre * :%s/\s\+$//e
+" AIRLINE SETTINGS
+"Use patched powerline fonts for airline and enable smart tab show in top
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+" SYNTASTIC SETTINGS
+"Set php chechers
+let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
 
 "intend intelligence based on syntax rules
 filetype plugin indent on
@@ -160,14 +171,12 @@ if has('autocmd')
 	autocmd filetype python set expandtab"TODO:add more
 endif
 
-"Set php chechers
-let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
-
+" VIM LOOKS
 " Add syntax highlight and colorscheme
 set t_Co=256
 set background=dark
 let g:solarized_termcolors=256
-colorscheme jellybeans "solarized
+colorscheme jellybeans "solarized molokai
 syntax on
 
 "Set fonts
