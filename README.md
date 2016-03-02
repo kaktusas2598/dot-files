@@ -33,6 +33,7 @@
   * [ctrlp](https://github.com/kien/ctrlp.vim)
   * [MiniBufExpl](https://github.com/fholgado/minibufexpl.vim)
   * [surround.vim](https://github.com/tpope/vim-surround)
+  * [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
  
 **Colorschemes:**
   * [JellyBeans](https://github.com/nanotech/jellybeans.vim)
