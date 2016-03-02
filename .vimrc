@@ -35,6 +35,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'bling/vim-airline'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
 Plug 'terryma/vim-multiple-cursors'
 call plug#end()
 
@@ -120,8 +121,8 @@ set splitbelow
 set splitright
 
 "Additional syntax rules show tabs, trailing spaces...
-"set list
-"set listchars=tab:>.,trail:.,extends:#,nbsp:.
+"set list listchars=tab:>.,trail:.,extends:#,nbsp:.
+set list listchars=tab:▸\ ,trail:·
 "Dont need tab show in HTML, XML files
 "autocmd filetype html,xml,php,cpp set listchars-=tab:>.
 
@@ -138,8 +139,6 @@ set noerrorbells "don't beep
 " Dont like swaps, really ==>()
 set noswapfile
 set nobackup
-
-
 
 " AUTO COMMANDS
 "Close vim if only window is NERDTree
@@ -187,8 +186,9 @@ if has("gui_running")
   set go -=r
   if has("gui_win32")
     "set guifont=Consolas:h11:cANSI Default
-    "Patched powerline font
-    set guifont=DejaVu_Sans_Mono_for_Powerline:h10:cANSI
+    "Patched powerline fonts
+    "set guifont=DejaVu_Sans_Mono_for_Powerline:h10:cANSI
+    set guifont=Inconsolata_for_Powerline:h12:cANSI
   endif
 endif
 
