@@ -196,6 +196,11 @@ endif
 highlight Pmenu ctermbg=8
 highlight PmenuSel ctermbg=1
 highlight PmenuSbar ctermbg=0
+"Autocomplete colors for menu
+highlight Pmenu guibg=dimgray guifg=white gui=bold
+highlight PmenuSel guibg=limegreen
+highlight PmenuSbar guibg=firebrick
+
 "Window split colors
 highlight VertSplit cterm=none gui=none
 "highlight StatusLineNC
