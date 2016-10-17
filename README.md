@@ -1,26 +1,26 @@
 # Dot Files
  
   This is my Configuration files which I use for my daily development.
- 
-## Vim
- 
-**Installation Guide**
   
-  Clone dot-files by executing:
+  ![](https://raw.githubusercontent.com/kaktusas2598/dot-files/master/vimSetup.png)
+
+## Installation
+  
   ```
-  git clone https://github.com/kaktusas2598/dot-files.git
-  ```
-  Initialize submodules:
-  ```
-  cd dot-files
-  git submodule init
-  git submodule update
+  $ git clone https://github.com/kaktusas2598/dot-files.git
+  $ cd dot-files
+  $ git submodule init
+  $ git submodule update
   ```
   Then first running vim, execute:
   ```
   :PlugInstall
   ```
   for vim-plug to install plugins.
+  
+**Vim Key mappings**
+  
+  
   
 **Plugins:**
   * [vim-plug](https://github.com/junegunn/vim-plug)
@@ -42,11 +42,12 @@
   * [Molokai](https://github.com/tomasr/molokai)
   * [Vividchalk](https://github.com/tpope/vim-vividchalk)
 
-**Dependencies:** 
+## Dependencies
   * [Ctags](http://ctags.sourceforge.net/) - for tagbar to work.
   * [Git](https://git-scm.com/) - for vim-plug
-  * [Python](https://www.python.org/) - for ulti-snip
+  * [Python](https://www.python.org/) - for ulti-snip (currently removed, but you can add to yours)
   * [Patched Powerline Fonts](https://github.com/powerline/fonts)
+  
 ## Other stuff
 
   * Basic **tmux** configuration
