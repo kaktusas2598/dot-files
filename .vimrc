@@ -10,9 +10,9 @@ set nocompatible
 
 "Source syntax, colorschemes and plugins in windows gvim
 "Don't forget to put .vimrc and .vim in $HOME!!
-if has('win32') || has('win64')
-  let &runtimepath.=',$HOME/.vim/'
-endif
+"if has('win32') || has('win64')
+  "let &runtimepath.=',$HOME/.vim/'
+"endif
 
 "if has ("vms") - doesnt work?
 set noundofile
@@ -37,6 +37,7 @@ Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'octol/vim-cpp-enhanced-highlight'
 call plug#end()
 
 " KEY MAPPINGS
@@ -76,6 +77,7 @@ nnoremap ; :
 
 "Map Ctrl-n to NERDTree
 map <C-n> :NERDTreeToggle<CR>
+map <silent><leader>n :NERDTreeToggle<CR>
 "Map Ctrl+t to TagBar
 map <C-t> :TagbarToggle<CR>
 
@@ -158,6 +160,33 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 "Use patched powerline fonts for airline and enable smart tab show in top
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+
 " SYNTASTIC SETTINGS
 "Set php chechers
 let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
@@ -170,12 +199,21 @@ if has('autocmd')
 	autocmd filetype python set expandtab"TODO:add more
 endif
 
+" Powetline fonts fix for iTerm2
+set guifont=Monaco\ for\ Powerline
+let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
+"set t_Co=256
+"set fillchars+=stl:\ ,stlnc:\
+"set term=xterm-256color
+set termencoding=utf-8
+
 " VIM LOOKS
 " Add syntax highlight and colorscheme
 set t_Co=256
 set background=dark
 let g:solarized_termcolors=256
-colorscheme jellybeans "solarized molokai
+colorscheme vividchalk "jellybeans solarized molokai
 syntax on
 
 "Set fonts
@@ -184,11 +222,15 @@ if has("gui_running")
   set go -=T
   set go -=m
   set go -=r
+  "set guifont=Inconsolata_for_Powerline:h12:cANSI
+  "For Mac
+  set guifont=Monaco\ for\ Powerline
+  ":h12:cANSI
   if has("gui_win32")
     "set guifont=Consolas:h11:cANSI Default
     "Patched powerline fonts
     "set guifont=DejaVu_Sans_Mono_for_Powerline:h10:cANSI
-    set guifont=Inconsolata_for_Powerline:h12:cANSI
+	set guifont=Inconsolata_for_Powerline:h12:cANSI
   endif
 endif
 
@@ -197,9 +239,9 @@ highlight Pmenu ctermbg=8
 highlight PmenuSel ctermbg=1
 highlight PmenuSbar ctermbg=0
 "Autocomplete colors for menu
-highlight Pmenu guibg=dimgray guifg=white gui=bold
-highlight PmenuSel guibg=limegreen
-highlight PmenuSbar guibg=firebrick
+"highlight Pmenu guibg=dimgray guifg=white gui=bold
+"highlight PmenuSel guibg=limegreen
+"highlight PmenuSbar guibg=firebrick
 
 "Window split colors
 highlight VertSplit cterm=none gui=none
@@ -210,3 +252,5 @@ highlight DiffAdd cterm=none ctermfg=bg ctermbg=Green gui=none guifg=bg guibg=Gr
 highlight DiffDelete cterm=none ctermfg=bg ctermbg=Red gui=none guifg=bg guibg=Red
 highlight DiffChange cterm=none ctermfg=bg ctermbg=Yellow gui=none guifg=bg guibg=Yellow
 highlight DiffText cterm=none ctermfg=bg ctermbg=Magenta gui=none guifg=bg guibg=Magenta
+
+set transparency=35
