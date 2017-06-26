@@ -199,10 +199,6 @@ if has('autocmd')
 	autocmd filetype python set expandtab"TODO:add more
 endif
 
-" Powetline fonts fix for iTerm2
-set guifont=Monaco\ for\ Powerline
-let g:Powerline_symbols = 'fancy'
-set encoding=utf-8
 "set t_Co=256
 "set fillchars+=stl:\ ,stlnc:\
 "set term=xterm-256color
@@ -223,8 +219,6 @@ if has("gui_running")
   set go -=m
   set go -=r
   "set guifont=Inconsolata_for_Powerline:h12:cANSI
-  "For Mac
-  set guifont=Monaco\ for\ Powerline
   ":h12:cANSI
   if has("gui_win32")
     "set guifont=Consolas:h11:cANSI Default
@@ -253,4 +247,15 @@ highlight DiffDelete cterm=none ctermfg=bg ctermbg=Red gui=none guifg=bg guibg=R
 highlight DiffChange cterm=none ctermfg=bg ctermbg=Yellow gui=none guifg=bg guibg=Yellow
 highlight DiffText cterm=none ctermfg=bg ctermbg=Magenta gui=none guifg=bg guibg=Magenta
 
-set transparency=35
+if has("unix")
+  let s:uname = system("uname")
+  if s:uname == "Darwin\n"
+    " Do Mac stuff here
+	set transparency=35
+	" Powetline fonts fix for iTerm2
+	set guifont=Monaco\ for\ Powerline
+	let g:Powerline_symbols = 'fancy'
+	set encoding=utf-8
+
+  endif
+endif
