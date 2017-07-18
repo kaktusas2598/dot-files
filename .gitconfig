@@ -8,3 +8,15 @@
 	interactive = auto
 	ui = true
 	pager = true
+[alias]
+	a = add
+	b = branch
+	c = commit
+	d = diff
+	g = grep
+	l = log
+	m = merge
+	o = checkout
+	p = pull
+	r = remote
+	s = status
