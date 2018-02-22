@@ -38,6 +38,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'vim-ctrlspace/vim-ctrlspace'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " KEY MAPPINGS
@@ -54,6 +56,8 @@ nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 "Easier Buffer switching
 nmap <silent><leader>bn :bn<CR>
 nmap <silent><leader>bp :bp<CR>
+"Quick buffer closing
+nmap <silent><leader>bd :bd<CR>
 
 "Map window resizing to Alt+h,j,k,l
 map <silent> <A-h> <C-w><
@@ -76,7 +80,7 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap ; :
 
 "Map Ctrl-n to NERDTree
-map <C-n> :NERDTreeToggle<CR>
+nmap <C-n> :NERDTreeToggle<CR>
 map <silent><leader>n :NERDTreeToggle<CR>
 "Map Ctrl+t to TagBar
 map <C-t> :TagbarToggle<CR>
