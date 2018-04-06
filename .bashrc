@@ -113,7 +113,8 @@ export TERM="screen-256color" #xterm256-color with tmux doesnt work right
 alias atsipisk='exit'
 #Convert all files in dir from CRLF to LF endings
 alias dirToUnix='find . -type f -exec dos2unix {} \;'
-
+#Same as CMD+K on MAC, clears whole scrollable buffer, not just visible part							
+alias clear="clear && printf '\e[3J'"
 #Open file with default x application
 alias o="xdg-open"
 
