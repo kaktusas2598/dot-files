@@ -115,8 +115,11 @@ alias atsipisk='exit'
 alias dirToUnix='find . -type f -exec dos2unix {} \;'
 #Same as CMD+K on MAC, clears whole scrollable buffer, not just visible part							
 alias clear="clear && printf '\e[3J'"
-#Open file with default x application
-alias o="xdg-open"
+
+#For linux OS, alias xdg-open as open to make it work just like in OS X
+if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+	alias open="xdg-open"
+fi
 
 alias up="cd .."
 alias ..="cd .."
