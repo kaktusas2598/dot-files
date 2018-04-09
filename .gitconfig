@@ -11,7 +11,7 @@
 [alias]
 	a = add
 	b = branch
-	c = commit
+	c = commit -m
 	d = diff
 	g = grep
 	l = log
