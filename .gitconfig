@@ -13,6 +13,7 @@
 	b = branch
 	c = commit -m
 	d = diff
+	f = fetch --prune
 	g = grep
 	l = log
 	m = merge
