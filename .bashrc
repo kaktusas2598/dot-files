@@ -1,6 +1,9 @@
 # Use case-insensitive filename globbing
 shopt -s nocaseglob
 
+# Enable dot files globbing, wildcard matches hidden files
+#shopt -s dotglob
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
@@ -48,7 +51,12 @@ alias la='ls -A'
 alias df='df -h'
 alias du='du -h'
 
-#alias vi='vim' #Fedora bug? Need to install sudo...
+alias c='clear'
+
+#For lazy devs like me
+alias gut='git'
+alias got='git'
+
 #alias most_used='history|awk '{print $2}'|awk 'BEGIN {FS="|"} {print $1}'|sort|uniq -c|sort -r'
 alias star_wars='telnet towel.blinkenlights.nl'
 #WINE & WINE programs aliases
