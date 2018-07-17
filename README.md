@@ -11,6 +11,8 @@
   $ cd dot-files
   $ git submodule init
   $ git submodule update
+  $ chmod +x install.sh
+  $ ./install.sh
   ```
   Then first running vim, execute:
   ```
