@@ -85,7 +85,8 @@ function prompt
 	local USER="\u"
 	local HOST="\h"
 	local PWD="\W"
-	export PS1="${RED}${TIME}${WHITE}[${GREEN}${USER}${YELLOW}@${BLUE}${HOST} ${RED}${PWD}${WHITE}]${YELLOW}\$(parse_git_branch) \$ ${GRAY}"
+	local FULL_PWD="\w"
+	export PS1="${RED}${TIME}${WHITE}[${GREEN}${USER}${YELLOW}:${BLUE}${FULL_PWD}${WHITE}]${YELLOW}\$(parse_git_branch) \$ ${GRAY}"
 	#export PS1="${RED}\A${WHITE}[${GREEN}\u@\h ${RED}\W${WHITE}]${GREEN}\$ ${GRAY}"
 }
 prompt
@@ -121,7 +122,7 @@ export TERM="screen-256color" #xterm256-color with tmux doesnt work right
 alias atsipisk='exit'
 #Convert all files in dir from CRLF to LF endings
 alias dirToUnix='find . -type f -exec dos2unix {} \;'
-#Same as CMD+K on MAC, clears whole scrollable buffer, not just visible part							
+#Same as CMD+K on MAC, clears whole scrollable buffer, not just visible part
 alias clear="clear && printf '\e[3J'"
 
 #For linux OS, alias xdg-open as open to make it work just like in OS X
@@ -141,6 +142,41 @@ export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
 export LESS_TERMCAP_md=$'\E[01;31m'      # begin bold
 export LESS_TERMCAP_me=$'\E[0m'           # end mode
 export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
-export LESS_TERMCAP_so=$'\E[01;44;33m'   # begin standout-mode - info box                              
+export LESS_TERMCAP_so=$'\E[01;44;33m'   # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 export LESS_TERMCAP_us=$'\E[01;32m'      # begin underline
+
+alias docker-stop-all='docker stop $(docker ps -a -q)'
+alias docker-rm-all='docker rm $(docker ps -a -q)'
+alias docker-rmi-all='docker rmi $(docker images -q)'
+alias docker-compose-reload='docker-compose down; docker-compose build; docker-compose up -d'
+alias docker-compose-reload-no-cache='docker-compose down; docker-compose build --no-cache; docker-compose up -d'
+#alias docker-spawn='docker exec -it cli bash'
+alias docker-spawn='docker exec -it webapp bash'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+alias openPorts="sudo lsof -i -P -n | grep LISTEN"
+
+# Only for testing purposes
+# Run inside pi-app root outside of Docker!!!
+# PHPSTORM executes phpunit using php with option -dxdebug.coverage_enable=1
+# MINE - --coverage-clover ~/.PhpStorm2018.2/system/coverage/checkout$unit.xml
+# php storm --coverage-clover /opt/phpstorm-coverage/checkout@unit.xml
+alias code-coverage="vendor/bin/phpunit -d memory_limit=2G --coverage-clover /opt/phpstorm-coverage/checkout@unit.xml --bootstrap tests/unit/bootstrap.php --configuration tests/unit/phpunit.xml tests/unit --teamcity"
+
+
+
+# enable bash completion in interactive shells
+if ! shopt -oq posix; then
+	  if [ -f /usr/share/bash-completion/bash_completion ]; then
+	    . /usr/share/bash-completion/bash_completion
+      elif [ -f /etc/bash_completion ]; then
+		. /etc/bash_completion
+      fi
+fi
+
+# tabtab source for packages
+# uninstall by removing these lines
+[ -f ~/.config/tabtab/__tabtab.bash ] && . ~/.config/tabtab/__tabtab.bash || true

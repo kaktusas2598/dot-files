@@ -40,6 +40,8 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'vim-ctrlspace/vim-ctrlspace'
 Plug 'airblade/vim-gitgutter'
+Plug 'rafi/awesome-vim-colorschemes'
+"Plug 'rip-rip/clang_complete'
 call plug#end()
 
 " KEY MAPPINGS
@@ -84,6 +86,7 @@ nmap <C-n> :NERDTreeToggle<CR>
 map <silent><leader>n :NERDTreeToggle<CR>
 "Map Ctrl+t to TagBar
 map <C-t> :TagbarToggle<CR>
+map <silent><leader>t :TagbarToggle<CR>
 
 "Enable mouse scrolling
 set mouse=a
@@ -100,7 +103,7 @@ set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 
 "Default startup size
-set lines=30 columns=120
+"set lines=30 columns=120
 set relativenumber "Relative line numbering instead of absolute
 set hidden "Hide buffers instead of closing
 set nowrap "don't wrap lines
@@ -213,7 +216,7 @@ set termencoding=utf-8
 set t_Co=256
 set background=dark
 let g:solarized_termcolors=256
-colorscheme vividchalk "jellybeans solarized molokai
+colorscheme deep-space
 syntax on
 
 "Set fonts
@@ -264,3 +267,32 @@ if has("unix")
 
   endif
 endif
+
+
+" Font commands
+let s:pattern = '^\(.* \)\([1-9][0-9]*\)$'
+let s:minfontsize = 6
+let s:maxfontsize = 16
+function! AdjustFontSize(amount)
+  if has("gui_gtk2") && has("gui_running")
+    let fontname = substitute(&guifont, s:pattern, '\1', '')
+    let cursize = substitute(&guifont, s:pattern, '\2', '')
+    let newsize = cursize + a:amount
+    if (newsize >= s:minfontsize) && (newsize <= s:maxfontsize)
+      let newfont = fontname . newsize
+      let &guifont = newfont
+    endif
+  else
+    echoerr "You need to run the GTK2 version of Vim to use this function."
+  endif
+endfunction
+
+function! LargerFont()
+  call AdjustFontSize(1)
+endfunction
+command! LargerFont call LargerFont()
+
+function! SmallerFont()
+  call AdjustFontSize(-1)
+endfunction
+command! SmallerFont call SmallerFont()
