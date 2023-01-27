@@ -59,6 +59,7 @@ alias c='clear'
 #For lazy devs like me
 alias gut='git'
 alias got='git'
+alias n='nvim'
 
 #alias most_used='history|awk '{print $2}'|awk 'BEGIN {FS="|"} {print $1}'|sort|uniq -c|sort -r'
 alias star_wars='telnet towel.blinkenlights.nl'

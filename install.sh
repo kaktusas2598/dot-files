@@ -6,7 +6,7 @@ dir=~/dot-files				#dot files directory
 olddir=~/dot-files_old		#old dot-files backup directory
 
 #list of files to symlink to homedir
-files=".bashrc .gitconfig .inputrc .tmux .tmux.conf .vim .vimrc"	
+files=".bashrc .gitconfig .inputrc .tmux .tmux.conf .vim .vimrc"
 ####
 
 #Create dot-files_old in homedir
@@ -25,13 +25,17 @@ git submodule init
 git submodule update
 echo "DONE"
 
-#Move any exsitinf dotfiles in homedir to backup dir then create symlinks
+#Move any exsiting dotfiles in homedir to backup dir then create symlinks
 for file in $files; do
 	echo "Moving any existing dotfiles from ~ to $olddir"
 	mv ~/$file $olddir/
 	echo "Creating symlink to $file in home directory."
 	ln -s $dir/$file ~/$file
 done
+
+# Symlink neovim init.vim
+echo "Symlinking NeoVim config"
+ln -s $dir/.config/nvim/init.vim ~/.config/nvim/init.vim
 
 #Apply some changes
 source ~/.bashrc
