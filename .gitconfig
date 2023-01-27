@@ -8,6 +8,8 @@
 	interactive = auto
 	ui = true
 	pager = true
+[core]
+	editor = vim
 [alias]
 	a = add
 	b = branch
