@@ -24,6 +24,8 @@ keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
+keymap("n", "<C-e>", ":NvimTreeToggle<CR>")
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>")
 keymap("n", "<C-n>", ":NvimTreeToggle<CR>")
 keymap("n", "<leader>n", ":NvimTreeToggle<CR>")
 -- NERDTree and Tagbar remaps
