@@ -35,8 +35,8 @@ keymap("n", "<C-t>", ":TagbarToggle<CR>")
 keymap("n", "<leader>t", ":TagbarToggle<CR>")
 
 -- Telescope keybinds for quick fuzzy search
-local builtin = require('telescope.builtin')
-keymap('n', '<leader>ff', builtin.find_files, {})
-keymap('n', '<leader>fg', builtin.live_grep, {})
-keymap('n', '<leader>fb', builtin.buffers, {})
-keymap('n', '<leader>fh', builtin.help_tags, {})
+--local builtin = require('telescope.builtin')
+--keymap('n', '<leader>ff', builtin.find_files, {})
+--keymap('n', '<leader>fg', builtin.live_grep, {})
+--keymap('n', '<leader>fb', builtin.buffers, {})
+--keymap('n', '<leader>fh', builtin.help_tags, {})

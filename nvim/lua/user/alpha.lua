@@ -23,7 +23,7 @@ dashboard.section.buttons.val = {
 }
 
 local function footer()
-	return "Madvi11ain: https://github.com/kaktusas2598"
+	return "Madvi11ain: https://github.com/kaktusas2598\nWu Tang Forever\n"
 end
 
 dashboard.section.footer.val = footer()
