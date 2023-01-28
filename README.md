@@ -37,11 +37,12 @@ Simply copy files in nvim directory to:
   
 **Common Nvim/Vim Key mappings**
 
-* <leader>bn - next buffer
-* <leader>bp - prev buffer
-* <leader>bd - close buffer
-* <leader>n - toggle file explorer
-* <leader>c<space> - toggle comment
+* '\<leader\>' - ','
+* '\<leader\>bn' - next buffer
+* '\<leader\>bp' - prev buffer
+* '\<leader\>bd' - close buffer
+* '\<leader\>n' - toggle file explorer
+* '\<leader\>c\<space\>' - toggle comment
   
   
 **Vim Plugins:**
@@ -69,15 +70,4 @@ Simply copy files in nvim directory to:
   * [Git](https://git-scm.com/) - for vim-plug
   * [Python](https://www.python.org/) - for ulti-snip (currently removed, but you can add to yours)
   * [Patched Powerline Fonts](https://github.com/powerline/fonts)
-  * [Lua]
-  
-## Other stuff
-
-  * Basic **tmux** configuration
-  
-  * Simple **bash** configuration with some helpful aliases, custom greeting and customized shell prompt.
- 
-  * My simple **git** configuration for color output and github.
- 
-  * Basic **urxvt** config file.
- 
+  * [Lua](https://www.lua.org/)
