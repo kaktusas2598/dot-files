@@ -11,7 +11,13 @@ keymap("n", ",/", ":nohlsearch<CR>", opts)
 keymap("v", "J", ":m '>+1<CR>gv=gv")
 keymap("v", "K", ":m '<-2<CR>gv=gv")  
 
--- Buffer mappings
+--keymap("x", "<leader>p", "\"_dP")
+
+-- Yank into system's clipboard
+keymap("n", "<leader>y", "\"+y")
+keymap("v", "<leader>y", "\"+y")
+
+-- Buffer keymap
 keymap("n", "<leader>bn", ":bnext<CR>")
 keymap("n", "<leader>bp", ":bprev<CR>")
 keymap("n", "<leader>bd", ":bd<CR>")
