@@ -4,14 +4,16 @@ if not status_ok then
 end
 
 configs.setup({
-  ensure_installed = { "bash", "c", "php", "json", "lua", "python", "hcl", "css", "go", "rust", "yaml", "markdown", "markdown_inline" }, -- one of "all" or a list of languages
-	ignore_install = { "" }, -- List of parsers to ignore installing
-	highlight = {
-		enable = true, -- false will disable the whole extension
-		disable = { "" }, -- list of language that will be disabled
-	},
-	autopairs = {
-		enable = true,
-	},
-	indent = { enable = true },
+    ensure_installed = { "help", "bash", "c", "php", "json", "lua", "python", "hcl", "css", "go", "rust", "yaml", "cpp", "markdown", "markdown_inline" }, -- one of "all" or a list of languages
+    sync_install = false,
+    auto_install = true,
+    ignore_install = { "" }, -- List of parsers to ignore installing
+    highlight = {
+        enable = true, -- false will disable the whole extension
+        disable = { "" }, -- list of language that will be disabled
+    },
+    autopairs = {
+        enable = true,
+    },
+    indent = { enable = true },
 })
