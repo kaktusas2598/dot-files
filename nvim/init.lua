@@ -1,8 +1,9 @@
 require('user.remap')
 require('user.options')
 require('user.packer')
-require('user.treesitter')
 require('user.lualine')
+
+require('user.treesitter')
 require('user.bufferline')
 --require('user.autocommands')
 --require('user.indentline')
