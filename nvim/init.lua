@@ -5,7 +5,7 @@ require('user.lualine')
 
 require('user.treesitter')
 require('user.bufferline')
---require('user.autocommands')
+require('user.autocommands')
 --require('user.indentline')
 require('user.nvim-tree')
 require('user.cmp')
