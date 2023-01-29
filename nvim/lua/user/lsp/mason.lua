@@ -1,4 +1,5 @@
 local servers = {
+    -- Lua Lang Server
 	"sumneko_lua",
 	-- "cssls",
 	-- "html",
@@ -7,6 +8,15 @@ local servers = {
 	-- "bashls",
 	"jsonls",
 	-- "yamlls",
+    -- C++ Lang Servers
+    "clangd",
+    --"ccls"
+    -- Markdown servers
+    --"marksman"
+    --PHP Lang servers
+    --"intelephense"
+    --"phpactor"
+    --"psalm"
 }
 
 local settings = {

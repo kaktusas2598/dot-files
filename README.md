@@ -1,7 +1,7 @@
 # Dot Files
- 
+
   This is my Configuration files which I use for my daily development.
-  
+
   ![vim](https://raw.githubusercontent.com/kaktusas2598/dot-files/master/vimSetup.png)
   ![nvim](https://raw.githubusercontent.com/kaktusas2598/dot-files/master/nVimSetup.png)
 
@@ -13,7 +13,7 @@
   * bash, git, urxvt, etc.
 
 ## Installation
-  
+
   ```
   $ git clone https://github.com/kaktusas2598/dot-files.git
   $ cd dot-files
@@ -34,7 +34,7 @@ Simply copy files in nvim directory to:
 
 * `~/.config/nvim` on Linux
 * `%AppData%/Local/nvim/` on Windows
-  
+
 **Common Nvim/Vim Key mappings**
 
 * '\<leader\>' - ','
@@ -43,8 +43,8 @@ Simply copy files in nvim directory to:
 * '\<leader\>bd' - close buffer
 * '\<leader\>n' - toggle file explorer
 * '\<leader\>c\<space\>' - toggle comment
-  
-  
+
+
 **Vim Plugins:**
   * [vim-plug](https://github.com/junegunn/vim-plug)
   * [NERDTree](https://github.com/scrooloose/nerdtree)
@@ -61,7 +61,7 @@ Simply copy files in nvim directory to:
 
 **NeoVim Plugins**
   * TODO
- 
+
 **Colorschemes:**
   * [AwesomeColorschemes](https://github.com/rafi/awesome-vim-colorschemes)
 
@@ -71,3 +71,7 @@ Simply copy files in nvim directory to:
   * [Python](https://www.python.org/) - for ulti-snip (currently removed, but you can add to yours)
   * [Patched Powerline Fonts](https://github.com/powerline/fonts)
   * [Lua](https://www.lua.org/)
+
+## TODO
+
+ * Autocomplete OpenGL functions and any other libraries (clangd seems to be able to handle the rest,  stuff like std namespace)

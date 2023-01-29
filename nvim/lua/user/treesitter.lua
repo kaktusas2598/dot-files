@@ -4,7 +4,25 @@ if not status_ok then
 end
 
 configs.setup({
-    ensure_installed = { "help", "bash", "c", "php", "json", "lua", "python", "hcl", "css", "go", "rust", "yaml", "cpp", "markdown", "markdown_inline" }, -- one of "all" or a list of languages
+    ensure_installed = {
+        "help",
+        "bash",
+        "c",
+        "cpp",
+        "cmake",
+        "glsl",
+        "php",
+        "json",
+        "lua",
+        "python",
+        "hcl",
+        --"css",
+        --"go",
+        --"rust",
+        "yaml",
+        "markdown",
+        "markdown_inline"
+    }, -- one of "all" or a list of languages
     sync_install = false,
     auto_install = true,
     ignore_install = { "" }, -- List of parsers to ignore installing
@@ -17,3 +35,9 @@ configs.setup({
     },
     indent = { enable = true },
 })
+
+--local parser_configs = require "nvim-treesitter.parsers".get_parser_configs()
+--parser_configs.glsl = {
+    -- Set more filetypes used by shaders to enable parsing for those files
+    --used_by = { "glsl", "vert", "frag", "geom", "shader" }
+--}
