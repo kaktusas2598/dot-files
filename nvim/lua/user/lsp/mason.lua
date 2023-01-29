@@ -6,6 +6,7 @@ local servers = {
 	-- "tsserver",
 	"pyright",
 	-- "bashls",
+    "cmake",
 	"jsonls",
 	-- "yamlls",
     -- C++ Lang Servers
@@ -15,7 +16,7 @@ local servers = {
     --"marksman"
     --PHP Lang servers
     --"intelephense"
-    --"phpactor"
+    "phpactor"
     --"psalm"
 }
 
