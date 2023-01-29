@@ -4,6 +4,7 @@ local options = {
   cmdheight = 1,                           -- more space in the neovim command line for displaying messages
   completeopt = { "menuone", "noselect" }, -- mostly just for cmp
   conceallevel = 0,                        -- so that `` is visible in markdown files
+  encoding = "utf-8",
   fileencoding = "utf-8",                  -- the encoding written to a file
   hlsearch = true,                         -- highlight all matches on previous search pattern
   incsearch = true,
@@ -28,6 +29,8 @@ local options = {
   number = true,                           -- set numbered lines
   relativenumber = true,                  -- set relative numbered lines
   numberwidth = 4,                         -- set number column width to 2 {default 4}
+  autoindent = true,
+  copyindent = true,
   smartindent = true,                      -- make indenting smarter again
 
   signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
@@ -39,6 +42,8 @@ local options = {
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
   -- whichwrap = "bs<>[]hl",                  -- which "horizontal" keys are allowed to travel to prev/next line
   whichwrap = "",                  -- which "horizontal" keys are allowed to travel to prev/next line
+  foldmethod = "syntax",
+
 }
 
 for k, v in pairs(options) do

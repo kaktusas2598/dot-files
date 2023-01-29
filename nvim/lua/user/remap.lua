@@ -9,18 +9,26 @@ keymap("n", ",/", ":nohlsearch<CR>", opts)
 
 -- Move selected text up/down
 keymap("v", "J", ":m '>+1<CR>gv=gv")
-keymap("v", "K", ":m '<-2<CR>gv=gv")  
+keymap("v", "K", ":m '<-2<CR>gv=gv")
 
+--After pasting yanked text in selection mode, keep it in yank register
 --keymap("x", "<leader>p", "\"_dP")
 
 -- Yank into system's clipboard
 keymap("n", "<leader>y", "\"+y")
 keymap("v", "<leader>y", "\"+y")
 
+-- Refactor word under cursor in a buffer
+keymap("n", "<leader>rf", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
 -- Buffer keymap
 keymap("n", "<leader>bn", ":bnext<CR>")
 keymap("n", "<leader>bp", ":bprev<CR>")
 keymap("n", "<leader>bd", ":bd<CR>")
+
+-- Half page jumps and keep cursor in the middle
+keymap("n", "<C-u>", "<C-u>zz")
+keymap("n", "<C-y>", "<C-d>zz")
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
