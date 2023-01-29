@@ -4,8 +4,12 @@ vim.g.mapleader = ","
 
 --local keymap = vim.api.nvim_set_keymap
 
-vim.keymap.set("n", ";", ":")
+keymap("n", ";", ":")
 keymap("n", ",/", ":nohlsearch<CR>", opts)
+
+-- Move selected text up/down
+keymap("v", "J", ":m '>+1<CR>gv=gv")
+keymap("v", "K", ":m '<-2<CR>gv=gv")  
 
 -- Buffer mappings
 keymap("n", "<leader>bn", ":bnext<CR>")
