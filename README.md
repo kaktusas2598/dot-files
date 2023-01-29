@@ -69,8 +69,10 @@ Simply copy files in nvim directory to:
   * [Ctags](http://ctags.sourceforge.net/) - for tagbar to work.
   * [Git](https://git-scm.com/) - for vim-plug
   * [Python](https://www.python.org/) - for ulti-snip (currently removed, but you can add to yours)
-  * [Patched Powerline Fonts](https://github.com/powerline/fonts)
+  * [Patched Powerline Fonts](https://github.com/powerline/fonts) - Or can use NERD fonts
   * [Lua](https://www.lua.org/)
+  * [ripgrep](https://github.com/BurntSushi/ripgrep)
+  * [fd](https://github.com/sharkdp/fd)
 
 ## TODO
 
