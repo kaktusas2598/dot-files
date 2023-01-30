@@ -4,3 +4,6 @@
 [submodule ".tmux/tmux-continuum"]
 	path = .tmux/tmux-continuum
 	url = https://github.com/tmux-plugins/tmux-continuum.git
+[submodule ".tmux/plugins/tpm"]
+	path = .tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
