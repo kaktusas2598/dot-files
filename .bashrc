@@ -91,7 +91,7 @@ function prompt
     export PS1="${RED}${TIME}${WHITE}[${GREEN}${USER}${YELLOW}:${BLUE}${FULL_PWD}${WHITE}]${YELLOW}\$(parse_git_branch) \$ ${GRAY}"
     #export PS1="${RED}\A${WHITE}[${GREEN}\u@\h ${RED}\W${WHITE}]${GREEN}\$ ${GRAY}"
 }
-##prompt
+prompt
 #Greeting
 
 #extract any archive
@@ -138,13 +138,17 @@ alias dirToUnix='find . -type f -exec dos2unix {} \;'
 #export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 #export LESS_TERMCAP_us=$'\E[01;32m'      # begin underline
 
+###############################################################################
+#             PI Datametrics Docker aliases                                   #
+alias docker-compose-reload-no-cache='docker-compose down; docker-compose build --no-cache; docker-compose up -d'
 alias docker-stop-all='docker stop $(docker ps -a -q)'
 alias docker-rm-all='docker rm $(docker ps -a -q)'
 alias docker-rmi-all='docker rmi $(docker images -q)'
-alias docker-compose-reload='docker-compose down; docker-compose build; docker-compose up -d'
-alias docker-compose-reload-no-cache='docker-compose down; docker-compose build --no-cache; docker-compose up -d'
+alias docker-compose-reload='docker-compose down; docker-compose build --build-arg UID=$(id -u) --build-arg GID=$(id -g); docker-compose up -d'
+alias docker-compose-reload-no-cache='docker-compose down; docker-compose build --no-cache --build-arg UID=$(id -u) --build-arg GID=$(id -g); docker-compose up -d'
 alias docker-spawn='docker exec -it cli bash'
 alias docker-spawn='docker exec -it webapp bash'
+###############################################################################
 
 #export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
