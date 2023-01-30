@@ -61,3 +61,9 @@ for _, server in pairs(servers) do
 
 	lspconfig[server].setup(opts)
 end
+
+-- Get rid of 'multiple different client offset-encodings detected' message caused by clangd
+-- https://github.com/jose-elias-alvarez/null-ls.nvim/issues/428
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.offsetEncoding = { "utf-16" }
+require("lspconfig").clangd.setup({ capabilities = capabilities })
