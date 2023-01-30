@@ -62,6 +62,7 @@ alias c='clear'
 alias g='git'
 alias gut='git'
 alias got='git'
+alias v='vim'
 alias n='nvim'
 alias r='ranger'
 #----
