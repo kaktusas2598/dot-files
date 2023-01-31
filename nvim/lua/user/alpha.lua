@@ -23,12 +23,16 @@ dashboard.section.buttons.val = {
 }
 
 local function footer()
-	return "Madvi11ain: https://github.com/kaktusas2598\nWu Tang Forever\n"
+    local version = vim.version()
+    local nvimVersion = "󰞑 v" .. version.major .. "." .. version.minor .. "." .. version.patch
+    local dateTime = " " .. os.date("%Y-%m-%d")
+	return dateTime .." ".. nvimVersion .. "\nMadvi11ain: https://github.com/kaktusas2598\nWu Tang Forever\n"
 end
 
 dashboard.section.footer.val = footer()
 
 dashboard.section.footer.opts.hl = "Type"
+dashboard.section.footer.opts.position = "center"
 dashboard.section.header.opts.hl = "Include"
 dashboard.section.buttons.opts.hl = "Keyword"
 
