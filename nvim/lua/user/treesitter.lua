@@ -33,7 +33,7 @@ configs.setup({
     autopairs = {
         enable = true,
     },
-    indent = { enable = true },
+    indent = { enable = true , disable = { "cpp" }},
 
     nt_cpp_tools = {
         enable = true,
