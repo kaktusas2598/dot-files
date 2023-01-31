@@ -1,5 +1,5 @@
 [user]
-	email = nerijus.vilcinskas@gmail.com
+	email = nerijus@intelligentpositioning.com
 	name = "Nerijus Vilčinskas"
 [color]
 	diff = auto
@@ -24,4 +24,4 @@
 	r = remote
 	s = status
 [credential]
-    helper = store
+	helper = store
