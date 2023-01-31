@@ -24,8 +24,16 @@ shopt -s histappend
 #Add ~/bin/ dir to PATH so we can execute our own scripts
 export PATH=~/bin:"$PATH"
 
-#----ALIASES----
+# Set default editor NeoVim -> Vim -> Vi
+if command -v nvim > /dev/null; then
+	export EDITOR=nvim
+elif command -v vim > /dev/null; then
+	export EDITOR=vim
+else
+	export EDITOR=vi
+fi
 
+#----ALIASES----
 # You may want to put all your additions into a separate file like
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
