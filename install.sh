@@ -6,7 +6,7 @@ dir=~/dot-files				#dot files directory
 olddir=~/dot-files_old		#old dot-files backup directory
 
 #list of files to symlink to homedir
-files=".bashrc .bash_aliases .gitconfig .inputrc .tmux .tmux.conf .vim .vimrc"
+files=".bashrc .gitconfig .inputrc .tmux .tmux.conf .vim .vimrc"
 ####
 
 #Create dot-files_old in homedir
@@ -29,6 +29,8 @@ for file in $files; do
 	mv ~/$file $olddir/
 	ln -s $dir/$file ~/$file
 done
+
+cp $dir/.bash_aliases ~/.bash_aliases
 
 #Apply some changes
 source ~/.bashrc

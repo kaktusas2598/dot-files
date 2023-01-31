@@ -37,7 +37,7 @@ fi
 export INPUTRC="$HOME/.inputrc"
 
 #----ALIASES----
-if [ -f ~/.bash_aliases ]; then
+if [ -e ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
