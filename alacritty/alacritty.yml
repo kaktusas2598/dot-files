@@ -1,0 +1,26 @@
+window:
+  padding:
+    x: 0
+    y: 0
+
+  startup_mode: Fullscreen
+  decorations: none
+
+  opacity: 0.95
+
+font:
+  normal:
+    family: UbuntuMono Nerd Font Mono
+    style: Bold
+  bold:
+      family: UbuntuMono Nerd Font Mono
+      style: Bold
+  #italic:
+      #family: Ubuntu Mono Nerd Font
+      #style: Italic
+
+  size: 14.0
+
+  offset:
+    x: 0
+    y: 0

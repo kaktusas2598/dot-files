@@ -7,10 +7,12 @@
 
 ## Setup
 
-  * Vim
-  * NeoVim
-  * tmux
-  * bash, git, urxvt, etc.
+  * Editors: Vim and NeoVim
+  * Shell: bash
+  * Multiplexer: Tmux
+  * VS: Git
+  * Terminal configs: urxvt, kitty, alacritty
+  * File manager: Ranger
 
 ## Installation
 
