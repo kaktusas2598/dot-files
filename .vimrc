@@ -54,6 +54,9 @@ nmap <silent><leader>sv :so $MYVIMRC<CR>
 nmap <silent> ,/ :nohlsearch<CR>
 "Can now cancel search by escape
 nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
+" Quick saving and quitting vim
+nmap <silent><leader>w :w<CR>
+nmap <silent><leader>q :q<CR>
 
 "Easier Buffer switching
 nmap <silent><leader>bn :bn<CR>
