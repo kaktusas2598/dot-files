@@ -16,6 +16,13 @@
 
 ## Installation
 
+### Supported environments
+
+- Ubuntu
+- MSYS2 (Windows)
+- WSL2 (Debian 11)
+
+
 ### Install Dependencies
 
 - git
