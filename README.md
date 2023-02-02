@@ -33,7 +33,6 @@
   $ cd
   $ git clone https://github.com/kaktusas2598/dot-files.git
   $ cd dot-files
-  $ git submodule init && git submodule update
   $ ./install.sh # Optional, you can also simply drag dot files to your home directory
   ```
 
