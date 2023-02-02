@@ -22,15 +22,15 @@
 - MSYS2 (Windows)
 - WSL2 (Debian 11)
 
-
 ### Install Dependencies
 
-- git
-- stow
+- [Git](https://git-scm.com/)
+- [GNU Stow](ihttps://www.gnu.org/software/stow/)
 
 ### Install instruction
 
   ```
+  $ cd
   $ git clone https://github.com/kaktusas2598/dot-files.git
   $ cd dot-files
   $ git submodule init && git submodule update

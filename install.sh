@@ -6,8 +6,8 @@ dir=~/dot-files				 #dot files directory
 olddir=~/dot-files_old		 #old dot-files backup directory
 envs=("Ubuntu" "WSL" "MSYS2 None")
 
-#list of files to symlink to homedir
-files=".bashrc .bash_aliases .gitconfig .inputrc .tmux .tmux.conf .vim .vimrc .Xdefaults"
+#list of modules to stow
+modules="bash readline vim tmux git X"
 ####
 
 #Create dot-files_old in homedir
@@ -22,16 +22,14 @@ echo "DONE"
 
 #Initialize git submodules
 echo "Initialising git submodules"
-git submodule init
-git submodule update
+git submodule init && git submodule update
 echo "DONE"
 
-# TODO: change all symlinking to use GNU Stow
-for file in $files; do
-	echo "Backing up ~/.$file to $olddir/$file"
-	mv ~/$file $olddir/
-	echo "Symlinking $file to ~/$file"
-	ln -s $dir/$file ~/$file
+for module in $modules; do
+	# TODO: Loop through files in each module and backup
+	#echo "Backing up ~/.$file to $olddir/$file"
+	#mv ~/$file $olddir/
+	stow -v $module
 done
 
 # Symlink .config dirs

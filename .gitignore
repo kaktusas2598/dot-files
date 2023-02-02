@@ -1,6 +1,6 @@
-.tmux/resurrect
-.vim/plugged
-.vim/.netrwhist
+tmux/.tmux/resurrect
+vim/.vim/plugged
+vim/.vim/.netrwhist
 
-.tmux/plugins/*
-!.tmux/plugins/tpm
+tmux/.tmux/plugins/*
+!tmux/.tmux/plugins/tpm
