@@ -30,7 +30,12 @@ for file in $files; do
 	ln -s $dir/$file ~/$file
 done
 
-cp $dir/.bash_aliases ~/.bash_aliases
+# Symlink .config dirs
+ln -s $HOME/dot-files/nvim ~/.config
+ln -s $HOME/dot-files/kitty ~/.config
+ln -s $HOME/dot-files/alacritty ~/.config
+ln -s $HOME/dot-files/ranger ~/.config
+
 
 #Apply some changes
 source ~/.bashrc
