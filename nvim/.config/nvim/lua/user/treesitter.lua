@@ -33,7 +33,7 @@ configs.setup({
     autopairs = {
         enable = true,
     },
-    indent = { enable = true , disable = { "cpp" }},
+    indent = { enable = true , disable = { "cpp" }}, -- Not sure why it breaks cpp indent, especially within namespaces
 
     nt_cpp_tools = {
         enable = true,
