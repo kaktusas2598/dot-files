@@ -7,7 +7,7 @@ olddir=~/dot-files_old		 #old dot-files backup directory
 envs=("Ubuntu" "WSL" "MSYS2 None")
 
 #list of modules to stow
-modules="bash readline vim tmux git X nvim"
+modules="bash readline vim tmux git X nvim ranger alacritty kitty"
 ####
 
 #Create dot-files_old in homedir
@@ -25,17 +25,14 @@ echo "Initialising git submodules"
 git submodule init && git submodule update
 echo "DONE"
 
+echo "Stowing dot files"
 for module in $modules; do
 	# TODO: Loop through files in each module and backup
 	#echo "Backing up ~/.$file to $olddir/$file"
 	#mv ~/$file $olddir/
 	stow -v $module
 done
-
-# Symlink .config dirs
-ln -s $HOME/dot-files/kitty ~/.config
-ln -s $HOME/dot-files/alacritty ~/.config
-ln -s $HOME/dot-files/ranger ~/.config
+echo "DONE"
 
 # Prompt for specific environment and apply spcific configs
 echo "Select specific environment you're on:"
