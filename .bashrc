@@ -128,3 +128,8 @@ fi
 # tabtab source for packages
 # uninstall by removing these lines
 #[ -f ~/.config/tabtab/__tabtab.bash ] && . ~/.config/tabtab/__tabtab.bash || true
+
+# Source environment specific bash configs
+if [ -f ~/.bash_env ]; then
+    source ~/.bash_env
+fi
