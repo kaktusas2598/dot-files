@@ -5,7 +5,7 @@
   ![vim](https://raw.githubusercontent.com/kaktusas2598/dot-files/master/vimSetup.png)
   ![nvim](https://raw.githubusercontent.com/kaktusas2598/dot-files/master/nVimSetup.png)
 
-## Setup
+## My Setup
 
   * Editors: Vim and NeoVim
   * Shell: bash
@@ -16,26 +16,21 @@
 
 ## Installation
 
+### Install Dependencies
+
+- git
+- stow
+
+### Install instruction
+
   ```
   $ git clone https://github.com/kaktusas2598/dot-files.git
   $ cd dot-files
-  $ git submodule init
-  $ git submodule update
-  $ chmod +x install.sh
+  $ git submodule init && git submodule update
   $ ./install.sh # Optional, you can also simply drag dot files to your home directory
   ```
-  Then first running vim, execute:
-  ```
-  :PlugInstall
-  ```
-  for vim-plug to install plugins.
 
-## NVim instructions:
-
-Simply copy files in nvim directory to:
-
-* `~/.config/nvim` on Linux
-* `%AppData%/Local/nvim/` on Windows
+## Vim/NeoVim
 
 **Common Nvim/Vim Key mappings**
 
@@ -43,6 +38,8 @@ Simply copy files in nvim directory to:
 * '\<leader\>bn' - next buffer
 * '\<leader\>bp' - prev buffer
 * '\<leader\>bd' - close buffer
+* '\<leader\>w' - write buffer
+* '\<leader\>q' - quit vim/nvim
 * '\<leader\>n' - toggle file explorer
 * '\<leader\>c\<space\>' - toggle comment
 
@@ -77,5 +74,3 @@ Simply copy files in nvim directory to:
   * [fd](https://github.com/sharkdp/fd)
 
 ## TODO
-
- * Autocomplete OpenGL functions and any other libraries (clangd seems to be able to handle the rest,  stuff like std namespace)
