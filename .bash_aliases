@@ -34,6 +34,7 @@ alias v='vim'
 alias n='nvim'
 alias r='ranger'
 
+alias cmake-modules='cmake --help-module-list'
 alias dirToUnix='find . -type f -exec dos2unix {} \;'
 #Same as CMD+K on MAC, clears whole scrollable buffer, not just visible part
 #alias clear="clear && printf '\e[3J'"
