@@ -25,7 +25,7 @@
 ### Install Dependencies
 
 - [Git](https://git-scm.com/)
-- [GNU Stow](ihttps://www.gnu.org/software/stow/)
+- [GNU Stow](https://www.gnu.org/software/stow/)
 
 ### Install instruction
 
