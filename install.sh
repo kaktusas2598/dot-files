@@ -7,7 +7,7 @@ olddir=~/dot-files_old		 #old dot-files backup directory
 envs=("Ubuntu" "WSL" "MSYS2 None")
 
 #list of modules to stow
-modules="bash readline vim tmux git X"
+modules="bash readline vim tmux git X nvim"
 ####
 
 #Create dot-files_old in homedir
@@ -33,7 +33,6 @@ for module in $modules; do
 done
 
 # Symlink .config dirs
-ln -s $HOME/dot-files/nvim ~/.config
 ln -s $HOME/dot-files/kitty ~/.config
 ln -s $HOME/dot-files/alacritty ~/.config
 ln -s $HOME/dot-files/ranger ~/.config
