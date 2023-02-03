@@ -32,7 +32,8 @@ alias got='git'
 alias gs='git status'
 alias v='vim'
 alias n='nvim'
-alias r='ranger'
+# Prepend '.' to make shell follow ranger
+alias r='. ranger'
 
 alias cmake-modules='cmake --help-module-list'
 alias dirToUnix='find . -type f -exec dos2unix {} \;'
