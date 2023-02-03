@@ -13,3 +13,14 @@ source /usr/share/doc/fzf/examples/completion.bash
 
 # Add Go to path (for system-wide is should go in /etc/profile)
 export PATH=$PATH:/usr/local/go/bin
+
+# Open selected dir using windows explorer, or open explorer in current dir if no arguments are supplied
+function open() {
+    if [ $# -eq 0 ]; then
+        explorer.exe $(wslpath -w $(pwd))
+    else
+        # cmd's start probably good enough for images
+        #cmd.exe /C start <file>
+        explorer.exe $(wslpath -w $rPath)
+    fi
+}
