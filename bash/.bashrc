@@ -67,7 +67,6 @@ function prompt
     #export PS1="${RED}\A${WHITE}[${GREEN}\u@\h ${RED}\W${WHITE}]${GREEN}\$ ${GRAY}"
 }
 prompt
-#Greeting
 
 #extract any archive
 extract () {
@@ -89,6 +88,24 @@ extract () {
     else
         echo "'$1' is not a valid file!"
     fi
+}
+
+# Automatically change directory in bash after closing ranger
+# q will quit as usual while Q will quit all tabs and cd directory in bash without creating nested ranger instances
+function ranger {
+    local IFS=$'\t\n'
+    local tempfile="$(mktemp -t tmp.XXXXXX)"
+    local ranger_cmd=(
+        command
+        ranger
+        --cmd="map Q chain shell echo %d > "$tempfile"; quitall"
+    )
+
+    ${ranger_cmd[@]} "$@"
+    if [[ -f "$tempfile" ]] && [[ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]]; then
+        cd -- "$(cat "$tempfile")" || return
+    fi
+    command rm -f -- "$tempfile" 2>/dev/null
 }
 
 #colored terminal
