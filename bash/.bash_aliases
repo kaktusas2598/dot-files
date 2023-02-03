@@ -32,10 +32,9 @@ alias got='git'
 alias gs='git status'
 alias v='vim'
 alias n='nvim'
-# Prepend '.' to make shell follow ranger
-alias r='. ranger'
+alias r='ranger'
 
-alias cmake-modules='cmake --help-module-list'
+alias cmodules='cmake --help-module-list'
 alias dirToUnix='find . -type f -exec dos2unix {} \;'
 #Same as CMD+K on MAC, clears whole scrollable buffer, not just visible part
 #alias clear="clear && printf '\e[3J'"
