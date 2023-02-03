@@ -121,7 +121,6 @@ function ranger {
 #export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 #export LESS_TERMCAP_us=$'\E[01;32m'      # begin underline
 
-
 #export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -142,11 +141,17 @@ if ! shopt -oq posix; then
       fi
 fi
 
+# Git Bash Completion
+if [ -f /usr/share/bash-completion/completion/git ]; then
+    . /usr/share/bash-completion/completions/git
+fi
+
 # tabtab source for packages
 # uninstall by removing these lines
 #[ -f ~/.config/tabtab/__tabtab.bash ] && . ~/.config/tabtab/__tabtab.bash || true
 
-# Source environment specific bash configs
+# Source environment specific bash configs, my own way of doing this
+# Obviously not the best way, I also need different ranger keybinds for work
 if [ -f ~/.bash_env ]; then
     source ~/.bash_env
 fi
