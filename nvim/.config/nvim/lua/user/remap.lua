@@ -60,4 +60,4 @@ keymap("n", "<leader>t", ":TagbarToggle<CR>")
 --keymap('n', '<leader>fh', builtin.help_tags, {})
 
 -- Toggle checkbox, maybe should only be enabled for certain filetypes like conf and markdown
-keymap("n", "<leader>m", ":lua require('toggle-checkbox').toggle()<CR>")
+keymap("n", "<leader>mt", ":lua require('user.toggle-checkbox').toggle()<CR>")

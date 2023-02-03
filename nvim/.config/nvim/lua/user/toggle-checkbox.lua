@@ -1,6 +1,6 @@
 -- Based on Lua script from: https://github.com/opdavies/toggle-checkbox.nvim
 -- Especially useful for TODO lists and Markfown files
--- M.toggle function will toggle between '[]' and '[x]'
+-- M.toggle function will toggle between '[ ]' and '[x]'
 
 local checked_character = "x"
 
