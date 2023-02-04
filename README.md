@@ -13,6 +13,7 @@
   * VS: Git
   * Terminal configs: urxvt, kitty, alacritty
   * File manager: Ranger
+  * Window manager: i3wm
 
 ## Installation
 
@@ -29,11 +30,21 @@
 
 ### Install instruction
 
+  Clone repo in home directory:
   ```
   $ cd
   $ git clone https://github.com/kaktusas2598/dot-files.git
+  ```
+  1. Install all modules at once
+  ```
   $ cd dot-files
   $ ./install.sh # Optional, you can also simply drag dot files to your home directory
+  ```
+  2. Or alternatively if you want to install only certain module, use:
+  ```
+  $ cd dot-files
+  $ stow vim
+  $ stow bash
   ```
 
 ## Vim/NeoVim
