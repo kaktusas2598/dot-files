@@ -6,7 +6,8 @@
 
 # Mod1 - Alt1
 # Mod4 - Super/Win
-set $mod Mod1
+#set $mod Mod1
+set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -46,7 +47,7 @@ floating_modifier $mod
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
-tiling_drag modifier titlebar
+#tiling_drag modifier titlebar
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
