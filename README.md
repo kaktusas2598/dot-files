@@ -47,6 +47,17 @@
   $ stow bash
   ```
 
+### Font Installation
+
+1. curl required font
+2. tar xcvf font.tar.gz
+3. mkdir ~/.local/share/fonts if it doesn't exist
+4. move font binaries to this directory
+5. Clear & regenerate font cache:
+    `fc-cache -f -v`
+6. Verify:
+    `fc-list | grep "FontName"`
+
 ## Vim/NeoVim
 
 **Common Nvim/Vim Key mappings**
