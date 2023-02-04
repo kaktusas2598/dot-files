@@ -6,6 +6,7 @@
 
 # Mod1 - Alt1
 # Mod4 - Super/Win
+# WSL only:
 #set $mod Mod1
 set $mod Mod4
 
