@@ -4,9 +4,11 @@ URxvt*geometry:                160x60
 !URxvt*font: xft:Liberation Mono:pixelsize=14:antialias=false:hinting=true
 !URxvt*font: xft:Inconsolata:pixelsize=17:antialias=true:hinting=true
 !URxvt*boldFont: xft:Inconsolata:bold:pixelsize=17:antialias=true:hinting=true
-urxvt*font: xft:UbuntuMono Nerd Font Mono:size=14:antialias=true:hinting=true:style=Bold
 !urxvt*font: xft:Inconsolata\ for\ Powerline:pixelsize=14
 !URxvt*boldFont: xft:Liberation Mono:bold:pixelsize=14:antialias=false:hinting=true
+urxvt*font: xft:UbuntuMono Nerd Font:size=14:antialias=true:hinting=true
+
+URxvt.letterSpace: -1
 
 URxvt.depth: 32
 URxvt.background: [80]#000000
