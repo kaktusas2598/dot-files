@@ -27,6 +27,9 @@
 
 - [Git](https://git-scm.com/)
 - [GNU Stow](https://www.gnu.org/software/stow/)
+- i3 dependencies:
+  - [Rofi] (https://github.com/davatorium/rofi)
+  - [picom] (https://github.com/yshui/picom)
 
 ### Install instruction
 
