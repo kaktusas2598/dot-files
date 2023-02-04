@@ -19,8 +19,7 @@ function open() {
     if [ $# -eq 0 ]; then
         explorer.exe $(wslpath -w $(pwd))
     else
-        # cmd's start probably good enough for images
-        #cmd.exe /C start <file>
-        explorer.exe $(wslpath -w $rPath)
+        rPath=$(realpath "$1")
+        explorer.exe $(wslpath -w "$rPath")
     fi
 }
