@@ -30,6 +30,7 @@
 - i3 dependencies:
   - [Rofi] (https://github.com/davatorium/rofi)
   - [picom] (https://github.com/yshui/picom)
+  - [i3blocks] - optional status line
 
 ### Install instruction
 

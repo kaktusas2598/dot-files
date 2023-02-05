@@ -245,8 +245,8 @@ set $orange #fe8019
 bar {
     position top
     font pango:UbuntuMono Nerd Font 14
-    #status_command i3blocks
-    status_command i3status
+    status_command i3blocks -c ~/.config/i3/i3blocks.conf
+    #status_command i3status
     # Or using custom status line like bumblebee
     # https://github.com/tobi-wan-kenobi/bumblebee-status
     # Install using: pip install --user bumblebee-status
