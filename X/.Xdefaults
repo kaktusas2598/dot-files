@@ -15,7 +15,10 @@ URxvt.intensityStyles: false
 URxvt.letterSpace: 0
 URxvt.lineSpace: 1
 URxvt.depth: 32
-URxvt.background: [85]#000000
+!URxvt.background: [85]#282828
+URxvt.background: [85]#32302f
+!URxvt.background: [85]#000000
+
 URxvt*borderless: 1
 URxvt*scrollBar: false
 URxvt*saveLines: 2000
@@ -52,6 +55,10 @@ URxvt.url-select.underline: true
 
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.keysym.Shift-Control-C:   perl:clipboard:copy
+URxvt.keysym.C-minus:     resize-font:smaller
+URxvt.keysym.C-equal:      resize-font:bigger
+!URxvt.keysym.C-equal:     resize-font:reset
+URxvt.keysym.C-question:  resize-font:show
 
 ! url-select lets us press Alt+U to navigate URLs and press Enter to visit it using browser defined here
 URxvt.urlLauncher: firefox

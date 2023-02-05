@@ -46,6 +46,10 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+# Tested this way on Ubuntu to control brightness and it works:
+# 1. Find out display name: xrandr | grep " connected" | cut -f1 -d " "
+# 2. Change brightness: xrandr --output displayName --brightness 1.0 (between 0.0 and 1.0)
+
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
@@ -72,6 +76,7 @@ set $right k
 #######################################
 # start a terminal: urxvt, kitty, alacritty..
 bindsym $mod+Return exec kitty
+bindsym $mod+Shift+Return exec urxvt
 
 # kill focused window
 bindsym $mod+q kill
