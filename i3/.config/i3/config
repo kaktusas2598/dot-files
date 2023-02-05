@@ -236,6 +236,11 @@ bindsym $mod+r mode "resize"
 default_border pixel 3
 default_floating_border normal
 
+# i3 v4.22 needed for gap functionality
+gaps outer 2
+gaps inner 2
+smart_gaps inverse_outer
+
 # # # # # # # # # # # # # # # # # # # #
 # Gruvbox Dark theme
 set $bg #282828
@@ -286,6 +291,7 @@ bar {
         urgent_workspace     $red $red $bg
     }
 }
+# i3bar can also be replaced entirely by something as https://github.com/polybar/polybar for example
 
 # class                 border|backgr|text|indicator|child_border
 client.focused          $lightgray $lightgray $bg $purple $darkgray
@@ -296,6 +302,7 @@ client.urgent           $red $red $white $red $red
 
 # Set wallpaper on startup using feh
 exec_always feh --bg-fill $HOME/Pictures/wallpaper.png
+
 # Start compositor to enable things like transparency
 # https://github.com/yshui/picom
 # Or: https://github.com/chjj/compton
