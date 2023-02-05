@@ -28,9 +28,9 @@
 - [Git](https://git-scm.com/)
 - [GNU Stow](https://www.gnu.org/software/stow/)
 - i3 dependencies:
-  - [Rofi] (https://github.com/davatorium/rofi)
-  - [picom] (https://github.com/yshui/picom)
-  - [i3blocks] - optional status line
+  - [Rofi](https://github.com/davatorium/rofi)
+  - [picom](https://github.com/yshui/picom) or [compton](https://github.com/chjj/compton)
+  - [i3blocks](https://github.com/vivien/i3blocks)
 
 ### Install instruction
 

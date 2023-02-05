@@ -79,7 +79,7 @@ bindsym $mod+q kill
 # start dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
-bindsym $mod+d exec "rofi -modi drun,run -show drun -font 'UbuntuMono Nerd Font 14'"
+bindsym $mod+d exec "rofi -modi drun,run -show drun -opacity '85' -font 'UbuntuMono Nerd Font 14'"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
@@ -228,24 +228,29 @@ bindsym $mod+r mode "resize"
 # # # # # # # # # # # # # # # # # # # #
 # Gruvbox Dark theme
 set $bg #282828
+set $fg #fbf1c7
 set $red #cc241d
 set $green #98971a
+set $green2 #b8bb26
 set $yellow #d79921
 set $blue #458588
+set $blue2 #83a598
 set $purple #b16286
 set $aqua #689d68
 set $gray #a89984
 set $darkgray #1d2021
 set $lightgray #bdae93
-set $white #fbf1c7
+set $white #ebdbb2
 set $orange #fe8019
 
+# Lock screen
+bindsym $mod+Shift+x exec i3lock --color "$bg"
 
 bar {
     position top
     font pango:UbuntuMono Nerd Font 14
-    status_command i3blocks -c ~/.config/i3/i3blocks.conf
     #status_command i3status
+    status_command i3blocks -c ~/.config/i3/i3blocks.conf
     # Or using custom status line like bumblebee
     # https://github.com/tobi-wan-kenobi/bumblebee-status
     # Install using: pip install --user bumblebee-status
@@ -256,6 +261,7 @@ bar {
         #-t solarized-powerline
 
     colors {
+        separator $fg
         # bar background color
         background $bg
         # text color used for blocks that do not have a color specified.
@@ -263,7 +269,7 @@ bar {
         # workspaces section
         #                    border  backgr. text
         #focused_workspace    $lightgray $lightgray $bg
-        focused_workspace    $lightgray $orange $bg
+        focused_workspace    $orange $orange $bg
         inactive_workspace   $darkgray $darkgray $lightgray
         active_workspace     $darkgray $darkgray $lightgray
         urgent_workspace     $red $red $bg
@@ -281,4 +287,5 @@ client.urgent           $red $red $white $red $red
 exec_always feh --bg-fill $HOME/Pictures/wallpaper.png
 # Start compositor to enable things like transparency
 # https://github.com/yshui/picom
+# Or: https://github.com/chjj/compton
 exec_always picom
