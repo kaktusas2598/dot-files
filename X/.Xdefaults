@@ -11,7 +11,7 @@ urxvt*font: xft:UbuntuMono Nerd Font Mono:size=15:antialias=true:hinting=true
 URxvt.letterSpace: -1
 
 URxvt.depth: 32
-URxvt.background: [80]#000000
+URxvt.background: [85]#000000
 URxvt*borderless: 1
 URxvt*scrollBar:   false
 URxvt*saveLines:  2000
