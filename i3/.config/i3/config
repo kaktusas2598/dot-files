@@ -224,6 +224,9 @@ bindsym $mod+r mode "resize"
 
 #######################################
 
+# Change window border styles: pixel|normal|none
+default_border pixel 3
+default_floating_border normal
 
 # # # # # # # # # # # # # # # # # # # #
 # Gruvbox Dark theme
