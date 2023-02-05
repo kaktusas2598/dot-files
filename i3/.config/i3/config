@@ -284,6 +284,7 @@ bar {
         urgent_workspace     $red $red $bg
     }
 }
+# i3bar can also be replaced entirely by something as https://github.com/polybar/polybar for example
 
 # class                 border|backgr|text|indicator|child_border
 client.focused          $lightgray $lightgray $bg $purple $darkgray
