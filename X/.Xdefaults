@@ -74,3 +74,16 @@ URxvt.iso14755_52: false
 ! LightGrey + White
 *color7:  #a89984
 *color15: #ebdbb2
+
+
+
+! rofi
+! Set ARGB option for rofi to make it transparent
+!rofi.color-window: argb: EE000000, argb: EE000000, argb: EE000000
+!rofi.color-normal: argb: 00000000, #DEDEDE, argb: 00000000, #DEDEDE
+!                  'background', 'border', 'separator'
+rofi.color-window: argb:c82d303b, #7c8389, #1d1f21
+! State:           'bg',     'fg',     'bgalt',  'hlbg',   'hlfg'
+rofi.color-normal: argb:031d1f21, #f3f4f5, argb:031d1f21, argb:031d1f21, #9575cd
+rofi.color-urgent: argb:031d1f21, #f3f4f5, argb:bc303541, argb:031d1f21, #9575cd
+rofi.color-active: argb:031d1f21, #f3f4f5, argb:031d1f21, argb:031d1f21, #9575cd
