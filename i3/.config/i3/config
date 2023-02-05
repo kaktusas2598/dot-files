@@ -194,6 +194,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # Assign different programs to particular workspaces
 # To find windows class, use xprop utility and click on program
 assign [ class = "kitty" ] $ws1
+assign [ class = "Slack" ] $ws3
 # "Slack"
 # "Google-chrome"
 # "firefox"
@@ -237,9 +238,10 @@ default_border pixel 3
 default_floating_border normal
 
 # i3 v4.22 needed for gap functionality
-gaps outer 2
-gaps inner 2
-smart_gaps inverse_outer
+# TODO: Update i3 on ubuntu
+#gaps outer 2
+#gaps inner 2
+#smart_gaps inverse_outer
 
 # # # # # # # # # # # # # # # # # # # #
 # Gruvbox Dark theme
