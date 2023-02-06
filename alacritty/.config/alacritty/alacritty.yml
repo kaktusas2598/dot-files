@@ -4,8 +4,8 @@ window:
     y: 5
   dynamic_padding: false
   #startup_mode: Fullscreen
-  #decorations: none
-  decorations: full
+  decorations: none
+  #decorations: full
   startup_mode: Windowed
   dynamic_title: true
 
