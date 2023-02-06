@@ -275,6 +275,7 @@ bindsym $mod+Shift+x exec i3lock --color "$bg"
 
 bar {
     position top
+    tray_output primary
     font pango:UbuntuMono Nerd Font 14
     #status_command i3status
     status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks -c ~/.config/i3blocks/config

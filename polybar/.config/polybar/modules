@@ -17,35 +17,35 @@ content-foreground = ${color.blue}
 content-padding = 1
 content-font = 4
 
-;click-left = rofi -monitor -1 -show drun -location 1 -columns 2 -yoffset 27 -lines 20 -width 30 -font "UbuntuMono Nerd Font 14"
+click-left = rofi -monitor -1 -show drun -location 1 -columns 2 -yoffset 27 -lines 20 -width 30 -font "UbuntuMono Nerd Font 14"
 
 ;;==========================================================
 
-;[module/title]
-;type = internal/xwindow
+[module/title]
+type = internal/xwindow
 
-;format = <label>
-;format-background = ${color.green}
-;format-foreground = ${color.black}
-;format-padding = 1
-;format-font = 2
+format = <label>
+format-background = ${color.green}
+format-foreground = ${color.black}
+format-padding = 1
+format-font = 2
 
-;label = %title%
-;label-maxlen = 40
+label = %title%
+label-maxlen = 40
 
 ;;label-empty = Arch Linux
 
 ;;==========================================================
 
-[module/title]
-type = custom/script
-exec = ~/dot-files/scripts/xwindowname.sh
-interval = 0.4
-format-maxlen = 40
-format-background = ${color.green}
-format-foreground = ${color.black}
-format-padding = 1
-format-font = 2
+;[module/title]
+;type = custom/script
+;exec = ~/dot-files/scripts/xwindowname.sh
+;interval = 0.4
+;format-maxlen = 40
+;format-background = ${color.green}
+;format-foreground = ${color.black}
+;format-padding = 1
+;format-font = 2
 ;;==========================================================
 ;
 [module/microphone-recording]

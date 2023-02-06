@@ -128,8 +128,7 @@ interval=30
 #
 [time]
 command=date '+%Y-%m-%d %H:%M:%S'
-# TODO: fix this mess, had to increase min_width because tray icons hid half of time block
-min_width=2023-01-01:12:00:00__________________
+min_width=2023-01-01:12:00:00
 interval=1
 
 #[weather_NOAA]
