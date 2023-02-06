@@ -129,8 +129,26 @@ interval=30
 [time]
 command=date '+%Y-%m-%d %H:%M:%S'
 # TODO: fix this mess, had to increase min_width because tray icons hid half of time block
-min_width=2023-01-01:12:00:00______________
+min_width=2023-01-01:12:00:00__________________
 interval=1
+
+#[weather_NOAA]
+#command=$SCRIPT_DIR/weather_NOAA
+#interval=600
+
+#[rofi-calendar]
+#command=$SCRIPT_DIR/rofi-calendar
+#bar_postion=top
+#interval=3600
+
+#[calendar]
+#command=$SCRIPT_DIR/calendar
+#interval=1
+#LABEL=
+#DATEFMT=+%H:%M:%S
+#SHORTFMT=+%H:%M:%S
+#HEIGHT=180
+#WIDTH=220
 
 # OpenVPN support
 #
