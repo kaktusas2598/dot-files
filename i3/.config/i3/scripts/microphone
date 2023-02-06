@@ -1,7 +1,8 @@
 #!/bin/bash
 
+# Credits to https://github.com/Anachron/i3blocks, the original maintainer of this script
 # Left click
-if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
+if [[ "${BLOCK_BUTTON}" -eq 2 ]]; then
   amixer -q sset Capture 5%+
 # Middle click
 elif [[ "${BLOCK_BUTTON}" -eq 2 ]]; then
