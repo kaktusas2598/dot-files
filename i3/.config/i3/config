@@ -271,7 +271,7 @@ bar {
     position top
     font pango:UbuntuMono Nerd Font 14
     #status_command i3status
-    status_command SCRIPT_DIR=~/.config/i3/scripts i3blocks -c ~/.config/i3/i3blocks.conf
+    status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks -c ~/.config/i3blocks/config
     # Or using custom status line like bumblebee
     # https://github.com/tobi-wan-kenobi/bumblebee-status
     # Install using: pip install --user bumblebee-status

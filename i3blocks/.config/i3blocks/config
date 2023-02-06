@@ -33,6 +33,9 @@ markup=none
 # This displays "ARTIST - SONG" if a music is playing.
 # Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
 [mediaplayer]
+# Can also comment this and use the one from /usr/share/i3blocks/ if it exists
+# this one is from i3blocks-contrib repo
+command=$SCRIPT_DIR/mediaplayer
 instance=spotify
 interval=5
 signal=10
