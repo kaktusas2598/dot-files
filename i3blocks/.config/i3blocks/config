@@ -140,7 +140,6 @@ interval=1
 
 #[rofi-calendar]
 #command=$SCRIPT_DIR/rofi-calendar
-#bar_postion=top
 #interval=3600
 
 #[calendar]
