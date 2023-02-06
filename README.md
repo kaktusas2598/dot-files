@@ -33,6 +33,7 @@
   - [Rofi](https://github.com/davatorium/rofi) for additional themes see [this](https://github.com/newmanls/rofi-themes-collection)
   - [picom](https://github.com/yshui/picom) or [compton](https://github.com/chjj/compton)
   - [i3blocks](https://github.com/vivien/i3blocks) or/and [polybar](https://github.com/polybar/polybar)
+  - [scrot](https://github.com/dreamer/scrot) and [imagemagick](https://imagemagick.org/index.php) for blurred lock screen effect
 
 ### Install instruction
 
@@ -113,9 +114,9 @@
     * Setup neovim php and c++ debugging using nvim-dap
     * Setup more themes for all tools: dracula, tomorrow night, monokai for example
   * **GUI**
-    * More i3blocks and maybe setup polybar
-    * Fix brightness control in i3 and setup multi monitor shorcuts and config
-    * Setup rofi-themes-collection installation
     * Notification system such as dunst
+    * More i3blocks and maybe setup polybar
+    * Fix brightness control in i3
+    * Setup rofi-themes-collection installation
     * Wallpaper rotation
 
