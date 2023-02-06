@@ -243,6 +243,10 @@ default_floating_border normal
 #gaps inner 2
 #smart_gaps inverse_outer
 
+# Mouse moving to other window will not change focus, but you can still
+# use the mouse click to change focus if needed
+focus_follows_mouse no
+
 # # # # # # # # # # # # # # # # # # # #
 # Gruvbox Dark theme
 set $bg #282828
@@ -298,7 +302,7 @@ bar {
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
 # class                 border|backgr|text|indicator|child_border
-client.focused          $lightgray $lightgray $bg $purple $darkgray
+client.focused          $lightgray $lightgray $bg $purple $aqua
 client.focused_inactive $darkgray $darkgray $lightgray $purple $darkgray
 client.unfocused        $darkgray $darkgray $lightgray $purple $darkgray
 client.urgent           $red $red $white $red $red
