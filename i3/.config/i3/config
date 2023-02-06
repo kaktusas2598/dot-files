@@ -318,6 +318,8 @@ client.urgent           $red $red $white $red $red
 
 for_window [class="Yad"] floating enable
 
+exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
+
 # Set wallpaper on startup using feh
 exec_always feh --bg-fill $HOME/Pictures/wallpaper.png
 

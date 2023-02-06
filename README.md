@@ -7,15 +7,18 @@
 
 ## My Setup
 
-  * Editors: Vim and NeoVim(>=0.80)
-  * Shell: bash
-  * Multiplexer: Tmux
-  * VS: Git
-  * Terminal configs: urxvt, kitty, alacritty
-  * File manager: Ranger
-  * Window manager: i3wm (>=4.22)
-  * Application launcher: rofi
-  * Status bars: i3bar(using i3blocks) or polybar
+  * **CLI**
+    * Editors: Vim and NeoVim(>=0.80)
+    * Shell: bash
+    * Multiplexer: Tmux
+    * VS: Git
+    * Terminal configs: urxvt, kitty, alacritty
+    * File manager: Ranger
+  * **GUI**
+    * Window manager: i3wm (>=4.22)
+    * Application launcher: rofi
+    * Status bars: i3bar(using i3blocks) or polybar
+    * Notification daemon: dunst
 
 ## Installation
 
@@ -34,6 +37,7 @@
   - [picom](https://github.com/yshui/picom) or [compton](https://github.com/chjj/compton)
   - [i3blocks](https://github.com/vivien/i3blocks) or/and [polybar](https://github.com/polybar/polybar)
   - [scrot](https://github.com/dreamer/scrot) and [imagemagick](https://imagemagick.org/index.php) for blurred lock screen effect
+  - [dunst](https://github.com/dunst-project/dunst)
 
 ### Install instruction
 
@@ -114,7 +118,6 @@
     * Setup neovim php and c++ debugging using nvim-dap
     * Setup more themes for all tools: dracula, tomorrow night, monokai for example
   * **GUI**
-    * Notification system such as dunst
     * More i3blocks and maybe setup polybar
     * Fix brightness control in i3
     * Setup rofi-themes-collection installation
