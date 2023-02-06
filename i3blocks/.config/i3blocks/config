@@ -108,9 +108,10 @@ separator=false
 # see the script for details.
 [cpu_usage]
 label=CPU
+label=󰘚
 interval=10
 align=center
-min_width=CPU: 10.00%
+min_width=󰘚 10.00%
 #min_width=CPU: 100.00%
 #separator=false
 
