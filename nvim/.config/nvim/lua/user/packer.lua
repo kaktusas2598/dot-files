@@ -67,8 +67,11 @@ return require('packer').startup(function(use)
     use { 'scrooloose/nerdtree', on = 'NERDTreeToggle'}
     use { 'scrooloose/nerdcommenter' } -- For commenting
     use { 'majutsushi/tagbar' } -- Install exuberant ctags for this to work
-    use { 'rafi/awesome-vim-colorschemes' }
     use { 'mg979/vim-visual-multi' } -- Multiple cursors
+
+    -- Coloschemes
+    use { 'rafi/awesome-vim-colorschemes' }
+    use 'Mofiqul/dracula.nvim'
 
     -- C++ member function initialisation and concrete class implementation snippets for treesitter
     -- :TSCppDefineClassFunc :TSCppMakeConcreteClass
