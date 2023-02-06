@@ -35,6 +35,7 @@ markup=none
 [mediaplayer]
 # Can also comment this and use the one from /usr/share/i3blocks/ if it exists
 # this one is from i3blocks-contrib repo
+label=♪
 command=$SCRIPT_DIR/mediaplayer
 instance=spotify
 interval=5
@@ -46,8 +47,7 @@ signal=10
 # The second parameter overrides the mixer selection
 # See the script for details.
 [volume]
-#label=VOL
-label=♪
+label=󰕾
 instance=Master
 #instance=PCM
 interval=1
@@ -109,7 +109,9 @@ separator=false
 [cpu_usage]
 label=CPU
 interval=10
-min_width=CPU: 100.00%
+align=center
+min_width=CPU: 10.00%
+#min_width=CPU: 100.00%
 #separator=false
 
 #[load_average]
@@ -119,7 +121,7 @@ min_width=CPU: 100.00%
 #
 # The battery instance defaults to 0.
 [battery]
-label=BAT
+#label=BAT
 label=⚡
 #instance=1
 interval=30
