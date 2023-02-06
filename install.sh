@@ -7,7 +7,7 @@ olddir=~/dot-files_old		 #old dot-files backup directory
 envs=("Ubuntu" "WSL" "MSYS2 None")
 
 #list of modules to stow
-modules="bash readline vim tmux git X nvim ranger alacritty kitty urxvt i3 rofi"
+modules="bash readline vim tmux git X nvim ranger alacritty kitty urxvt"
 ####
 
 #Create dot-files_old in homedir

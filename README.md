@@ -14,6 +14,8 @@
   * Terminal configs: urxvt, kitty, alacritty
   * File manager: Ranger
   * Window manager: i3wm
+  * Application launcher: rofi
+  * Status bars: i3bar(using i3blocks) or polybar
 
 ## Installation
 
@@ -30,7 +32,7 @@
 - i3 dependencies:
   - [Rofi](https://github.com/davatorium/rofi)
   - [picom](https://github.com/yshui/picom) or [compton](https://github.com/chjj/compton)
-  - [i3blocks](https://github.com/vivien/i3blocks)
+  - [i3blocks](https://github.com/vivien/i3blocks) or/and [polybar](https://github.com/polybar/polybar)
 
 ### Install instruction
 
