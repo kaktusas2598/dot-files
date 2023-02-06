@@ -5,13 +5,6 @@ configuration {
 
 
 /*Use rofi-theme-selector script to preview and apply a theme*/
-
 //@theme "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"
-@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
-
-window {
-  transparency: "real";
-  /*fullscreen: true;*/
-  background-color: #282c34d0;
-}
-
+//@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
+@theme "/usr/share/rofi/themes/Monokai.rasi"

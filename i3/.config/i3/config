@@ -195,7 +195,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # To find windows class, use xprop utility and click on program
 assign [ class = "kitty" ] $ws1
 assign [ class = "Slack" ] $ws3
-# "Slack"
+assign [ class = "Spotify" ] $ws10
 # "Google-chrome"
 # "firefox"
 # "jetbrains-phpstorm"
@@ -294,6 +294,8 @@ bar {
     }
 }
 # i3bar can also be replaced entirely by something as https://github.com/polybar/polybar for example
+# TODO: decide on one status line and use that
+exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
 # class                 border|backgr|text|indicator|child_border
 client.focused          $lightgray $lightgray $bg $purple $darkgray
