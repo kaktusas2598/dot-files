@@ -154,6 +154,9 @@ bindsym $mod+Shift+minus move scratchpad
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+minus scratchpad show
 
+# Moving workspaces between screens
+bindsym $mod+m move workspace to output right
+
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1: "
@@ -307,6 +310,9 @@ client.focused_inactive $darkgray $darkgray $lightgray $purple $darkgray
 client.unfocused        $darkgray $darkgray $lightgray $purple $darkgray
 client.urgent           $red $red $white $red $red
 # # # # # # # # # # # # # # # # # #
+
+
+for_window [class="Yad"] floating enable
 
 # Set wallpaper on startup using feh
 exec_always feh --bg-fill $HOME/Pictures/wallpaper.png
