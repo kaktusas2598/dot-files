@@ -1,9 +1,14 @@
 window:
   padding:
-    x: 0
-    y: 0
+    x: 5
+    y: 5
+  dynamic_padding: false
   #startup_mode: Fullscreen
   #decorations: none
+  decorations: full
+  startup_mode: Windowed
+  dynamic_title: true
+
   opacity: 0.85
 font:
   normal:
@@ -15,10 +20,13 @@ font:
   italic:
     family: UbuntuMono Nerd Font Mono
     style: Italic
-  size: 13.0
+  size: 14.0
   offset:
-    x: 3
-    y: 3
+    x: 0
+    y: 0
+  glyph_offset:
+    x: 0
+    y: 0
 
 colors:
   # Default colors
