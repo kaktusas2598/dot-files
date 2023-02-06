@@ -234,14 +234,13 @@ bindsym $mod+r mode "resize"
 #######################################
 
 # Change window border styles: pixel|normal|none
-default_border pixel 3
+default_border pixel 1
 default_floating_border normal
 
 # i3 v4.22 needed for gap functionality
-# TODO: Update i3 on ubuntu
-#gaps outer 2
-#gaps inner 2
-#smart_gaps inverse_outer
+gaps outer 2
+gaps inner 2
+smart_gaps inverse_outer
 
 # Mouse moving to other window will not change focus, but you can still
 # use the mouse click to change focus if needed
