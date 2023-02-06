@@ -7,13 +7,13 @@
 
 ## My Setup
 
-  * Editors: Vim and NeoVim
+  * Editors: Vim and NeoVim(>=0.80)
   * Shell: bash
   * Multiplexer: Tmux
   * VS: Git
   * Terminal configs: urxvt, kitty, alacritty
   * File manager: Ranger
-  * Window manager: i3wm
+  * Window manager: i3wm (>=4.22)
   * Application launcher: rofi
   * Status bars: i3bar(using i3blocks) or polybar
 
