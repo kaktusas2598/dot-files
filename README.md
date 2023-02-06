@@ -30,7 +30,7 @@
 - [Git](https://git-scm.com/)
 - [GNU Stow](https://www.gnu.org/software/stow/)
 - i3 dependencies:
-  - [Rofi](https://github.com/davatorium/rofi)
+  - [Rofi](https://github.com/davatorium/rofi) for additional themes see [this](https://github.com/newmanls/rofi-themes-collection)
   - [picom](https://github.com/yshui/picom) or [compton](https://github.com/chjj/compton)
   - [i3blocks](https://github.com/vivien/i3blocks) or/and [polybar](https://github.com/polybar/polybar)
 
@@ -108,3 +108,14 @@
   * [fd](https://github.com/sharkdp/fd)
 
 ## TODO
+
+  * **CLI**
+    * Setup neovim php and c++ debugging using nvim-dap
+    * Setup more themes for all tools: dracula, tomorrow night, monokai for example
+  * **GUI**
+    * More i3blocks and maybe setup polybar
+    * Fix brightness control in i3 and setup multi monitor shorcuts and config
+    * Setup rofi-themes-collection installation
+    * Notification system such as dunst
+    * Wallpaper rotation
+

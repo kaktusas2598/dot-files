@@ -7,4 +7,6 @@ configuration {
 /*Use rofi-theme-selector script to preview and apply a theme*/
 //@theme "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"
 //@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
-@theme "/usr/share/rofi/themes/Monokai.rasi"
+//@theme "~/.local/share/rofi/themes/launchpad.rasi"
+//@theme "/usr/share/rofi/themes/Monokai.rasi"
+@theme "/home/nerijus/.local/share/rofi/themes/rounded-orange-dark.rasi"
