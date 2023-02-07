@@ -263,6 +263,13 @@ type = internal/network
 ;interface = wlan0
 ;interface = wlp0s20f3
 
+; If no interface is specified, polybar can detect an interface of the given type.
+; If multiple are found, it will prefer running interfaces and otherwise just
+; use the first one found.
+; Either 'wired' or 'wireless'
+; New in version 3.6.0
+interface-type = wireless
+
 interval = 3.0
 unknown-as-up = true
 
@@ -279,7 +286,8 @@ format-disconnected-foreground = ${color.black}
 format-disconnected-padding = 1
 
 label-font = 2
-label-connected = "%{A1:nm-connection-editor&:}%{A2:nm-applet&:}%{A3:bash ~/dot-files/scripts/toggle_wifi.sh:} %signal%% wlan0%{A}%{A}%{A}"
+;label-connected = "%{A1:nm-connection-editor&:}%{A2:nm-applet&:}%{A3:bash ~/dot-files/scripts/toggle_wifi.sh:} %signal%% wlan0%{A}%{A}%{A}"
+label-connected = "%{A1:nm-connection-editor&:}%{A2:nm-applet&:}%{A3:bash ~/dot-files/scripts/toggle_wifi.sh:} %signal%% %{A}%{A}%{A}"
 label-disconnected = "%{A1:nm-connection-editor&:}%{A2:nm-applet&:}%{A3:bash ~/dot-files/scripts/toggle_wifi.sh:}睊 null%{A}%{A}%{A}"
 ramp-signal-0 = 睊
 ramp-signal-1 = 

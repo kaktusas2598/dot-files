@@ -44,7 +44,7 @@ content = ""
 
 [module/right3]
 type = custom/text
-content-background = ${color.black}
+content-background = ${color.yellow}
 content-foreground = ${color.grey}
 content = ""
 

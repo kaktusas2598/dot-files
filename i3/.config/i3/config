@@ -248,6 +248,9 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+# Wifi popup always floating
+for_window [class="Nm-connection-editor"] floating enable
+
 #######################################
 
 # Change window border styles: pixel|normal|none
