@@ -274,36 +274,27 @@ set $orange #fe8019
 #bindsym $mod+Shift+x exec i3lock --color "$bg"
 bindsym $mod+Shift+x exec ~/dot-files/scripts/i3lock.sh
 
-bar {
-    position top
-    tray_output primary
-    font pango:UbuntuMono Nerd Font 14
-    #status_command i3status
-    status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks -c ~/.config/i3blocks/config
-    # Or using custom status line like bumblebee
-    # https://github.com/tobi-wan-kenobi/bumblebee-status
-    # Install using: pip install --user bumblebee-status
-    #status_command $HOME/.local/bin/bumblebee-status \
-        #-m cpu memory battery time \
-        #pasink pasource \
-        #-p time.format="%H:%M" \
-        #-t solarized-powerline
+#bar {
+    #position top
+    #tray_output primary
+    #font pango:UbuntuMono Nerd Font 14
+    ##status_command i3status
+    #status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks -c ~/.config/i3blocks/config
 
-    colors {
-        separator $fg
-        # bar background color
-        background $bg
-        # text color used for blocks that do not have a color specified.
-        statusline $lightgray
-        # workspaces section
-        #                    border  backgr. text
-        #focused_workspace    $lightgray $lightgray $bg
-        focused_workspace    $orange $orange $bg
-        inactive_workspace   $darkgray $darkgray $lightgray
-        active_workspace     $darkgray $darkgray $lightgray
-        urgent_workspace     $red $red $bg
-    }
-}
+    #colors {
+        #separator $fg
+        ## bar background color
+        #background $bg
+        ## text color used for blocks that do not have a color specified.
+        #statusline $lightgray
+        ## workspaces section
+        ##                    border  backgr. text
+        #focused_workspace    $orange $orange $bg
+        #inactive_workspace   $darkgray $darkgray $lightgray
+        #active_workspace     $darkgray $darkgray $lightgray
+        #urgent_workspace     $red $red $bg
+    #}
+#}
 # i3bar can also be replaced entirely by something as https://github.com/polybar/polybar for example
 # TODO: decide on one status line and use that
 exec_always --no-startup-id ~/.config/polybar/launch.sh &

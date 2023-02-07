@@ -118,7 +118,6 @@
     * Setup neovim php and c++ debugging using nvim-dap
     * Setup more themes for all tools: dracula, tomorrow night, monokai for example
   * **GUI**
-    * More i3blocks and maybe setup polybar
     * Fix brightness control in i3
     * Setup rofi-themes-collection installation
     * Wallpaper rotation
