@@ -62,6 +62,7 @@ run_rofi() {
 # Execute Command
 run_cmd() {
 	selected="$(confirm_exit)"
+	# TODO: replace systemctl with something better
 	if [[ "$selected" == "$yes" ]]; then
 		if [[ $1 == '--shutdown' ]]; then
 			systemctl poweroff
@@ -70,7 +71,7 @@ run_cmd() {
 		elif [[ $1 == '--hibernate' ]]; then
 			systemctl hibernate
 		elif [[ $1 == '--suspend' ]]; then
-			mpc -q pause
+			#mpc -q pause
 			amixer set Master mute
 			systemctl suspend
 		elif [[ $1 == '--logout' ]]; then
@@ -105,7 +106,8 @@ case ${chosen} in
 		if [[ -x '/usr/bin/betterlockscreen' ]]; then
 			betterlockscreen -l
 		elif [[ -x '/usr/bin/i3lock' ]]; then
-			i3lock
+            ~/dot-files/scripts/i3lock.sh
+            #i3lock
 		fi
         ;;
     $suspend)
