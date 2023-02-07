@@ -34,7 +34,7 @@
 - [Git](https://git-scm.com/)
 - [GNU Stow](https://www.gnu.org/software/stow/)
 - i3 dependencies:
-  - [Rofi](https://github.com/davatorium/rofi) for additional themes see [this](https://github.com/newmanls/rofi-themes-collection)
+  - [Rofi](https://github.com/davatorium/rofi) for additional themes see [this](https://github.com/newmanls/rofi-themes-collection) and [this](https://github.com/adi1090x/rofi)
   - [picom](https://github.com/yshui/picom) or [compton](https://github.com/chjj/compton)
   - [i3blocks](https://github.com/vivien/i3blocks) or/and [polybar](https://github.com/polybar/polybar)
   - [scrot](https://github.com/dreamer/scrot) and [imagemagick](https://imagemagick.org/index.php) for blurred lock screen effect
