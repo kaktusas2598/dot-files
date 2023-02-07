@@ -250,12 +250,12 @@ bindsym $mod+r mode "resize"
 #######################################
 
 # Change window border styles: pixel|normal|none
-default_border pixel 3
+default_border pixel 2
 default_floating_border normal
 
 # i3 v4.22 needed for gap functionality
-gaps outer 2
-gaps inner 3
+gaps outer 3
+gaps inner 5
 smart_gaps inverse_outer
 
 # Mouse moving to other window will not change focus, but you can still
