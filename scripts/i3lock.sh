@@ -1,17 +1,13 @@
 #!/bin/bash
 
-# i3lock blurred screen inspired by /u/patopop007 and the blog post
-# http://plankenau.com/blog/post-10/gaussianlock
-
-# Timings are on an Intel i7-2630QM @ 2.00GHz
-
 # Dependencies:
 # imagemagick
 # i3lock
-# scrot (optional but default)
+# maim
 
 IMAGE=/tmp/i3lock.png
-SCREENSHOT="scrot $IMAGE" # 0.46s
+SCREENSHOT="maim $IMAGE"
+#maim -u --window $(xdotool getactivewindow) | tee ~/Pictures/screenshot-"$(date '+%y%m%d-%H%M-%S').png" | xclip -sel c -t image/png
 
 # Alternate screenshot method with imagemagick. NOTE: it is much slower
 # SCREENSHOT="import -window root $IMAGE" # 1.35s
