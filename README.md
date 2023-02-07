@@ -2,6 +2,7 @@
 
   This is my Configuration files which I use for my daily development.
 
+  ![setup](https://raw.githubusercontent.com/kaktusas2598/dot-files/master/setup.png)
   ![vim](https://raw.githubusercontent.com/kaktusas2598/dot-files/master/vimSetup.png)
   ![nvim](https://raw.githubusercontent.com/kaktusas2598/dot-files/master/nVimSetup.png)
 
