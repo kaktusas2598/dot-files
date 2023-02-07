@@ -40,6 +40,7 @@
   - [i3blocks](https://github.com/vivien/i3blocks) or/and [polybar](https://github.com/polybar/polybar)
   - [scrot](https://github.com/dreamer/scrot) and [imagemagick](https://imagemagick.org/index.php) for blurred lock screen effect
   - [dunst](https://github.com/dunst-project/dunst)
+  - [light](https://github.com/haikarainen/light)
 
 ### Install instruction
 
