@@ -23,7 +23,7 @@ content = ""
 type = custom/text
 content-background = ${color.background}
 content-foreground = ${color.green}
-content = "  "
+content = ""
 
 
 #+++++++++++++++++++++++++++++++++++++++
