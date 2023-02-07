@@ -259,8 +259,8 @@ default_border pixel 2
 default_floating_border normal
 
 # i3 v4.22 needed for gap functionality
-gaps outer 3
-gaps inner 5
+gaps outer 5
+gaps inner 7
 smart_gaps inverse_outer
 
 # Mouse moving to other window will not change focus, but you can still
