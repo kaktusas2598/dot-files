@@ -148,7 +148,7 @@ label-muted-foreground = ${color.white}
 label-muted-background = ${color.black}
 label-muted-font = 2
 
-bar-volume-width = 10
+bar-volume-width = 7
 bar-volume-foreground-0 = ${color.blue}
 bar-volume-foreground-1 = ${color.blue}
 bar-volume-foreground-2 = ${color.blue}
@@ -258,7 +258,10 @@ format-disconnected =
 
 [module/network]
 type = internal/network
-interface = wlan0
+; NV: Only reason this wasnt showing is because of wrong interface name, need to find this dynamically
+; We can find the correct name using 'ip link' or 'ifconfig'
+;interface = wlan0
+;interface = wlp0s20f3
 
 interval = 3.0
 unknown-as-up = true
