@@ -3,14 +3,14 @@
 
 [module/left1]
 type = custom/text
-content-background = ${color.background}
-content-foreground = ${color.background}
+content-background = ${color.black}
+content-foreground = ${color.blue}
 content = ""
 
 [module/left2]
 type = custom/text
-content-background = ${color.black}
-content-foreground = ${color.blue}
+content-background = ${color.background}
+content-foreground = ${color.background}
 content = ""
 
 [module/left3]
@@ -18,6 +18,13 @@ type = custom/text
 content-background = ${color.grey}
 content-foreground = ${color.white}
 content = ""
+
+[module/left4]
+type = custom/text
+content-background = ${color.background}
+content-foreground = ${color.green}
+content = "  "
+
 
 #+++++++++++++++++++++++++++++++++++++++
 

@@ -12,8 +12,10 @@
 type = custom/text
 content = 
 
-content-background = ${color.black}
-content-foreground = ${color.blue}
+;content-background = ${color.black}
+content-background = ${color.blue}
+;content-foreground = ${color.blue}
+content-foreground = ${color.white}
 content-padding = 1
 content-font = 4
 
