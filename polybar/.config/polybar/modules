@@ -81,7 +81,7 @@ wrapping-scroll = false
 enable-scroll = true
 
 ; Only show workspaces on the same output as the bar
-;pin-workspaces = true
+pin-workspaces = true
 
 label-mode = " %mode%"
 label-mode-padding = 1
