@@ -121,5 +121,6 @@
   * **GUI**
     * Setup rofi-themes-collection installation
     * Wallpaper rotation
+    * Weather service
     * Setup sound and brightness notifications
 
