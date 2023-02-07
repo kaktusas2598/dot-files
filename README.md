@@ -19,6 +19,7 @@
     * Application launcher: rofi
     * Status bars: i3bar(using i3blocks) or polybar
     * Notification daemon: dunst
+    * Gruvbox GTK [Theme](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme)
 
 ## Installation
 
