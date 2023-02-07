@@ -225,8 +225,8 @@ animation-charging-framerate = 750
 type = internal/date
 interval = 1.0
 
-time = " %Y-%m-%d %H:%M"
-time-alt =  %H:%M
+time = " %Y-%m-%d %H:%M:%S"
+time-alt =  %H:%M:%S
 
 format = <label>
 format-background = ${color.white}
@@ -289,7 +289,8 @@ interval = 30
 
 mount-0 = /
 
-label-mounted = "  %percentage_used%% "
+;label-mounted = "  %percentage_used%% "
+label-mounted = "  %free% "
 label-mounted-background = ${color.black}
 label-mounted-foreground = ${color.white}
 label-mounted-font = 2
@@ -338,6 +339,19 @@ ramp-2 = "  "
 ramp-background = ${color.grey}
 ramp-foreground = ${color.white}
 ramp-font = 5
+
+;;==========================================================
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = " "
+format = <label>
+exec = python3 ~/.config/polybar/scripts/spotify_status.py -f '{artist}: {song}'
+format-underline = #1db954
+;control players (optional)
+click-left = playerctl --player=spotify play-pause
+click-right = playerctl --player=spotify next
+click-middle = playerctl --player=spotify previous
 
 ;;==========================================================
 ;;	    __________  ______
