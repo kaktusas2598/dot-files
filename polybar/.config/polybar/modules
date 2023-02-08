@@ -19,7 +19,8 @@ content-foreground = ${color.white}
 content-padding = 1
 content-font = 4
 
-click-left = rofi -monitor -1 -show drun -location 1 -columns 2 -yoffset 27 -lines 20 -width 30 -font "UbuntuMono Nerd Font 14"
+;click-left = rofi -monitor -1 -show drun -location 1 -columns 2 -yoffset 27 -lines 20 -width 30 -font "UbuntuMono Nerd Font 14"
+click-left = bash ~/.config/rofi/launchers/type-3/launcher.sh
 
 ;;==========================================================
 
@@ -228,8 +229,8 @@ animation-charging-framerate = 750
 type = internal/date
 interval = 1.0
 
-time = " %Y-%m-%d %H:%M:%S"
-time-alt =  %H:%M:%S
+time =  %H:%M:%S
+time-alt = " %Y-%m-%d %H:%M:%S"
 
 format = <label>
 format-background = ${color.white}
@@ -237,6 +238,20 @@ format-foreground = ${color.black}
 format-font = 2
 format-padding = 1
 label = %time%
+
+;;==========================================================
+
+[module/keyboard]
+type = internal/xkeyboard
+
+; List of indicators to ignore
+blacklist-0 = num lock
+blacklist-1 = scroll lock
+
+; Removed space from default layout to conserve space
+format = <label-layout><label-indicator>
+
+label-indicator-on-capslock = 󰪛
 
 ;;==========================================================
 
@@ -424,6 +439,19 @@ format-underline = #1db954
 click-left = playerctl --player=spotify play-pause
 click-right = playerctl --player=spotify next
 click-middle = playerctl --player=spotify previous
+
+;;==========================================================
+
+[module/power]
+type = custom/text
+content = 
+
+content-background = ${color.teal}
+content-foreground = ${color.white}
+content-padding = 1
+content-font = 4
+
+click-left = bash ~/.config/rofi/powermenu/type-6/powermenu.sh
 
 ;;==========================================================
 ;;	    __________  ______

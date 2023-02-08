@@ -267,6 +267,10 @@ smart_gaps inverse_outer
 # use the mouse click to change focus if needed
 focus_follows_mouse no
 
+# Set keyboard layouts and switch layout shortcut
+exec "setxkbmap -layout gb,lt"
+exec "setxkbmap -option 'grp:alt_shift_toggle'"
+
 # # # # # # # # # # # # # # # # # # # #
 # Gruvbox Dark theme
 set $bg #282828
