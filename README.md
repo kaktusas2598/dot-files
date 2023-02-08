@@ -19,7 +19,7 @@
     * Window manager: i3wm (>=4.22 for gap support)
     * Application launcher: rofi
     * Status bars: i3bar(using i3blocks) or polybar (>=3.60 for better network module)
-    * Notification daemon: dunst
+    * Notification daemon: dunst (>= 1.9.0 to have good stuff)
     * Gruvbox GTK [Theme](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme)
 
 ## Installation
