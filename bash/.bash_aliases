@@ -22,6 +22,8 @@ alias du='du -h'
 #Hardware and drivers info
 alias hardware='lspci -v | less'
 alias openPorts="sudo lsof -i -P -n | grep LISTEN"
+alias myIp='curl icanhazip.com'
+alias weather='curl wttr.in?format=3'
 #alias most_used='history|awk '{print $2}'|awk 'BEGIN {FS="|"} {print $1}'|sort|uniq -c|sort -r'
 
 #For lazy devs like me
