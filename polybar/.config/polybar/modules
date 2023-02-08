@@ -181,12 +181,12 @@ time-format = %H:%M
 
 format-font = 2
 format-charging-font = 2
-format-charging = <animation-charging> <label-charging>
+format-charging = <animation-charging><label-charging>
 format-charging-background = ${color.red}
 format-charging-foreground = ${color.foreground}
 format-charging-padding = 1
 
-format-discharging = <ramp-capacity> <label-discharging>
+format-discharging = <ramp-capacity><label-discharging>
 format-discharging-background = ${color.red}
 format-discharging-foreground = ${color.foreground}
 format-discharging-padding = 1
@@ -302,7 +302,7 @@ format-disconnected-padding = 1
 
 label-font = 2
 ;label-connected = "%{A1:nm-connection-editor&:}%{A2:nm-applet&:}%{A3:bash ~/dot-files/scripts/toggle_wifi.sh:} %signal%% wlan0%{A}%{A}%{A}"
-label-connected = "%{A1:nm-connection-editor&:}%{A2:nm-applet&:}%{A3:bash ~/dot-files/scripts/toggle_wifi.sh:} %signal%% %{A}%{A}%{A}"
+label-connected = "%{A1:nm-connection-editor&:}%{A2:nm-applet&:}%{A3:bash ~/dot-files/scripts/toggle_wifi.sh:} %signal%%%{A}%{A}%{A}"
 label-disconnected = "%{A1:nm-connection-editor&:}%{A2:nm-applet&:}%{A3:bash ~/dot-files/scripts/toggle_wifi.sh:}睊 null%{A}%{A}%{A}"
 ramp-signal-0 = 睊
 ramp-signal-1 = 
