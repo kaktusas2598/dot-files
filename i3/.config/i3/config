@@ -266,6 +266,8 @@ smart_gaps inverse_outer
 # Mouse moving to other window will not change focus, but you can still
 # use the mouse click to change focus if needed
 focus_follows_mouse no
+# hjkl keys will only work inside workspace, useful in multi monitor setup
+focus_wrapping workspace
 
 # Set keyboard layouts and switch layout shortcut
 exec_always "setxkbmap -layout gb,lt"
