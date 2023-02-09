@@ -146,6 +146,10 @@ if [ -f /usr/share/bash-completion/completion/git ]; then
     . /usr/share/bash-completion/completions/git
 fi
 
+# Enable fuzzy file finder
+# See https://github.com/junegunn/fzf for installation details
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 # tabtab source for packages
 # uninstall by removing these lines
 #[ -f ~/.config/tabtab/__tabtab.bash ] && . ~/.config/tabtab/__tabtab.bash || true

@@ -19,7 +19,7 @@
     * Window manager: i3wm (>=4.22 for gap support)
     * Application launcher: rofi
     * Status bars: i3bar(using i3blocks) or polybar (>=3.60 for better network module)
-    * Notification daemon: dunst (>= 1.9.0 to have good stuff)
+    * Notification daemon: dunst (>= 1.9.0 for better geometry)
     * Gruvbox GTK [Theme](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme)
 
 ## Installation
@@ -51,9 +51,7 @@
   ```
   1. Install all modules at once
   ```
-  $ cd dot-files
-  $ ./install.sh # Optional, you can also simply drag dot files to your home directory
-  ```
+  $ cd dot-files $ ./install.sh # Optional, you can also simply drag dot files to your home directory ```
   2. Or alternatively if you want to install only certain module, use:
   ```
   $ cd dot-files
@@ -106,14 +104,16 @@
 **Colorschemes:**
   * [AwesomeColorschemes](https://github.com/rafi/awesome-vim-colorschemes)
 
-## Dependencies
-  * [Ctags](http://ctags.sourceforge.net/) - for tagbar to work.
-  * [Git](https://git-scm.com/) - for vim-plug
-  * [Python](https://www.python.org/) - for ulti-snip (currently removed, but you can add to yours)
-  * [Patched Powerline Fonts](https://github.com/powerline/fonts) - Or can use NERD fonts
+## CLI Dependencies
+  * [Ctags](http://ctags.sourceforge.net/)
+  * [Git](https://git-scm.com/)
+  * [Python](https://www.python.org/)
+  * [NERD Fonts](https://github.com/ryanoasis/nerd-fonts)
   * [Lua](https://www.lua.org/)
   * [ripgrep](https://github.com/BurntSushi/ripgrep)
   * [fd](https://github.com/sharkdp/fd)
+  * [bat](https://github.com/sharkdp/bat)
+  * [fzf](https://github.com/junegunn/fzf)
 
 ## TODO
 
@@ -121,7 +121,6 @@
     * Setup neovim php and c++ debugging using nvim-dap
     * Setup more themes for all tools: dracula, tomorrow night, monokai for example
   * **GUI**
-    * Setup rofi-themes-collection installation
     * Wallpaper rotation
     * Weather service
     * Setup sound and brightness notifications
