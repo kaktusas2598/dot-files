@@ -42,9 +42,9 @@ configuration {
     }
 
 	/*---------- Run settings ----------*/
-	run-command: "kitty bash -c {cmd}";
+	run-command: "{cmd}";
 	run-list-command: "";
-	run-shell-command: "{terminal} -e {cmd}";
+	run-shell-command: "{terminal} bash -c {cmd}";
 
 	/*---------- Fallback Icon ----------*/
 	/*run,drun {*/
