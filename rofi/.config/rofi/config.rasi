@@ -42,7 +42,7 @@ configuration {
     }
 
 	/*---------- Run settings ----------*/
-	run-command: "{cmd}";
+	run-command: "kitty bash -c {cmd}";
 	run-list-command: "";
 	run-shell-command: "{terminal} -e {cmd}";
 
@@ -78,7 +78,8 @@ configuration {
 	display-filebrowser: "Files";
 
 	/*---------- Misc setting ----------*/
-	terminal: "rofi-sensible-terminal";
+	/*terminal: "rofi-sensible-terminal";*/
+	terminal: "kitty";
 	font: "Mono 12";
 	sort: false;
 	threads: 0;
