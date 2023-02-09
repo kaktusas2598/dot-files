@@ -353,4 +353,4 @@ exec_always feh --bg-fill $HOME/Pictures/wallpaper.png
 # Start compositor to enable things like transparency
 # https://github.com/yshui/picom
 # Or: https://github.com/chjj/compton
-exec_always picom
+exec_always picom --config ~/.config/picom/picom.conf
