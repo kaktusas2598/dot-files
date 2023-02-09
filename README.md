@@ -105,15 +105,15 @@
   * [AwesomeColorschemes](https://github.com/rafi/awesome-vim-colorschemes)
 
 ## CLI Dependencies
-  * [Ctags](http://ctags.sourceforge.net/)
   * [Git](https://git-scm.com/)
-  * [Python](https://www.python.org/)
-  * [NERD Fonts](https://github.com/ryanoasis/nerd-fonts)
   * [Lua](https://www.lua.org/)
+  * [Python](https://www.python.org/)
+  * [NERD Fonts](https://github.com/ryanoasis/nerd-fonts) and [Noto Emoji font](https://github.com/googlefonts/noto-emoji)
   * [ripgrep](https://github.com/BurntSushi/ripgrep)
   * [fd](https://github.com/sharkdp/fd)
-  * [bat](https://github.com/sharkdp/bat)
+  * [bat](https://github.com/sharkdp/bat) - used by ranger in file preview
   * [fzf](https://github.com/junegunn/fzf)
+  * [Ctags](http://ctags.sourceforge.net/) - for Vim/NVim tags
 
 ## TODO
 
