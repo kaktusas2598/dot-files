@@ -24,7 +24,9 @@ alias hardware='lspci -v | less'
 alias openPorts="sudo lsof -i -P -n | grep LISTEN"
 alias myIp='curl icanhazip.com'
 alias weather='curl wttr.in?format=3'
-#alias most_used='history|awk '{print $2}'|awk 'BEGIN {FS="|"} {print $1}'|sort|uniq -c|sort -r'
+alias cmodules='cmake --help-module-list'
+alias dirToUnix='find . -type f -exec dos2unix {} \;'
+
 
 #For lazy devs like me
 alias c='clear'
@@ -35,15 +37,14 @@ alias gs='git status'
 alias v='vim'
 alias n='nvim'
 alias r='ranger'
+alias nvimdiff='nvim -d'
 
-alias cmodules='cmake --help-module-list'
-alias dirToUnix='find . -type f -exec dos2unix {} \;'
 #Same as CMD+K on MAC, clears whole scrollable buffer, not just visible part
 #alias clear="clear && printf '\e[3J'"
 
 #For linux OS, alias xdg-open as open to make it work just like in OS X
 #if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-	#alias open="xdg-open"
+    #alias open="xdg-open"
 #fi
 
 ###############################################################################
