@@ -17,7 +17,7 @@ content-background = ${color.blue}
 ;content-foreground = ${color.blue}
 content-foreground = ${color.white}
 content-padding = 1
-content-font = 4
+content-font = 1
 
 ;click-left = rofi -monitor -1 -show drun -location 1 -columns 2 -yoffset 27 -lines 20 -width 30 -font "UbuntuMono Nerd Font 14"
 click-left = bash ~/.config/rofi/launchers/type-6/launcher.sh
@@ -88,7 +88,7 @@ label-mode = " %mode%"
 label-mode-padding = 1
 label-mode-foreground = ${color.black}
 label-mode-background = ${color.lightred}
-label-mode-font = 2
+label-mode-font = 3
 
 ; focused = Active workspace on focused monitor
 label-focused = %name%
@@ -97,7 +97,7 @@ label-focused-background = ${color.background}
 label-focused-foreground = ${color.orange}
 label-focused-underline= ${color.background}
 label-focused-padding = 1
-label-focused-font = 2
+label-focused-font = 1
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %name%
