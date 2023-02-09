@@ -68,6 +68,7 @@ return require('packer').startup(function(use)
     use { 'scrooloose/nerdcommenter' } -- For commenting
     use { 'majutsushi/tagbar' } -- Install exuberant ctags for this to work
     use { 'mg979/vim-visual-multi' } -- Multiple cursors
+    use 'norcalli/nvim-colorizer.lua'
 
     -- Coloschemes
     use { 'rafi/awesome-vim-colorschemes' }
