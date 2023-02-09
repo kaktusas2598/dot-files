@@ -326,8 +326,19 @@ client.urgent           $red $red $white $red $red
 # # # # # # # # # # # # # # # # # #
 
 
+# These windows will always be floating
 for_window [class="Yad"] floating enable
+for_window [class="Lxappearance"] floating enable
 
+# If following windows are floating, they will be certain size
+for_window [class="kitty" floating] resize set 1024 768
+for_window [class="urxvt" floating] resize set 1024 768
+for_window [class="URxvt" floating] resize set 1024 768
+
+# Make all floating windows centered
+for_window [floating] move position center
+
+# Start up notification daemon
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
 # Set wallpaper on startup using feh
