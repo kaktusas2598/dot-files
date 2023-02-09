@@ -268,8 +268,12 @@ smart_gaps inverse_outer
 focus_follows_mouse no
 
 # Set keyboard layouts and switch layout shortcut
-exec "setxkbmap -layout gb,lt"
-exec "setxkbmap -option 'grp:alt_shift_toggle'"
+exec_always "setxkbmap -layout gb,lt"
+exec_always "setxkbmap -option 'grp:alt_shift_toggle'"
+
+# Set keyboard press rate in X, super useful when navigating in Vim, holding down key
+# makes it go brrrr
+exec_always xset r rate 300 50
 
 # # # # # # # # # # # # # # # # # # # #
 # Gruvbox Dark theme
