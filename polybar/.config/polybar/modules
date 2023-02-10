@@ -457,7 +457,7 @@ click-left = bash ~/.config/rofi/powermenu/type-6/powermenu.sh
 
 [module/weather]
 type = custom/script
-exec = curl -s v2d.wttr.in?format=1
+exec = curl -s wttr.in?format="%c%t"
 ; poll weather every 15min
 interval = 900
 format-maxlen = 80
