@@ -51,7 +51,8 @@
   ```
   1. Install all modules at once
   ```
-  $ cd dot-files $ ./install.sh # Optional, you can also simply drag dot files to your home directory ```
+  $ cd dot-files $ ./install.sh # Optional, you can also simply drag dot files to your home directory
+  ```
   2. Or alternatively if you want to install only certain module, use:
   ```
   $ cd dot-files
