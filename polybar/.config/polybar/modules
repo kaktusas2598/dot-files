@@ -88,7 +88,7 @@ label-mode = " %mode%"
 label-mode-padding = 1
 label-mode-foreground = ${color.black}
 label-mode-background = ${color.lightred}
-label-mode-font = 3
+label-mode-font = 2
 
 ; focused = Active workspace on focused monitor
 label-focused = %name%
@@ -367,7 +367,7 @@ ramp-1 = "  "
 ramp-2 = "  "
 ramp-background = ${color.grey}
 ramp-foreground = ${color.white}
-ramp-font = 5
+ramp-font = 1
 
 ;;==========================================================
 [module/backlight]
@@ -449,7 +449,7 @@ content = 
 content-background = ${color.teal}
 content-foreground = ${color.white}
 content-padding = 1
-content-font = 4
+content-font = 1
 
 click-left = bash ~/.config/rofi/powermenu/type-6/powermenu.sh
 
@@ -464,7 +464,7 @@ format-maxlen = 80
 ;format-background = ${color.green}
 ;format-foreground = ${color.black}
 format-padding = 1
-format-font = 2
+;format-font = 3
 
 
 ;;==========================================================
