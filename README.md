@@ -125,6 +125,5 @@
     * Setup more themes for all tools: dracula, tomorrow night, monokai for example
   * **GUI**
     * Wallpaper rotation
-    * Weather service
     * Setup sound and brightness notifications
 
