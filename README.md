@@ -41,6 +41,7 @@
   - [maim](https://github.com/naelstrof/maim) and [imagemagick](https://imagemagick.org/index.php) for blurred lock screen effect and screenshots
   - [dunst](https://github.com/dunst-project/dunst)
   - [light](https://github.com/haikarainen/light)
+  - Python dbus module for playerctl support with spotify: ```pip install dbus-python```
 
 ### Install instruction
 
