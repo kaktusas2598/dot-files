@@ -23,6 +23,7 @@ shopt -s histappend
 
 #Add ~/bin/ dir to PATH so we can execute our own scripts
 export PATH=~/bin:"$PATH"
+export PATH=~/.local/bin:"$PATH"
 
 # Set default editor NeoVim -> Vim -> Vi
 if command -v nvim > /dev/null; then
