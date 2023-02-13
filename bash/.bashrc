@@ -64,8 +64,11 @@ function prompt
     local HOST="\h"
     local PWD="\W"
     local FULL_PWD="\w"
-    export PS1="${RED}${TIME}${WHITE}[${GREEN}${USER}${YELLOW}:${BLUE}${FULL_PWD}${WHITE}]${YELLOW}\$(parse_git_branch) \$ ${GRAY}"
-    #export PS1="${RED}\A${WHITE}[${GREEN}\u@\h ${RED}\W${WHITE}]${GREEN}\$ ${GRAY}"
+    # 2013-2023: Clasic Prompt I have used for a decade, will work fine everywhere
+    #export PS1="${RED}${TIME}${WHITE}[${GREEN}${USER}${YELLOW}:${BLUE}${FULL_PWD}${WHITE}]${YELLOW}\$(parse_git_branch) \$ ${GRAY}"
+    # 2023: Fancy minimal emoji prompt, will work out of the box in the kitty terminal and patched st terminal
+    # On urxvt it will work but emoji will not be colored
+    export PS1="${GREEN}${USER}${YELLOW}:${BLUE}${FULL_PWD}${YELLOW}\$(parse_git_branch) 🐧 ${GRAY}"
 }
 prompt
 
