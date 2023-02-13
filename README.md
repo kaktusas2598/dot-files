@@ -41,6 +41,9 @@
   - [maim](https://github.com/naelstrof/maim) and [imagemagick](https://imagemagick.org/index.php) for blurred lock screen effect and screenshots
   - [dunst](https://github.com/dunst-project/dunst)
   - [light](https://github.com/haikarainen/light)
+  - Python dbus module for playerctl support with spotify: ```pip install dbus-python```, to control media players, especially spotify on polybar
+  - network-manager-applet (or nm-applet) for wifi/network popup in polybar
+  - [pulsemixer](https://github.com/GeorgeFilipkin/pulsemixer) - to control sounds on polybar
 
 ### Install instruction
 
@@ -51,7 +54,9 @@
   ```
   1. Install all modules at once
   ```
-  $ cd dot-files $ ./install.sh # Optional, you can also simply drag dot files to your home directory ```
+  $ cd dot-files
+  $ ./install.sh # Optional, you can also simply drag dot files to your home directory
+  ```
   2. Or alternatively if you want to install only certain module, use:
   ```
   $ cd dot-files
@@ -122,6 +127,5 @@
     * Setup more themes for all tools: dracula, tomorrow night, monokai for example
   * **GUI**
     * Wallpaper rotation
-    * Weather service
     * Setup sound and brightness notifications
 
