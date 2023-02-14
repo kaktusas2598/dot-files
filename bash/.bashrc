@@ -44,7 +44,7 @@ fi
 
 #Get git branch name
 parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /' # Last space is only for prompt
 }
 
 ##Customize shell prompt
@@ -68,7 +68,9 @@ function prompt
     #export PS1="${RED}${TIME}${WHITE}[${GREEN}${USER}${YELLOW}:${BLUE}${FULL_PWD}${WHITE}]${YELLOW}\$(parse_git_branch) \$ ${GRAY}"
     # 2023: Fancy minimal emoji prompt, will work out of the box in the kitty terminal and patched st terminal
     # On urxvt it will work but emoji will not be colored
-    export PS1="${GREEN}${USER}${YELLOW}:${BLUE}${FULL_PWD}${YELLOW}\$(parse_git_branch) 🐧 ${GRAY}"
+    #export PS1="${GREEN}${USER}${YELLOW}:${BLUE}${FULL_PWD}${YELLOW}\$(parse_git_branch) 🐧 ${GRAY}"
+    # 2023: Minimal, no bullshit prompts
+    export PS1="${BLUE}${FULL_PWD} ${YELLOW}\$(parse_git_branch)${GREEN} ${GRAY}"
 }
 prompt
 
