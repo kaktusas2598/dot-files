@@ -27,6 +27,11 @@ alias weather='curl wttr.in?format=3'
 alias cmodules='cmake --help-module-list'
 alias dirToUnix='find . -type f -exec dos2unix {} \;'
 
+# On Ubuntu/Debian systems bat is called "batcat", remap it here
+if command -v batcat &> /dev/null
+then
+    alias bat='batcat'
+fi
 
 #For lazy devs like me
 alias c='clear'
