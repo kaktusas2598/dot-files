@@ -64,10 +64,17 @@ echo -e "Firefox stored your history and bookmarks in: ${BBlack}$PLACES_DB${Code
 echo "Here are the tables stored by firefox:"
 sqlite3 /tmp/places.sqlite ".tables"
 
-sqlite3 /tmp/places.sqlite "select moz_places.url, moz_bookmarks.title
-                       from moz_places, moz_bookmarks
-                       where moz_bookmarks.fk = moz_places.id
-                       and moz_bookmarks.type = 1
-                       and length(moz_bookmarks.title) > 0
-                       order by moz_bookmarks.dateAdded"
-
+# moz_bookmarks.type: 1 - url, 2 - folder/parent
+sqlite3 /tmp/places.sqlite "select moz_places.url, bookmarks.title, folders.title
+                       from moz_places, moz_bookmarks as bookmarks
+                       left join moz_bookmarks as folders on folders.id = bookmarks.parent
+                       where bookmarks.fk = moz_places.id
+                       and bookmarks.type = 1 and folders.type = 2
+                       and length(bookmarks.title) > 0
+                       order by bookmarks.dateAdded"
+#sqlite3 /tmp/places.sqlite "select moz_places.url, moz_bookmarks.title
+                       #from moz_places, moz_bookmarks
+                       #where moz_bookmarks.fk = moz_places.id
+                       #and moz_bookmarks.type = 1
+                       #and length(moz_bookmarks.title) > 0
+                       #order by moz_bookmarks.dateAdded"
