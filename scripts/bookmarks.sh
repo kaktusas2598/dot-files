@@ -45,15 +45,26 @@ if command -v snap >/dev/null 2>&1 ; then
     fi
 fi
 
+# Check if windows
+if command -v wsl.exe >/dev/null 2>&1 ; then
+    PLACES_LOOKUP=$(wslpath $APPDATA)/Mozilla/Firefox/Profiles/
+    echo $PLACES_LOOKUP
+fi
+
 # Find location of main firefox places db
 PLACES_DB=$(find $PLACES_LOOKUP -name places.sqlite)
+
+# places.sqlite must be copied mainly for 2 reasons:
+#   1. To avoid corruption of firefox's data
+#   2. DB will be locked if firefox is opened
+cp $PLACES_DB /tmp/places.sqlite
 
 echo -e "Firefox stored your history and bookmarks in: ${BBlack}$PLACES_DB${CodeOff}"
 
 echo "Here are the tables stored by firefox:"
-sqlite3 $PLACES_DB ".tables"
+sqlite3 /tmp/places.sqlite ".tables"
 
-sqlite3 $PLACES_DB "select moz_places.url, moz_bookmarks.title
+sqlite3 /tmp/places.sqlite "select moz_places.url, moz_bookmarks.title
                        from moz_places, moz_bookmarks
                        where moz_bookmarks.fk = moz_places.id
                        and moz_bookmarks.type = 1
