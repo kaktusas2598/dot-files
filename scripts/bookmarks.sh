@@ -1,6 +1,6 @@
 #!/bin/bash
 #==========================================
-# Title:  Web Browser Data Extractor
+# Title:  Firefox Bookmark Dmenu Launcher
 # Author: madvi11ain
 # Date:   16 Feb 2023
 #==========================================
@@ -61,17 +61,20 @@ cp $PLACES_DB /tmp/places.sqlite
 
 echo -e "Firefox stored your history and bookmarks in: ${BBlack}$PLACES_DB${CodeOff}"
 
-echo "Here are the tables stored by firefox:"
-sqlite3 /tmp/places.sqlite ".tables"
+#echo "Here are the tables stored by firefox:"
+#sqlite3 /tmp/places.sqlite ".tables"
 
 # moz_bookmarks.type: 1 - url, 2 - folder/parent
-sqlite3 /tmp/places.sqlite "select moz_places.url, bookmarks.title, folders.title
+SQL="select folders.title, bookmarks.title, moz_places.url
                        from moz_places, moz_bookmarks as bookmarks
                        left join moz_bookmarks as folders on folders.id = bookmarks.parent
                        where bookmarks.fk = moz_places.id
                        and bookmarks.type = 1 and folders.type = 2
                        and length(bookmarks.title) > 0
-                       order by bookmarks.dateAdded"
+                       order by bookmarks.dateAdded;"
+
+printf '%s\n' "$(sqlite3 "/tmp/places.sqlite" "${SQL}")" | dmenu -i -l 20 -p "Firefox open: " | awk -F'|' '{print $3}'
+# | xargs firefox
 #sqlite3 /tmp/places.sqlite "select moz_places.url, moz_bookmarks.title
                        #from moz_places, moz_bookmarks
                        #where moz_bookmarks.fk = moz_places.id
