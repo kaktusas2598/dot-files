@@ -78,6 +78,16 @@ HISTLIST=$(sqlite3 -separator "|" "/tmp/places.sqlite" "${SQL}")
 
 # TODO: WSL, need x server for dmenu or maybe find an alternative for windows
 
+# Import mozilla bookmarks to nb, time consuming
+#IFS=$'\n'
+#BM_ARRAY=(`sqlite3 -separator "|" "/tmp/places.sqlite" "${SQL}"`)
+#for bookmark in "${BM_ARRAY[@]}"; do
+    #TAG=$(echo "${bookmark}" | awk -F '|' '{print $1}')
+    #URL=$(echo "${bookmark}" | awk -F '|' '{print $NF}')
+    ##echo "Tag: $TAG, Url: $URL"
+    #nb $URL -t $TAG
+#done
+
 # Simple, use dmenu:
 #CHOICE=$(printf '%s\n' "${HISTLIST}" | dmenu -i -l 20 -p "Firefox open:" | awk -F'|' '{print $NF}')
 
