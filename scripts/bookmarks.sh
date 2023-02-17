@@ -78,7 +78,7 @@ HISTLIST=$(sqlite3 -separator "|" "/tmp/places.sqlite" "${SQL}")
 
 # TODO: WSL, need x server for dmenu or maybe find an alternative for windows
 # FIXME: need to change separator to be multiple character to avoid wrong parsing
-CHOICE=$(printf '%s\n' "${HISTLIST}" | dmenu -i -l 20 -p "Firefox open:" | awk -F '|' '{print $3}')
+CHOICE=$(printf '%s\n' "${HISTLIST}" | dmenu -i -l 20 -p "Firefox open:" | awk -F'|' '{print $NF}')
 
 echo $CHOICE
 [[ $CHOICE = "" ]] && exit 1
