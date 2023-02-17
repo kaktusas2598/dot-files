@@ -74,10 +74,14 @@ SQL="select folders.title, bookmarks.title, moz_places.url
                        order by bookmarks.dateAdded;"
 
 #HISTLIST=$(printf '%s\n' "$(sqlite3 "/tmp/places.sqlite" "${SQL}")")
-HISTLIST=$(sqlite3 "/tmp/places.sqlite" "${SQL}")
+HISTLIST=$(sqlite3 -separator "|" "/tmp/places.sqlite" "${SQL}")
 
 # TODO: WSL, need x server for dmenu or maybe find an alternative for windows
+# FIXME: need to change separator to be multiple character to avoid wrong parsing
 CHOICE=$(printf '%s\n' "${HISTLIST}" | dmenu -i -l 20 -p "Firefox open:" | awk -F '|' '{print $3}')
+
+echo $CHOICE
+[[ $CHOICE = "" ]] && exit 1
 
 # TODO: firefox.exe on wsl, assuming we can subtitute dmenu for something
 firefox $CHOICE
