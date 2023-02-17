@@ -73,11 +73,11 @@ SQL="select folders.title, bookmarks.title, moz_places.url
                        and length(bookmarks.title) > 0
                        order by bookmarks.dateAdded;"
 
-printf '%s\n' "$(sqlite3 "/tmp/places.sqlite" "${SQL}")" | dmenu -i -l 20 -p "Firefox open: " | awk -F'|' '{print $3}'
-# | xargs firefox
-#sqlite3 /tmp/places.sqlite "select moz_places.url, moz_bookmarks.title
-                       #from moz_places, moz_bookmarks
-                       #where moz_bookmarks.fk = moz_places.id
-                       #and moz_bookmarks.type = 1
-                       #and length(moz_bookmarks.title) > 0
-                       #order by moz_bookmarks.dateAdded"
+#HISTLIST=$(printf '%s\n' "$(sqlite3 "/tmp/places.sqlite" "${SQL}")")
+HISTLIST=$(sqlite3 "/tmp/places.sqlite" "${SQL}")
+
+# TODO: WSL, need x server for dmenu or maybe find an alternative for windows
+CHOICE=$(printf '%s\n' "${HISTLIST}" | dmenu -i -l 20 -p "Firefox open:" | awk -F '|' '{print $3}')
+
+# TODO: firefox.exe on wsl, assuming we can subtitute dmenu for something
+firefox $CHOICE

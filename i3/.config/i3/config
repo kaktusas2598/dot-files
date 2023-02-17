@@ -102,6 +102,9 @@ bindsym $mod+Shift+p exec --no-startup-id ~/.config/rofi/powermenu/type-6/powerm
 # Instead of specific bindings we open screenshot dialog
 bindsym Print exec --no-startup-id ~/.config/rofi/applets/bin/screenshot.sh
 
+
+bindsym $mod+i exec ~/dot-files/scripts/bookmarks.sh
+
 # change focus
 bindsym $mod+$left focus left
 bindsym $mod+$right focus right
