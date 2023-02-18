@@ -34,6 +34,7 @@
 
 - [Git](https://git-scm.com/)
 - [GNU Stow](https://www.gnu.org/software/stow/)
+- [Starship](https://starship.rs/)
 - i3 dependencies:
   - [Rofi](https://github.com/davatorium/rofi) for additional themes see [this](https://github.com/newmanls/rofi-themes-collection) and [this](https://github.com/adi1090x/rofi)
   - [picom](https://github.com/yshui/picom) or [compton](https://github.com/chjj/compton)

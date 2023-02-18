@@ -165,3 +165,6 @@ fi
 if [ -f ~/.bash_env ]; then
     source ~/.bash_env
 fi
+
+# Enable Startship Prompt
+eval "$(starship init bash)"
