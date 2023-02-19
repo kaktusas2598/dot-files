@@ -312,7 +312,10 @@ handle_mime() {
             #exit 2;;
             #try safepipe bat --color=always --theme="Monokai Extended" "${FILE_PATH}" && { dump | trim; exit 5; }
             #try safepipe batcat --color=always --theme="gruvbox-dark" "${FILE_PATH}" && { dump | trim; exit 5; }
-            bat --color=always --theme="gruvbox-dark" "${FILE_PATH}" && exit 5
+            # Ranger does not seem to respect aliases even if you put them in bash profile so added this here
+            VIEWER='bat'
+            if command -v batcat &> /dev/null; then VIEWER='batcat'; fi
+            $VIEWER --color=always --theme="gruvbox-dark" "${FILE_PATH}" && exit 5
             exit 2;;
 
         ## DjVu
