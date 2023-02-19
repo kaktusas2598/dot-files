@@ -76,8 +76,9 @@ set $right l
 #######################################
 #               Keybinds              #
 #######################################
-# start a terminal: urxvt, kitty, alacritty..
-bindsym $mod+Return exec kitty
+# start a terminal: st, urxvt, kitty, alacritty..
+#bindsym $mod+Return exec kitty
+bindsym $mod+Return exec st
 bindsym $mod+Shift+Return exec urxvt
 
 # kill focused window
@@ -170,6 +171,10 @@ bindsym $mod+minus scratchpad show
 
 # Moving workspaces between screens
 bindsym $mod+m move workspace to output right
+
+# Alt+tab behaviour for workspace switching
+bindsym Mod1+Tab workspace next
+bindsym Mod1+Shift+Tab workspace prev
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
