@@ -59,6 +59,8 @@ nmap <silent><leader>w :w<CR>
 nmap <silent><leader>q :q<CR>
 
 "Easier Buffer switching
+nmap <Tab> :bnext<CR>
+nmap <S-Tab> :bprev<CR>
 nmap <silent><leader>bn :bn<CR>
 nmap <silent><leader>bp :bp<CR>
 "Quick buffer closing
