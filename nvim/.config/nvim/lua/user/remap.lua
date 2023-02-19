@@ -24,9 +24,6 @@ keymap("n", "<leader>rf", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]
 -- Buffer keymap
 keymap("n", "<Tab>", ":bnext<CR>")
 keymap("n", "<S-Tab>", ":bprev<CR>")
-keymap("n", "<leader>bn", ":bnext<CR>")
-keymap("n", "<leader>bp", ":bprev<CR>")
-keymap("n", "<leader>bd", ":bd<CR>")
 
 -- Half page jumps and keep cursor in the middle
 keymap("n", "<C-u>", "<C-u>zz")
@@ -45,7 +42,6 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 keymap("n", "<C-e>", ":NvimTreeToggle<CR>")
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>")
 keymap("n", "<C-n>", ":NvimTreeToggle<CR>")
 keymap("n", "<leader>n", ":NvimTreeToggle<CR>")
 -- NERDTree and Tagbar remaps
