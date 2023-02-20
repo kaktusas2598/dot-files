@@ -316,9 +316,9 @@ format-disconnected-foreground = ${color.black}
 format-disconnected-padding = 1
 
 label-font = 2
-;label-connected = "%{A1:nm-connection-editor&:}%{A2:nm-applet&:}%{A3:bash ~/dot-files/scripts/toggle_wifi.sh:} %signal%% wlan0%{A}%{A}%{A}"
-label-connected = "%{A1:nm-connection-editor&:}%{A2:nm-applet&:}%{A3:bash ~/dot-files/scripts/toggle_wifi.sh:} %signal%%%{A}%{A}%{A}"
-label-disconnected = "%{A1:nm-connection-editor&:}%{A2:nm-applet&:}%{A3:bash ~/dot-files/scripts/toggle_wifi.sh:}睊 null%{A}%{A}%{A}"
+;label-connected = "%{A1:nm-connection-editor&:}%{A2:nm-applet&:}%{A3:bash ~/dot-files/scripts/toggle_wifi.sh:}%signal%% wlan0%{A}%{A}%{A}"
+label-connected = "%{A1:nm-connection-editor&:}%{A2:nm-applet&:}%{A3:bash ~/dot-files/scripts/toggle_wifi.sh:}%signal%%%{A}%{A}%{A}"
+label-disconnected = "%{A1:nm-connection-editor&:}%{A2:nm-applet&:}%{A3:bash ~/dot-files/scripts/toggle_wifi.sh:}睊null%{A}%{A}%{A}"
 ramp-signal-0 = 睊
 ramp-signal-1 = 
 ramp-signal-2 = 
