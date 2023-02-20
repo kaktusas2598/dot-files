@@ -45,6 +45,7 @@
   - Python dbus module for playerctl support with spotify: ```pip install dbus-python```, to control media players, especially spotify on polybar
   - network-manager-applet (or nm-applet) for wifi/network popup in polybar
   - [pulsemixer](https://github.com/GeorgeFilipkin/pulsemixer) - to control sounds on polybar
+  - [yad](https://github.com/v1cont/yad) - yet another dialog tool, used by status bar to display calendar
 
 ### Install instruction
 
