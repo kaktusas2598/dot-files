@@ -127,16 +127,17 @@ function ranger {
 #export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 #export LESS_TERMCAP_us=$'\E[01;32m'      # begin underline
 
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # Only for testing purposes
 # Run inside pi-app root outside of Docker!!!
 # PHPSTORM executes phpunit using php with option -dxdebug.coverage_enable=1
 # MINE - --coverage-clover ~/.PhpStorm2018.2/system/coverage/checkout$unit.xml
 # php storm --coverage-clover /opt/phpstorm-coverage/checkout@unit.xml
 #alias code-coverage="vendor/bin/phpunit -d memory_limit=2G --coverage-clover /opt/phpstorm-coverage/checkout@unit.xml --bootstrap tests/unit/bootstrap.php --configuration tests/unit/phpunit.xml tests/unit --teamcity"
+
+# Node Version Manager
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # enable bash completion in interactive shells
 if ! shopt -oq posix; then
