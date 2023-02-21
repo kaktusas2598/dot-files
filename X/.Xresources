@@ -104,3 +104,6 @@ URxvt.iso14755_52: false
 ! LightGrey + White
 *color7:  #a89984
 *color15: #ebdbb2
+
+! Overrides
+st.background: #000000
