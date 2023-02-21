@@ -448,7 +448,7 @@ type = custom/script
 interval = 1
 format-prefix = " "
 format = <label>
-exec = python3 ~/.config/polybar/scripts/spotify_status.py --font '2' -f '{artist}: {song}' -t 45
+exec = python3 ~/.config/polybar/scripts/spotify_status.py --font '2' -f '{play_pause} {artist}: {song}' -t 45
 format-underline = #1db954
 ;control players (optional)
 click-left = playerctl --player=spotify play-pause
