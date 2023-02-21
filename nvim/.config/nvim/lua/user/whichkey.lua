@@ -108,6 +108,7 @@ local mappings = {
         s = { "<cmd>DapStepOver<cr>", "Step" },
         i = { "<cmd>DapStepInto<cr>", "Step into" },
         c = { "<cmd>DapContinue<cr>", "Continue" },
+        u = { "<cmd>lua require('dapui').toggle()<cr>", "Toggle UI" },
     },
 
     p = {
