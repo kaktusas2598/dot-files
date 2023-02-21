@@ -3,9 +3,9 @@
 
 !! urxvt appearance
 URxvt*geometry:                160x60
-urxvt*font: xft:UbuntuMono Nerd Font Mono:style=Regular:size=15:antialias=true:hinting=true
-urxvt*boldFont: xft:UbuntuMono Nerd Font Mono:style=Bold:size=15:antialias=true:hinting=true
-urxvt*italicFont: xft:UbuntuMono Nerd Font Mono:style=Italic:size=15:antialias=true:hinting=true
+urxvt*font: xft:UbuntuMono Nerd Font Mono:style=Regular:size=16:antialias=true:hinting=true
+urxvt*boldFont: xft:UbuntuMono Nerd Font Mono:style=Bold:size=16:antialias=true:hinting=true
+urxvt*italicFont: xft:UbuntuMono Nerd Font Mono:style=Italic:size=16:antialias=true:hinting=true
 
 URxvt.intensityStyles: false
 URxvt.letterSpace: 0
