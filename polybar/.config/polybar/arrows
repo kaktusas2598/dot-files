@@ -37,21 +37,21 @@ content = ""
 
 [module/right2]
 type = custom/text
-content-background = ${color.light-blue}
+content-background = ${color.grey}
 content-foreground = ${color.white}
 content = ""
 
 
 [module/right3]
 type = custom/text
-content-background = ${color.grey}
-content-foreground = ${color.light-blue}
+content-background = ${color.blue}
+content-foreground = ${color.grey}
 content = ""
 
 [module/right4]
 type = custom/text
 content-background = ${color.yellow}
-content-foreground = ${color.grey}
+content-foreground = ${color.blue}
 content = ""
 
 [module/right5]

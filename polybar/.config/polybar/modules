@@ -267,7 +267,7 @@ blacklist-1 = scroll lock
 ; Removed space from default layout to conserve space
 format =  <label-layout> <label-indicator>
 format-spacing = 1
-format-background = ${color.light-blue}
+format-background = ${color.grey}
 
 
 label-indicator-on-capslock = 󰪛
@@ -373,10 +373,10 @@ format-warn = <ramp><label-warn>
 format-font = 2
 
 label = "%temperature-c% "
-label-background = ${color.grey}
+label-background = ${color.blue}
 label-foreground = ${color.white}
 label-warn = %temperature-c%
-label-warn-background = ${color.grey}
+label-warn-background = ${color.blue}
 label-warn-foreground = ${color.red}
 label-font = 2
 label-warn-font = 2
@@ -384,7 +384,7 @@ label-warn-font = 2
 ramp-0 = "  "
 ramp-1 = "  "
 ramp-2 = "  "
-ramp-background = ${color.grey}
+ramp-background = ${color.blue}
 ramp-foreground = ${color.white}
 ramp-font = 1
 
