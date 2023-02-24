@@ -265,8 +265,8 @@ blacklist-0 = num lock
 blacklist-1 = scroll lock
 
 ; Removed space from default layout to conserve space
-format =  <label-layout> <label-indicator>
-format-spacing = 1
+format =  <label-layout><label-indicator>
+format-spacing = 0
 format-background = ${color.grey}
 
 
