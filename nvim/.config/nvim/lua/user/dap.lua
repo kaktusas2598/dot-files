@@ -15,7 +15,7 @@ dap.adapters.cppdbg = {
     id = 'cppdbg',
     type = 'executable',
     --command = 'C:\\msys2\\path\\to\\cpptools\\extension\\debugAdapters\\bin\\OpenDebugAD7.exe',
-    command = '/home/madvi11ain/cpptools-linux/debugAdapters/bin/OpenDebugAD7',
+    command = os.getenv("HOME")..'/Development/cpptools-linux/debugAdapters/bin/OpenDebugAD7',
     --command = '\\wsl$\\Debian\\home\\madvi11ain\\cpptools-linux\\debugAdapters\\bin\\OpenDebugAD7',
     -- Windows only
     options = {
