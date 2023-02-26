@@ -8,6 +8,7 @@ local options = {
     conceallevel = 0,                        -- so that `` is visible in markdown files
     encoding = "utf-8",
     fileencoding = "utf-8",                  -- the encoding written to a file
+    fillchars = { vert = " "},
     hlsearch = true,                         -- highlight all matches on previous search pattern
     incsearch = true,
     ignorecase = true,                       -- ignore case in search patterns
