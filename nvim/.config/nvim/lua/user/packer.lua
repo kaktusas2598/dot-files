@@ -102,6 +102,8 @@ return require('packer').startup(function(use)
 
     use { "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" } -- Git
 
+    use "folke/neodev.nvim" -- setup for init.lua, docs, completion for nvim lua api
+
     -- Debugging
     use 'mfussenegger/nvim-dap' -- DAP (Debugger Adapter Protocol) Client
     use "rcarriga/nvim-dap-ui"
