@@ -44,33 +44,32 @@ content = ""
 
 [module/right3]
 type = custom/text
-content-background = ${color.yellow}
+content-background = ${color.blue}
 content-foreground = ${color.grey}
 content = ""
 
 [module/right4]
 type = custom/text
-content-background = ${color.red}
-content-foreground = ${color.black}
+content-background = ${color.yellow}
+content-foreground = ${color.blue}
 content = ""
 
 [module/right5]
 type = custom/text
-;content-background = ${color.yellow}
 content-background = ${color.background}
-content-foreground = ${color.red}
+content-foreground = ${color.yellow}
 content = ""
 
 [module/right6]
 type = custom/text
-content-background = ${color.black}
-content-foreground = ${color.yellow}
+content-background = ${color.red}
+content-foreground = ${color.background}
 content = ""
 
 [module/right7]
 type = custom/text
-content-background = ${color.green}
-content-foreground = ${color.black}
+content-background = ${color.background}
+content-foreground = ${color.red}
 content = ""
 
 [module/right8]

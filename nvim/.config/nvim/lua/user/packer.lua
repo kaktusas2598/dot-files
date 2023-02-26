@@ -102,7 +102,11 @@ return require('packer').startup(function(use)
 
     use { "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" } -- Git
 
+    -- Debugging
     use 'mfussenegger/nvim-dap' -- DAP (Debugger Adapter Protocol) Client
+    use "rcarriga/nvim-dap-ui"
+    use "theHamsta/nvim-dap-virtual-text"
+    use "nvim-telescope/telescope-dap.nvim"
 
     use {
         "folke/todo-comments.nvim",

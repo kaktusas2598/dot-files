@@ -125,7 +125,6 @@
 ## TODO
 
   * **CLI**
-    * Setup neovim php and c++ debugging using nvim-dap
     * Setup more themes for all tools: dracula, tomorrow night, monokai for example
   * **GUI**
     * Wallpaper rotation

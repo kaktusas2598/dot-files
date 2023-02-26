@@ -59,3 +59,14 @@ keymap("n", "<leader>t", ":TagbarToggle<CR>")
 
 -- Toggle checkbox, maybe should only be enabled for certain filetypes like conf and markdown
 keymap("n", "<leader>mt", ":lua require('user.toggle-checkbox').toggle()<CR>")
+
+-- Additional dap keymaps in addition to ones configured by whichkey
+keymap('n', '<F5>', function() require('dap').continue() end)
+keymap('n', '<F10>', function() require('dap').step_over() end)
+keymap('n', '<F11>', function() require('dap').step_into() end)
+keymap('n', '<F12>', function() require('dap').step_out() end)
+--keymap('n', '<Leader>b', function() require('dap').toggle_breakpoint() end)
+--keymap('n', '<Leader>B', function() require('dap').set_breakpoint() end)
+--keymap('n', '<Leader>lp', function() require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: ')) end)
+--keymap('n', '<Leader>dr', function() require('dap').repl.open() end)
+--keymap('n', '<Leader>dl', function() require('dap').run_last() end)
