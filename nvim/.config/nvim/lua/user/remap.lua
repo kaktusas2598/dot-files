@@ -48,7 +48,7 @@ keymap("n", "<leader>n", ":NvimTreeToggle<CR>")
 --keymap("n", "<C-n>", ":NERDTreeToggle<CR>")
 --keymap("n", "<leader>n", ":NERDTreeToggle<CR>")
 keymap("n", "<C-t>", ":TagbarToggle<CR>")
-keymap("n", "<leader>t", ":TagbarToggle<CR>")
+--keymap("n", "<leader>t", ":TagbarToggle<CR>")
 
 -- Telescope keybinds for quick fuzzy search
 --local builtin = require('telescope.builtin')
