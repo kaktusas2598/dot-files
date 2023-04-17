@@ -14,6 +14,7 @@ alias la='ls -A'
 alias l='ls -CF'
 alias ..='cd ..'
 alias mkdir='mkdir -p'
+alias e='exit'
 
 # Default to human readable figures
 alias df='df -h'
