@@ -55,7 +55,7 @@ return require('packer').startup(function(use)
     use { 'nvim-telescope/telescope.nvim', tag = '0.1.1' } -- Fuzzy search
     use { 'nvim-lualine/lualine.nvim' } -- Fast status line written in Lua
     use { "kyazdani42/nvim-tree.lua", commit = "7282f7de8aedf861fe0162a559fc2b214383c51c" }
-    use { "akinsho/bufferline.nvim", commit = "83bf4dc7bff642e145c8b4547aa596803a8b4dc4" }
+    use { "akinsho/bufferline.nvim", commit = "41660189da6951d14436147dff30ed7f0d12ed01" }
     use { "akinsho/toggleterm.nvim", commit = "2a787c426ef00cb3488c11b14f5dcf892bbd0bda" } -- Better terminal
     use { "ahmedkhalf/project.nvim", commit = "628de7e433dd503e782831fe150bb750e56e55d6" } -- Project management
     use { "lewis6991/impatient.nvim", commit = "b842e16ecc1a700f62adb9802f8355b99b52a5a6" } -- Speedup plugin startup time
