@@ -10,7 +10,6 @@ if not has_dap_ui then
 end
 
 -- C/C++
--- Not working yet
 dap.adapters.cppdbg = {
     id = 'cppdbg',
     type = 'executable',
