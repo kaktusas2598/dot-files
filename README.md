@@ -41,7 +41,7 @@
   - [i3blocks](https://github.com/vivien/i3blocks) or/and [polybar](https://github.com/polybar/polybar)
   - [maim](https://github.com/naelstrof/maim) and [imagemagick](https://imagemagick.org/index.php) for blurred lock screen effect and screenshots
   - [dunst](https://github.com/dunst-project/dunst)
-  - [light](https://github.com/haikarainen/light)
+  - [light](https://github.com/haikarainen/light) - Don't forget to "sudo usermod -a -G video ${USER}"!
   - Python dbus module for playerctl support with spotify: ```pip install dbus-python```, to control media players, especially spotify on polybar
   - network-manager-applet (or nm-applet) for wifi/network popup in polybar
   - [pulsemixer](https://github.com/GeorgeFilipkin/pulsemixer) - to control sounds on polybar
