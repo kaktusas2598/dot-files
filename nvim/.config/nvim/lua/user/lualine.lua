@@ -8,7 +8,15 @@ require('lualine').setup {
             statusline = {},
             winbar = {},
         },
-        ignore_focus = {},
+        ignore_focus = {
+            'NvimTree',
+            'dapui_scopes',
+            'dapui_breakpoints',
+            'dapui_stacks',
+            'dapui_watches',
+            'dap-repl',
+            'dapui_console'
+        },
         always_divide_middle = true,
         globalstatus = false,
         refresh = {
