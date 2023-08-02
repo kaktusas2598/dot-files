@@ -116,6 +116,7 @@
   * [Lua](https://www.lua.org/)
   * [Python](https://www.python.org/)
   * [NERD Fonts](https://github.com/ryanoasis/nerd-fonts) and [Noto Emoji font](https://github.com/googlefonts/noto-emoji)
+  * [NVM](https://github.com/nvm-sh/nvm)
   * [ripgrep](https://github.com/BurntSushi/ripgrep)
   * [fd](https://github.com/sharkdp/fd)
   * [bat](https://github.com/sharkdp/bat) - used by ranger in file preview

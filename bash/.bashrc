@@ -169,3 +169,6 @@ fi
 
 # Enable Startship Prompt
 eval "$(starship init bash)"
+. "$HOME/.cargo/env"
+
+export PATH=$PATH:/usr/local/go/bin
