@@ -12,6 +12,11 @@ fi
 
 alias la='ls -A'
 alias l='ls -CF'
+if command -v exa &> /dev/null
+then
+    alias ls='exa --icons'
+fi
+
 alias ..='cd ..'
 alias mkdir='mkdir -p'
 alias e='exit'
@@ -33,6 +38,11 @@ if command -v batcat &> /dev/null
 then
     alias bat='batcat'
 fi
+# Same for fd, it is fdfind on ubuntu
+if command -v fdfind &> /dev/null
+then
+    alias fd='fdfind'
+fi
 
 #For lazy devs like me
 alias c='clear'
@@ -44,6 +54,7 @@ alias v='vim'
 alias n='nvim'
 alias r='ranger'
 alias nvimdiff='nvim -d'
+alias reload='source ~/.bashrc'
 
 #Same as CMD+K on MAC, clears whole scrollable buffer, not just visible part
 #alias clear="clear && printf '\e[3J'"
