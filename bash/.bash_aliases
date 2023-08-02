@@ -10,8 +10,10 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-alias la='ls -A'
-alias l='ls -CF'
+alias la='ls -a'
+# NOTE: Had to remove -C flag as it is not directly compatible with exa
+# Also had to change -A flag above to -a
+alias l='ls -F' # C
 if command -v exa &> /dev/null
 then
     alias ls='exa --icons'
