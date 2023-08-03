@@ -77,4 +77,6 @@ alias docker-compose-reload-no-cache='docker-compose down; docker-compose build 
 alias docker-spawn='docker exec -it cli bash'
 alias docker-spawn='docker exec -it webapp bash'
 ###############################################################################
+#            Work Laptop Specific Aliases                                     #
+alias monitors='xrandr --output DP-3 --mode 2560x1440 --right-of eDP-1'
 
