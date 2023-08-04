@@ -78,5 +78,7 @@ alias docker-spawn='docker exec -it cli bash'
 alias docker-spawn='docker exec -it webapp bash'
 ###############################################################################
 #            Work Laptop Specific Aliases                                     #
+# Run when plugging in 2nd monitor, output name might change though!
 alias monitors='xrandr --output DP-3 --mode 2560x1440 --right-of eDP-1'
-
+# Will resursively count the lines in all cpp and hpp files in src directory
+alias vcode='find src/ -name "*.cpp" -o -name "*.hpp" | xargs cat | wc -l'
