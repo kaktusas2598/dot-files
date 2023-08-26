@@ -26,9 +26,11 @@
 
   --]]
 
+-- NOTE: glh (shader header), vsh(vertex shader header) and fsh(frag shader header) are special
+-- extensions used for shader resource system in Villain engine
 vim.cmd [[
     augroup _mark_more_glsl_filetypes
-        autocmd BufNewFile,BufRead *.vs,*.fs,*.vert,*.frag set ft=glsl
+        autocmd BufNewFile,BufRead *.vs,*.fs,*.vert,*.frag,*.glh,*.vsh,*.fsh set ft=glsl
     augroup end
 
     augroup _remove_trailing_whitespace
