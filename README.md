@@ -123,6 +123,7 @@
   * [fzf](https://github.com/junegunn/fzf) - optional but highly recommended
   * [exa](https://github.com/ogham/exa) - optional but highly recommended
   * [Ctags](http://ctags.sourceforge.net/) - for Vim/NVim tags
+  * [xdotool] - for screenshot script
 
 ## TODO
 
