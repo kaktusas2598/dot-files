@@ -42,6 +42,10 @@ vim.cmd [[
         autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
     augroup end
 
+    augroup _format_tf
+        autocmd!
+        autocmd FileType terraform autocmd BufWritePre <buffer> :TerraformFmt
+    augroup end
 ]]
 -- Autoformat
 -- augroup _lsp
