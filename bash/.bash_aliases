@@ -82,3 +82,7 @@ alias docker-spawn='docker exec -it webapp bash'
 alias monitors='xrandr --output DP-3 --mode 2560x1440 --right-of eDP-1'
 # Will resursively count the lines in all cpp and hpp files in src directory
 alias vcode='find src/ -name "*.cpp" -o -name "*.hpp" | xargs cat | wc -l'
+
+function getcw() {
+  echo aws logs get-log-events --log-group-name "$1" --log-stream-name $(aws logs describe-log-streams --log-group-name "$1" --max-items 1 --descending --order-by LastEventTime | grep logStreamName | cut -d':' -f2 | sed -e 's/,//' -e 's/\"/'\''/g') | sh -
+}
