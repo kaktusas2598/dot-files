@@ -142,6 +142,9 @@ return require('packer').startup(function(use)
     -- Terraform
     use "hashivim/vim-terraform"
 
+    -- Git
+    use "FabijanZulj/blame.nvim"
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
