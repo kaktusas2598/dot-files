@@ -58,6 +58,9 @@ alias r='ranger'
 alias nvimdiff='nvim -d'
 alias reload='source ~/.bashrc'
 
+# Pipe output to clippy to copy it to the clipboard
+alias clippy='xclip -sel c -rmlastnl'
+
 #Same as CMD+K on MAC, clears whole scrollable buffer, not just visible part
 #alias clear="clear && printf '\e[3J'"
 
