@@ -5,6 +5,10 @@
 # i3lock
 # maim
 
+# TODO: does not do what I want: after locking screen, rofi should disappear before taking screenshot so that
+# lock screen does not display rofi
+xdotool key Escape
+
 IMAGE=/tmp/i3lock.png
 SCREENSHOT="maim $IMAGE"
 #maim -u --window $(xdotool getactivewindow) | tee ~/Pictures/screenshot-"$(date '+%y%m%d-%H%M-%S').png" | xclip -sel c -t image/png

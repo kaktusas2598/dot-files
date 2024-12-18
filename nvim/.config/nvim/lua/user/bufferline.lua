@@ -15,10 +15,12 @@ bufferline.setup {
     -- as an escape hatch for people who cannot bear it for whatever reason
 	indicator_icon = nil,
     indicator = { style = "icon", icon = "▎"},
-    buffer_close_icon = "",
+    --buffer_close_icon = "",
+    buffer_close_icon = nil,
     -- buffer_close_icon = '',
     modified_icon = "●",
-    close_icon = "",
+    --close_icon = "",
+    close_icon = nil,
     -- close_icon = '',
     left_trunc_marker = "",
     right_trunc_marker = "",
@@ -58,7 +60,7 @@ bufferline.setup {
     -- end,
     offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
     show_buffer_icons = true,
-    show_buffer_close_icons = true,
+    show_buffer_close_icons = false,
     show_close_icon = true,
     show_tab_indicators = true,
     persist_buffer_sort = true, -- whether or not custom sorted buffers should persist

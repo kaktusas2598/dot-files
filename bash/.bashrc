@@ -42,6 +42,11 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Get current git user
+parse_git_user() {
+  git rev-parse --git-dir 1>/dev/null 2>/dev/null && git config user.name | sed -e 's/^/ \[/g' -e 's/$/]/g'
+}
+
 #Get git branch name
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /' # Last space is only for prompt

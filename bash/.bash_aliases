@@ -79,6 +79,7 @@ alias docker-compose-reload='docker-compose down; docker-compose build --build-a
 alias docker-compose-reload-no-cache='docker-compose down; docker-compose build --no-cache --build-arg UID=$(id -u) --build-arg GID=$(id -g); docker-compose up -d'
 alias docker-spawn='docker exec -it cli bash'
 alias docker-spawn='docker exec -it webapp bash'
+alias pi-log='clear; truncate -s0 var/log/application.log; tail -f var/log/application.log | jq'
 ###############################################################################
 #            Work Laptop Specific Aliases                                     #
 # Run when plugging in 2nd monitor, output name might change though!
@@ -89,3 +90,5 @@ alias vcode='find src/ -name "*.cpp" -o -name "*.hpp" | xargs cat | wc -l'
 function getcw() {
   echo aws logs get-log-events --log-group-name "$1" --log-stream-name $(aws logs describe-log-streams --log-group-name "$1" --max-items 1 --descending --order-by LastEventTime | grep logStreamName | cut -d':' -f2 | sed -e 's/,//' -e 's/\"/'\''/g') | sh -
 }
+
+alias pgen="tr -dc A-Za-z0-9 </dev/urandom | head -c 32 && echo"
