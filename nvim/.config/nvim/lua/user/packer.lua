@@ -52,10 +52,10 @@ return require('packer').startup(function(use)
     -- Post-install/update hook with neovim command
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use { 'kyazdani42/nvim-web-devicons', opt = true }
-    use { 'nvim-telescope/telescope.nvim', tag = '0.1.1' } -- Fuzzy search
+    use { 'nvim-telescope/telescope.nvim', tag = '0.1.4' } -- Fuzzy search
     use { 'nvim-lualine/lualine.nvim' } -- Fast status line written in Lua
     use { "kyazdani42/nvim-tree.lua", commit = "7282f7de8aedf861fe0162a559fc2b214383c51c" }
-    use { "akinsho/bufferline.nvim", commit = "41660189da6951d14436147dff30ed7f0d12ed01" }
+    use { "akinsho/bufferline.nvim" }
     use { "akinsho/toggleterm.nvim", commit = "2a787c426ef00cb3488c11b14f5dcf892bbd0bda" } -- Better terminal
     use { "ahmedkhalf/project.nvim", commit = "628de7e433dd503e782831fe150bb750e56e55d6" } -- Project management
     use { "lewis6991/impatient.nvim", commit = "b842e16ecc1a700f62adb9802f8355b99b52a5a6" } -- Speedup plugin startup time
@@ -68,7 +68,8 @@ return require('packer').startup(function(use)
     use { 'scrooloose/nerdcommenter' } -- For commenting
     use { 'majutsushi/tagbar' } -- Install exuberant ctags for this to work
     use { 'mg979/vim-visual-multi' } -- Multiple cursors
-    use 'norcalli/nvim-colorizer.lua'
+    -- DIsabled due to deprecation: https://github.com/norcalli/nvim-colorizer.lua/pull/103
+    --use 'norcalli/nvim-colorizer.lua'
 
     -- Coloschemes
     use { 'rafi/awesome-vim-colorschemes' }
@@ -83,17 +84,18 @@ return require('packer').startup(function(use)
 
     -- LSP
     use { "williamboman/mason.nvim" } -- simple to use language server installer
-    use { "neovim/nvim-lspconfig", commit = "f11fdff7e8b5b415e5ef1837bdcdd37ea6764dda" } -- enable LSP
+    use { "neovim/nvim-lspconfig" } -- enable LSP
     use { "williamboman/mason-lspconfig.nvim", commit = "0051870dd728f4988110a1b2d47f4a4510213e31" }
-    use { "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" } -- for formatters and linters
-    use { "RRethy/vim-illuminate", commit = "a2e8476af3f3e993bb0d6477438aad3096512e42" } -- highlight other use of the word uner the cursor
+    -- Abandoned package!
+    -- use { "jose-elias-alvarez/null-ls.nvim" } -- for formatters and linters
+    use { "RRethy/vim-illuminate" } -- highlight other use of the word uner the cursor
 
     -- Auto Completion
-    use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin
+    use { "hrsh7th/nvim-cmp" } -- The completion plugin
     use { "hrsh7th/cmp-buffer", commit = "3022dbc9166796b644a841a02de8dd1cc1d311fa" } -- buffer completions
     use { "hrsh7th/cmp-path", commit = "447c87cdd6e6d6a1d2488b1d43108bfa217f56e1" } -- path completions
     use { "saadparwaiz1/cmp_luasnip", commit = "a9de941bcbda508d0a45d28ae366bb3f08db2e36" } -- snippet completions
-    use { "hrsh7th/cmp-nvim-lsp", commit = "3cf38d9c957e95c397b66f91967758b31be4abe6" }
+    use { "hrsh7th/cmp-nvim-lsp" }
     use { "hrsh7th/cmp-nvim-lua", commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21" }
 
     -- To show function signature as you type

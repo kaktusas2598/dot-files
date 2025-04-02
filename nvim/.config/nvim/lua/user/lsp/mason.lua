@@ -1,6 +1,7 @@
 local servers = {
     -- Lua Lang Server
-	"sumneko_lua",
+	--"sumneko_lua", -- Deprecated
+	"lua_ls",
 	-- "cssls",
 	-- "html",
 	-- "tsserver",

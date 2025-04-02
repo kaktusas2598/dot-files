@@ -24,4 +24,4 @@ require('user.dap')
 
 -- This works by running autocmd on all filetypes on startup
 -- Use :ColorizerAttachToBuffer to start colorizer in files without filetype
-require'colorizer'.setup()
+--require'colorizer'.setup()

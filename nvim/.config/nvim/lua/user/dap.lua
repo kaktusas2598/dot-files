@@ -51,7 +51,7 @@ dap.configurations.cpp = {
 dap.adapters.php = {
   type = 'executable',
   command = 'node',
-  args = { os.getenv("HOME")..'/Development/vscode-php-debug/out/phpDebug.js' }
+  args = { os.getenv("HOME")..'/vscode-php-debug/out/phpDebug.js' }
 }
 
 dap.configurations.php = {
