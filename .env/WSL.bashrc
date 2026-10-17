@@ -9,7 +9,8 @@ export LC_ALL=en_US.UTF-8
 
 # Fuzzy finder bash completion
 source /usr/share/doc/fzf/examples/key-bindings.bash
-source /usr/share/doc/fzf/examples/completion.bash
+#source /usr/share/doc/fzf/examples/completion.bash // Broke with newer fzf version on WSl2
+source /usr/share/bash-completion/completions/fzf
 
 # Add Go to path (for system-wide is should go in /etc/profile)
 export PATH=$PATH:/usr/local/go/bin
