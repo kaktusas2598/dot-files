@@ -5,6 +5,11 @@ local servers = {
   "jsonls",
   "clangd",
   "phpactor",
+  "gopls",
+  "ts_ls",
+  "eslint",
+  "html",
+  "cssls",
 }
 
 require("mason").setup({
@@ -29,6 +34,11 @@ require("mason-tool-installer").setup({
     "json-lsp",
     "clangd",
     "phpactor",
+    "gopls",
+    "typescript-language-server",
+    "eslint-lsp",
+    "html-lsp",
+    "css-lsp",
   },
   run_on_start = true,
   start_delay = 0,

@@ -14,6 +14,16 @@ local parsers = {
   "json",
   "lua",
   "python",
+  "go",
+  "gomod",
+  "gosum",
+  "gotmpl",
+  "javascript",
+  "typescript",
+  "tsx",
+  "jsdoc",
+  "html",
+  "css",
   "hcl",
   "yaml",
   "markdown",
@@ -21,6 +31,7 @@ local parsers = {
 }
 
 treesitter.setup({})
+vim.treesitter.language.register("json", "jsonc")
 
 local parser_set = {}
 for _, parser in ipairs(parsers) do
