@@ -45,6 +45,9 @@ local options = {
     winborder = "rounded",                    -- borders for floating windows, including LSP help
     -- whichwrap = "bs<>[]hl",                  -- which "horizontal" keys are allowed to travel to prev/next line
     whichwrap = "",                  -- which "horizontal" keys are allowed to travel to prev/next line
+    foldenable = false,                       -- always open files with folds expanded
+    foldlevel = 99,
+    foldlevelstart = 99,
     foldmethod = "syntax",
 
 }
