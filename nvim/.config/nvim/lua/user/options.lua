@@ -42,6 +42,7 @@ local options = {
     scrolloff = 5,                           -- minimal number of screen lines to keep above and below the cursor
     sidescrolloff = 5,                       -- minimal number of screen columns either side of cursor if wrap is `false`
     guifont = "monospace:h17",               -- the font used in graphical neovim applications
+    winborder = "rounded",                    -- borders for floating windows, including LSP help
     -- whichwrap = "bs<>[]hl",                  -- which "horizontal" keys are allowed to travel to prev/next line
     whichwrap = "",                  -- which "horizontal" keys are allowed to travel to prev/next line
     foldmethod = "syntax",
@@ -57,4 +58,3 @@ vim.opt.shortmess:append "c"                           -- don't give |ins-comple
 vim.opt.iskeyword:append "-"                           -- hyphenated words recognized by searches
 vim.opt.formatoptions:remove({ "c", "r", "o" })        -- don't insert the current comment leader automatically for auto-wrapping comments using 'textwidth', hitting <Enter> in insert mode, or hitting 'o' or 'O' in normal mode.
 vim.opt.runtimepath:remove("/usr/share/vim/vimfiles")  -- separate vim plugins from neovim in case vim still in use
-

@@ -1,67 +1,57 @@
-local status_ok, configs = pcall(require, "nvim-treesitter.configs")
-if not status_ok then
-	return
+local ok, treesitter = pcall(require, "nvim-treesitter")
+if not ok then
+  return
 end
 
-configs.setup({
-    ensure_installed = {
-        "vimdoc",
-        "bash",
-        "c",
-        "cpp",
-        "cmake",
-        "glsl",
-        "php",
-        "json",
-        "lua",
-        "python",
-        "hcl",
-        --"css",
-        --"go",
-        --"rust",
-        "yaml",
-        "markdown",
-        "markdown_inline"
-    }, -- one of "all" or a list of languages
-    sync_install = false,
-    auto_install = true,
-    ignore_install = { "" }, -- List of parsers to ignore installing
-    highlight = {
-        enable = true, -- false will disable the whole extension
-        disable = { "" }, -- list of language that will be disabled
-    },
-    autopairs = {
-        enable = true,
-    },
-    indent = { enable = true , disable = { "cpp" }}, -- Not sure why it breaks cpp indent, especially within namespaces
+local parsers = {
+  "vimdoc",
+  "bash",
+  "c",
+  "cpp",
+  "cmake",
+  "glsl",
+  "php",
+  "json",
+  "lua",
+  "python",
+  "hcl",
+  "yaml",
+  "markdown",
+  "markdown_inline",
+}
 
-    nt_cpp_tools = {
-        enable = true,
-        preview = {
-            quit = 'q', -- optional keymapping for quit preview
-            accept = '<tab>' -- optional keymapping for accept preview
-        },
-        header_extension = 'hxx', -- optional
-        source_extension = 'cxx', -- optional
-        custom_define_class_function_commands = { -- optional
-            -- FIXME: cpp tools just broke recently
-            --TSCppImplWrite = {
-                --output_handle = require'nvim-treesitter.nt-cpp-tools.output_handlers'.get_add_to_cpp()
-            --}
-            --[[
-            <your impl function custom command name> = {
-                output_handle = function (str, context)
-                    -- string contains the class implementation
-                    -- do whatever you want to do with it
-                end
-            }
-            ]]
-        }
-    }
+treesitter.setup({})
+
+local parser_set = {}
+for _, parser in ipairs(parsers) do
+  parser_set[parser] = true
+end
+
+local function install_parsers()
+  if vim.fn.executable("tree-sitter") == 1 then
+    treesitter.install(parsers)
+  end
+end
+
+install_parsers()
+
+-- On a fresh install Mason may finish installing tree-sitter-cli after this
+-- module loads. Install the parsers as soon as that tool becomes available.
+vim.api.nvim_create_autocmd("User", {
+  pattern = "MasonToolsUpdateCompleted",
+  callback = install_parsers,
 })
 
---local parser_configs = require "nvim-treesitter.parsers".get_parser_configs()
---parser_configs.glsl = {
-    -- Set more filetypes used by shaders to enable parsing for those files
-    --used_by = { "glsl", "vert", "frag", "geom", "shader" }
---}
+vim.api.nvim_create_autocmd("FileType", {
+  callback = function(args)
+    local language = vim.treesitter.language.get_lang(args.match) or args.match
+    if not parser_set[language] then
+      return
+    end
+
+    pcall(vim.treesitter.start, args.buf, language)
+    if language ~= "cpp" then
+      vim.bo[args.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    end
+  end,
+})

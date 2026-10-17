@@ -5,8 +5,6 @@ vim/.vim/.netrwhist
 tmux/.tmux/plugins/*
 !tmux/.tmux/plugins/tpm
 
-nvim/.config/nvim/plugin/packer_compiled.lua
-
 # Python
 __pycache__/
 *.py[cod]

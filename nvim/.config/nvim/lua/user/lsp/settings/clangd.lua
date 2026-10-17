@@ -1,5 +1,4 @@
 return {
-    capabilities = capabilities,
     cmd = {
         "clangd",
         "--background-index",
@@ -13,6 +12,5 @@ return {
         completeUnimported = true,
         clangdFileStatus = true
     },
-    on_attach = on_attach,
-    flags = {debounce_text_changes = 150}
+    flags = { debounce_text_changes = 150 }
 }

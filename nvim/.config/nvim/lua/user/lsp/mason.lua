@@ -1,70 +1,60 @@
 local servers = {
-    -- Lua Lang Server
-	--"sumneko_lua", -- Deprecated
-	"lua_ls",
-	-- "cssls",
-	-- "html",
-	-- "tsserver",
-	"pyright",
-	-- "bashls",
-    "cmake",
-	"jsonls",
-	-- "yamlls",
-    -- C++ Lang Servers
-    "clangd",
-    --"ccls"
-    -- Markdown servers
-    --"marksman"
-    --PHP Lang servers
-    --"intelephense"
-    "phpactor"
-    --"psalm"
+  "lua_ls",
+  "pyright",
+  "cmake",
+  "jsonls",
+  "clangd",
+  "phpactor",
 }
 
-local settings = {
-	ui = {
-		border = "none",
-		icons = {
-			package_installed = "◍",
-			package_pending = "◍",
-			package_uninstalled = "◍",
-		},
-	},
-	log_level = vim.log.levels.INFO,
-	max_concurrent_installers = 4,
-}
-
-require("mason").setup(settings)
-require("mason-lspconfig").setup({
-	ensure_installed = servers,
-	automatic_installation = true,
+require("mason").setup({
+  ui = {
+    border = "none",
+    icons = {
+      package_installed = "◍",
+      package_pending = "◍",
+      package_uninstalled = "◍",
+    },
+  },
+  log_level = vim.log.levels.INFO,
+  max_concurrent_installers = 4,
 })
 
-local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")
-if not lspconfig_status_ok then
-	return
+require("mason-tool-installer").setup({
+  ensure_installed = {
+    "tree-sitter-cli",
+    "lua-language-server",
+    "pyright",
+    "cmake-language-server",
+    "json-lsp",
+    "clangd",
+    "phpactor",
+  },
+  run_on_start = true,
+  start_delay = 0,
+})
+
+local handlers = require("user.lsp.handlers")
+
+vim.lsp.config("*", {
+  on_attach = handlers.on_attach,
+  capabilities = handlers.capabilities,
+})
+
+for _, server in ipairs(servers) do
+  local opts = {}
+  local settings_ok, server_settings = pcall(require, "user.lsp.settings." .. server)
+  if settings_ok then
+    opts = server_settings
+  end
+  vim.lsp.config(server, opts)
 end
 
-local opts = {}
+require("mason-lspconfig").setup({
+  ensure_installed = servers,
+  automatic_enable = false,
+})
 
-for _, server in pairs(servers) do
-	opts = {
-		on_attach = require("user.lsp.handlers").on_attach,
-		capabilities = require("user.lsp.handlers").capabilities,
-	}
-
-	server = vim.split(server, "@")[1]
-
-	local require_ok, conf_opts = pcall(require, "user.lsp.settings." .. server)
-	if require_ok then
-		opts = vim.tbl_deep_extend("force", conf_opts, opts)
-	end
-
-	lspconfig[server].setup(opts)
-end
-
--- Get rid of 'multiple different client offset-encodings detected' message caused by clangd
--- https://github.com/jose-elias-alvarez/null-ls.nvim/issues/428
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.offsetEncoding = { "utf-16" }
-require("lspconfig").clangd.setup({ capabilities = capabilities })
+-- Enable every configured server even when it is provided by the system
+-- instead of Mason.
+vim.lsp.enable(servers)

@@ -34,7 +34,8 @@ vim.cmd [[
     augroup end
 
     augroup _remove_trailing_whitespace
-        autocmd BufWritePre * :%s/\s\+$//e
+        autocmd!
+        autocmd BufWritePre * if &modifiable && &buftype ==# '' | silent! %s/\s\+$//e | endif
     augroup end
 
     augroup _hide_bufferline_on_alpha

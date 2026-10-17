@@ -9,7 +9,7 @@
 ## My Setup
 
   * **CLI**
-    * Editors: Vim and NeoVim(>=0.80)
+  * Editors: Vim and NeoVim (>=0.12)
     * Shell: bash
     * Multiplexer: Tmux
     * VS: Git
@@ -106,7 +106,7 @@
   * [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
 
 **NeoVim Plugins**
-  * TODO
+  * Managed with [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 **Colorschemes:**
   * [AwesomeColorschemes](https://github.com/rafi/awesome-vim-colorschemes)
@@ -132,4 +132,3 @@
   * **GUI**
     * Wallpaper rotation
     * Setup sound and brightness notifications
-
